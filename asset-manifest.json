@@ -1,20 +1,24 @@
 {
   "files": {
-    "main.css": "/cra-postcss-tailwind-boilerplate/static/css/main.4a509249.chunk.css",
-    "main.js": "/cra-postcss-tailwind-boilerplate/static/js/main.a82bcedb.chunk.js",
-    "main.js.map": "/cra-postcss-tailwind-boilerplate/static/js/main.a82bcedb.chunk.js.map",
-    "runtime-main.js": "/cra-postcss-tailwind-boilerplate/static/js/runtime-main.732d83d8.js",
-    "runtime-main.js.map": "/cra-postcss-tailwind-boilerplate/static/js/runtime-main.732d83d8.js.map",
-    "static/js/2.5d527c0f.chunk.js": "/cra-postcss-tailwind-boilerplate/static/js/2.5d527c0f.chunk.js",
-    "static/js/2.5d527c0f.chunk.js.map": "/cra-postcss-tailwind-boilerplate/static/js/2.5d527c0f.chunk.js.map",
-    "index.html": "/cra-postcss-tailwind-boilerplate/index.html",
-    "static/css/main.4a509249.chunk.css.map": "/cra-postcss-tailwind-boilerplate/static/css/main.4a509249.chunk.css.map",
-    "static/js/2.5d527c0f.chunk.js.LICENSE.txt": "/cra-postcss-tailwind-boilerplate/static/js/2.5d527c0f.chunk.js.LICENSE.txt"
+    "main.css": "/tailwind-poem/static/css/main.08311fde.chunk.css",
+    "main.js": "/tailwind-poem/static/js/main.5c647918.chunk.js",
+    "main.js.map": "/tailwind-poem/static/js/main.5c647918.chunk.js.map",
+    "runtime-main.js": "/tailwind-poem/static/js/runtime-main.9a81584a.js",
+    "runtime-main.js.map": "/tailwind-poem/static/js/runtime-main.9a81584a.js.map",
+    "static/js/2.dcb8a536.chunk.js": "/tailwind-poem/static/js/2.dcb8a536.chunk.js",
+    "static/js/2.dcb8a536.chunk.js.map": "/tailwind-poem/static/js/2.dcb8a536.chunk.js.map",
+    "static/js/3.c0aa755b.chunk.js": "/tailwind-poem/static/js/3.c0aa755b.chunk.js",
+    "static/js/3.c0aa755b.chunk.js.map": "/tailwind-poem/static/js/3.c0aa755b.chunk.js.map",
+    "index.html": "/tailwind-poem/index.html",
+    "static/css/main.08311fde.chunk.css.map": "/tailwind-poem/static/css/main.08311fde.chunk.css.map",
+    "static/js/2.dcb8a536.chunk.js.LICENSE.txt": "/tailwind-poem/static/js/2.dcb8a536.chunk.js.LICENSE.txt",
+    "static/media/egg-2.21f9049e.jpg": "/tailwind-poem/static/media/egg-2.21f9049e.jpg",
+    "static/media/egg.5ba61075.jpg": "/tailwind-poem/static/media/egg.5ba61075.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.732d83d8.js",
-    "static/js/2.5d527c0f.chunk.js",
-    "static/css/main.4a509249.chunk.css",
-    "static/js/main.a82bcedb.chunk.js"
+    "static/js/runtime-main.9a81584a.js",
+    "static/js/2.dcb8a536.chunk.js",
+    "static/css/main.08311fde.chunk.css",
+    "static/js/main.5c647918.chunk.js"
   ]
 }
