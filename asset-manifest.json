@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/tailwind-poem/static/css/main.08311fde.chunk.css",
-    "main.js": "/tailwind-poem/static/js/main.5c647918.chunk.js",
-    "main.js.map": "/tailwind-poem/static/js/main.5c647918.chunk.js.map",
-    "runtime-main.js": "/tailwind-poem/static/js/runtime-main.9a81584a.js",
-    "runtime-main.js.map": "/tailwind-poem/static/js/runtime-main.9a81584a.js.map",
-    "static/js/2.dcb8a536.chunk.js": "/tailwind-poem/static/js/2.dcb8a536.chunk.js",
-    "static/js/2.dcb8a536.chunk.js.map": "/tailwind-poem/static/js/2.dcb8a536.chunk.js.map",
-    "static/js/3.c0aa755b.chunk.js": "/tailwind-poem/static/js/3.c0aa755b.chunk.js",
-    "static/js/3.c0aa755b.chunk.js.map": "/tailwind-poem/static/js/3.c0aa755b.chunk.js.map",
+    "main.css": "/tailwind-poem/static/css/main.38553d22.chunk.css",
+    "main.js": "/tailwind-poem/static/js/main.6c56017a.chunk.js",
+    "main.js.map": "/tailwind-poem/static/js/main.6c56017a.chunk.js.map",
+    "runtime-main.js": "/tailwind-poem/static/js/runtime-main.936247fd.js",
+    "runtime-main.js.map": "/tailwind-poem/static/js/runtime-main.936247fd.js.map",
+    "static/js/2.580c968f.chunk.js": "/tailwind-poem/static/js/2.580c968f.chunk.js",
+    "static/js/2.580c968f.chunk.js.map": "/tailwind-poem/static/js/2.580c968f.chunk.js.map",
+    "static/js/3.428125ba.chunk.js": "/tailwind-poem/static/js/3.428125ba.chunk.js",
+    "static/js/3.428125ba.chunk.js.map": "/tailwind-poem/static/js/3.428125ba.chunk.js.map",
     "index.html": "/tailwind-poem/index.html",
-    "static/css/main.08311fde.chunk.css.map": "/tailwind-poem/static/css/main.08311fde.chunk.css.map",
-    "static/js/2.dcb8a536.chunk.js.LICENSE.txt": "/tailwind-poem/static/js/2.dcb8a536.chunk.js.LICENSE.txt",
+    "static/css/main.38553d22.chunk.css.map": "/tailwind-poem/static/css/main.38553d22.chunk.css.map",
+    "static/js/2.580c968f.chunk.js.LICENSE.txt": "/tailwind-poem/static/js/2.580c968f.chunk.js.LICENSE.txt",
     "static/media/egg-2.21f9049e.jpg": "/tailwind-poem/static/media/egg-2.21f9049e.jpg",
-    "static/media/egg.5ba61075.jpg": "/tailwind-poem/static/media/egg.5ba61075.jpg"
+    "static/media/egg.5ba61075.jpg": "/tailwind-poem/static/media/egg.5ba61075.jpg",
+    "static/media/skythee-avatar.209f6cc7.png": "/tailwind-poem/static/media/skythee-avatar.209f6cc7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.9a81584a.js",
-    "static/js/2.dcb8a536.chunk.js",
-    "static/css/main.08311fde.chunk.css",
-    "static/js/main.5c647918.chunk.js"
+    "static/js/runtime-main.936247fd.js",
+    "static/js/2.580c968f.chunk.js",
+    "static/css/main.38553d22.chunk.css",
+    "static/js/main.6c56017a.chunk.js"
   ]
 }
