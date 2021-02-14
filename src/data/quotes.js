@@ -1,37 +1,176 @@
-import { stripIndents } from "common-tags";
-import skytheeAvatar from "../images/skythee-avatar.png"
 const quotes = [
   {
-    text: `"If you cringe at your past self, it's a sign of growth"`,
-    socialMedia: "youtube",
+    text:
+      "The world isn't perfect. But it's there for us, doing the best it can....that's what makes it so damn beautiful.",
     topic: "Cringe",
     author: {
-      avatarUrl: "",
-      username: "DR. DORITOS",
+      // "Roy Mustang",
+      id: 68,
     },
   },
   {
-    text: stripIndents(`
-      thought i'd share smth my therapist told me and it stuck with me
-      fear is natural, and you'll encounter it throughout your life
-      but when you encounter it, just think of the letters F-E-A-R
-      and remember that they stand for Face Everything And Recover 🥰
-    `),
-    socialMedia: "discord",
+    text:
+      "To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have.",
     topic: "Fear",
     author: {
-      avatarUrl: skytheeAvatar,
-      username: "Skythee",
+      // "Matsumoto Rangiku",
+      id: 904,
     },
   },
   {
-    text: "wo bu zhi dou ni shuo shen me",
-    socialMedia: "discord",
+    text:
+      "We are all like fireworks: we climb, we shine and always go our separate ways and become further apart. But even when that time comes, let's not disappear like a firework and continue to shine.. forever.",
     topic: "Fear",
     author: {
-      username: "poutinggif",
+      // "Hitsugaya Toshiro",
+      id: 245,
+    },
+  },
+  {
+    text:
+      "Those who stand at the top determine what's wrong and what's right! This very place is neutral ground! Justice will prevail, you say? But of course it will! Whoever wins this war becomes justice!",
+    topic: "Fear",
+    author: {
+      // "Don Quixote Doflamingo",
+      id: 2754,
+    },
+  },
+  {
+    text:
+      "Fear is not evil. It tells you what weakness is. And once you know your weakness, you can become stronger as well as kinder.",
+    topic: "Fear",
+    author: {
+      // "Gildarts Clive",
+      id: 29502,
+    },
+  },
+  {
+    text:
+      "Whatever you lose, you'll find it again. But what you throw away you'll never get back.",
+    topic: "Fear",
+    author: {
+      // "Kenshin Himura",
+      id: 147,
+    },
+  },
+  {
+    text:
+      "Fear is freedom! Subjugation is liberation! Contradiction is truth! Those are the facts of this world! And you will all surrender to them, you pigs in human clothing!",
+    topic: "Fear",
+    author: {
+      // "Satsuki Kiryuuin",
+      id: 83799,
+    },
+  },
+  {
+    text:
+      "I am the hope of the universe. I am the answer to all living things that cry out for peace. I am protector of the innocent. I am the light in the darkness. I am truth. Ally to good! Nightmare to you!",
+    topic: "Fear",
+    author: {
+      // "Son Goku",
+      id: 246,
+    },
+  },
+  {
+    text:
+      "Religion, ideology, resources, land, spite, love or just because… No matter how pathetic the reason, it’s enough to start war. War will never cease to exist… reasons can be thought up after the fact… Human nature pursues strife.",
+    topic: "Fear",
+    author: {
+      // "Paine",
+      id: 3180,
+    },
+  },
+  {
+    text:
+      "People, who can’t throw something important away, can never hope to change anything.",
+    topic: "Fear",
+    author: {
+      // "Armin Arlert",
+      id: 46494,
+    },
+  },
+  {
+    text:
+      "I want you to be happy. I want you to laugh a lot. I don’t know what exactly I’ll be able to do for you, but I’ll always be by your side.",
+    topic: "Fear",
+    author: {
+      // "Kagome",
+      id: 1354,
+    },
+  },
+  {
+    text: "Thinking you’re no-good and worthless is the worst thing you can do",
+    topic: "Fear",
+    author: {
+      // "Nobito",
+      id: 4303,
+    },
+  },
+  {
+    text:
+      "Don’t give up, there’s no shame in falling down! True shame is to not stand up again!",
+    topic: "Fear",
+    author: {
+      // "Shintaro Midorima",
+      id: 22253,
     },
   },
 ];
 
-export default quotes
+const output = {};
+for (let i = 0; i < quotes.length; i++) {
+  const quote = quotes[i]
+  if (!quote.author.id) continue;
+  output[quote.author.id] = true;
+}
+
+const url = "https://graphql.anilist.co",
+  options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      query: `
+        query ($id_in: [Int]) {
+          Page (page: 1) {
+            pageInfo {
+              total
+              currentPage
+              lastPage
+              hasNextPage
+              perPage
+            }
+            characters (id_in: $id_in) {
+              id
+              image {
+                large
+              }
+              name {
+                full
+              }
+            }
+          }
+        }
+      `,
+      variables: {
+        id_in: Object.keys(output),
+      },
+    }),
+  };
+fetch(url, options)
+  .then((res) => res.json())
+  .then((characters) => {
+    for (let i = 0; i < quotes.length; i++) {
+      const quote = quotes[i];
+      const character = characters.data.Page.characters.find(
+        (character) => character.id === quote.author.id
+      );
+      if (!character) return;
+      quote.author.name = character.name.full;
+      quote.author.image = character.image.large
+    }
+  });
+
+export default quotes;

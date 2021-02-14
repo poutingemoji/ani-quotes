@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import { HashRouter, Route } from "react-router-dom";
 import Home from "./pages";
-import About from "./pages/about";
-import Menu from "./pages/menu";
+import Topics from "./pages/topics";
+import Series from "./pages/series";
+import QuoteOfTheDay from "./pages/quote-of-the-day";
 import Footer from "./components/Footer";
 import Dropdown from "./components/Dropdown";
 
@@ -35,8 +36,9 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle} />
 
       <Route path="/" exact component={Home} />
-      <Route path="/menu" component={Menu} />
-      <Route path="/about" component={About} />
+      <Route path="/series" component={Series} />
+      <Route path="/topics" component={Topics} />
+      <Route path="/quote_of_the_day" component={QuoteOfTheDay} />
       <Footer />
     </HashRouter>
   );

@@ -1,47 +1,29 @@
 import React from "react";
 import quotes from "../data/quotes";
-
+import { getRandomQuote } from "../utils/Helper";
+import Card from "../components/Card";
 class Hero extends React.Component {
   state = {
     quote: quotes[0],
   };
 
-  generateRandomQuote = () => {
-    this.setState({
-      quote: quotes[Math.floor(Math.random() * quotes.length)],
-    });
-    //Shuffling
-    quotes.sort(function () {
-      return 0.5 - Math.random();
-    });
-  };
-
   render() {
-    console.log(this.state.quote.socialMedia);
     return (
-      <div className="bg-white h-screen flex flex-col justify-center items-center">
-        <h1 className="lg:text-9xl md:text-7xl sm:text-5xl text-3xl font-black mb-14 text-center">
-          Social Media Quotes
+      <div className="bg-background text-pale-silver h-screen flex flex-col justify-center items-center">
+        <h1 className="lg:text-9xl md:text-7xl sm:text-5xl text-3xl font-bold mb-2 text-center">
+          AniQuotes
         </h1>
         <button
-          className="py-6 px-10 bg-blue-500 rounded-full text-3xl hover:bg-blue-400 active:bg-blue-300 transition duration-300 ease-in-out flex items-center animate-bounce"
-          onClick={() => this.generateRandomQuote()}
+          className="text-pale-silver lg:text-4xl md:text-2xl sm:text-2xl text-lg py-6 px-10 bg-french-blue hover:bg-star-command-blue rounded-md flex items-center"
+          onClick={() => this.setState({ quote: getRandomQuote() })}
         >
-          Click For A New Quote <i className="ml-2.5 fas fa-random"></i>
+          Randomize the Quote <i className="ml-2.5 fas fa-random"></i>
         </button>
-
-        <div className="card text-2xl mx-48">
-          <p className="card-text">{this.state.quote.text}</p>
-          <h5 className="card-title">
-            -{" "}
-            <img
-              className="inline h-7 align-middle rounded-full"
-              src={this.state.quote.author.avatarUrl}
-            />{" "}
-            {this.state.quote.author.username}{" "}
-            <i className={`fab fa-${this.state.quote.socialMedia} fa-lg`}></i>
-          </h5>
-        </div>
+        <Card
+          image={this.state.quote.author.image}
+          title={this.state.quote.author.name}
+          content={this.state.quote.text}
+        ></Card>
       </div>
     );
   }

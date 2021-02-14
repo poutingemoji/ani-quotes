@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 const Navbar = ({ toggle }) => {
   return (
     <nav
-      className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm"
+      className="flex justify-start items-center h-16 text-white bg-foreground fixed shadow-sm w-full hover:text-gray-900"
       role="navigation"
     >
       <Link to="/" className="pl-8">
-        SMQuotes
+        <span className="text-white font-black text-4xl">A</span>
+        <span className="text-blue-jeans font-black text-4xl">Q</span>
       </Link>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg
@@ -26,18 +27,18 @@ const Navbar = ({ toggle }) => {
           />
         </svg>
       </div>
-      <div className="pr-8 md:block  hidden">
+      <div className="pr-8 md:block hidden font-semibold">
         <Link to="/" className="p-4">
           Home
         </Link>
-        <Link to="/menu" className="p-4">
-          Menu
+        <Link to="/series" className="p-4">
+          Series
         </Link>
-        <Link to="/about" className="p-4">
-          About
+        <Link to="/topics" className="p-4">
+          Topics
         </Link>
-        <Link to="/contact" className="p-4">
-          Contact
+        <Link to="/quote_of_the_day" className="p-4">
+          Quote Of The Day
         </Link>
       </div>
     </nav>
