@@ -9,7 +9,7 @@ const Navbar = ({ toggle }) => {
     >
       <Link to="/" className="pl-8">
         <span className="text-white font-black text-4xl">A</span>
-        <span className="text-blue-jeans font-black text-4xl">Q</span>
+        <span className="text-blue font-black text-4xl">Q</span>
       </Link>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg
