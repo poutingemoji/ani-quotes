@@ -2,7 +2,7 @@
   "name": "ani-quotes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://poutingemoji.github.io/tailwind-poem/",
+  "homepage": "https://poutingemoji.github.io/ani-quotes/",
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@tailwindcss/postcss7-compat": "^2.0.3",

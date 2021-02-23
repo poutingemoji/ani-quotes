@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex justify-center items-center h-16 bg-black text-white">
-      <p>Copyright © 2021 SMQuotes All rights reserved.</p>
+    <div className="flex items-center justify-center h-16 text-white bg-black">
+      <p>Copyright © 2021 AniQuotes All rights reserved.</p>
     </div>
   );
 };

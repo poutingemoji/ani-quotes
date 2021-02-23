@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 const Navbar = ({ toggle }) => {
   return (
     <nav
-      className="flex justify-start items-center h-16 text-white bg-foreground fixed shadow-sm w-full hover:text-gray-900"
+      className="fixed flex items-center justify-between w-full h-16 text-white shadow-sm md:justify-evenly bg-foreground "
       role="navigation"
     >
       <Link to="/" className="pl-8">
-        <span className="text-white font-black text-4xl">A</span>
-        <span className="text-blue font-black text-4xl">Q</span>
+        <span className="text-4xl font-black text-white" style={{letterSpacing:"-0.2em"}}>
+          A
+        </span>
+        <span className="text-4xl font-black text-blue">Q</span>
       </Link>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg
@@ -27,20 +29,21 @@ const Navbar = ({ toggle }) => {
           />
         </svg>
       </div>
-      <div className="pr-8 md:block hidden font-semibold">
-        <Link to="/" className="p-4">
+      <div className="hidden pr-8 font-semibold md:block">
+        <Link to="/" className="p-4 hover:text-gray-900">
           Home
         </Link>
-        <Link to="/series" className="p-4">
-          Series
+        <Link to="/authors" className="p-4 hover:text-gray-900">
+          Authors
         </Link>
-        <Link to="/topics" className="p-4">
+        <Link to="/topics" className="p-4 hover:text-gray-900">
           Topics
         </Link>
-        <Link to="/quote_of_the_day" className="p-4">
+        <Link to="/quote_of_the_day" className="p-4 hover:text-gray-900">
           Quote Of The Day
         </Link>
       </div>
+      <div className="hidden md:block"></div>
     </nav>
   );
 };

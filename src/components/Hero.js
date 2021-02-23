@@ -1,34 +1,36 @@
-import React from "react";
-import quotes from "../data/quotes";
-import { getRandomQuote } from "../utils/Helper";
+import React, { useState } from "react";
+import { randomChoice } from "../utils/Helper";
 import Card from "../components/Card";
-class Hero extends React.Component {
-  state = {
-    quote: quotes[0],
-  };
+function Hero({ quotes }) {
+  const [quote, setQuote] = useState(randomChoice(quotes));
+  console.log("HERO", quotes);
 
-  render() {
+  if (quotes.length > 0) {
     return (
       <>
-        <div className="bg-background h-screen flex flex-col items-center">
-            <h1 className="mt-32 text-white lg:text-7xl md:text-5xl sm:text-3xl text-3xl font-bold mb-2 text-center">
-              AniQuotes
-            </h1>
-            <button
-              className="text-white bg-green lg:text-xl md:text-xl sm:text-xl text-lg py-2 px-3 my-4 bg-french-blue hover:bg-star-command-blue rounded-md flex items-center"
-              onClick={() => this.setState({ quote: getRandomQuote() })}
-            >
-              Randomize the Quote <i className="ml-2.5 fas fa-random"></i>
-            </button>
-         
+        <div className="flex flex-col items-center h-screen bg-background">
+          <h1 className="mt-32 mb-2 text-4xl font-bold text-center text-white lg:text-7xl md:text-5xl sm:text-4xl">
+            <span className="text-white">Ani</span>
+            <span className="text-blue">Quotes</span>
+          </h1>
+
+          <button
+            className="flex items-center px-3 py-2 my-4 text-lg text-white rounded-md bg-green lg:text-xl md:text-xl sm:text-xl bg-french-blue hover:bg-star-command-blue"
+            onClick={() => setQuote(randomChoice(quotes))}
+          >
+            Randomize the Quote <i className="ml-2.5 fas fa-random"></i>
+          </button>
+
           <Card
-            image={this.state.quote.author.image}
-            title={this.state.quote.author.name}
-            content={this.state.quote.text}
+            image={quote.author.image}
+            title={quote.author.name}
+            content={quote.text}
           ></Card>
         </div>
       </>
     );
+  } else {
+    return <div>Loading...</div>;
   }
 }
 

@@ -2,10 +2,11 @@ import React from 'react';
 import Content from '../components/Content';
 import Hero from '../components/Hero';
 
-const Home = () => {
+const Home = ({quotes}) => {
+  console.log("YAY", quotes)
   return (
     <>
-      <Hero />
+      <Hero quotes={quotes}/>
       <Content />
     </>
   );

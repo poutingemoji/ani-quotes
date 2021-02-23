@@ -1,6 +1,6 @@
 import React from "react";
 import quotes from "../data/quotes";
-import {getRandomQuote} from "../utils/Helper"
+import {randomChoice} from "../utils/Helper"
 import Card from "../components/Card"
 
 const months = [
@@ -26,7 +26,7 @@ class QuoteOfTheDay extends React.Component {
 
   componentDidMount() {
     this.interval = setInterval(() => {
-      this.setState({ date: new Date(), quote: getRandomQuote() });
+      this.setState({ date: new Date(), quote: randomChoice(quotes) });
     }, calculateSecondsUntilEndOfDate(this.state.date) / 10);
   }
 
@@ -38,8 +38,8 @@ class QuoteOfTheDay extends React.Component {
     console.log(calculateSecondsUntilEndOfDate(this.state.date));
     return (
       <>
-        <div className="h-screen flex flex-col justify-center items-center bg-yellow-300">
-          <h1 className="text-9xl uppercase font-black">Quote Of The Day</h1>
+        <div className="flex flex-col items-center justify-center h-screen bg-yellow-300">
+          <h1 className="font-black uppercase text-9xl">Quote Of The Day</h1>
 
           <p>
             {months[this.state.date.getMonth()]}{" "}
