@@ -4,7 +4,7 @@ const Topics = ({ quotes, isLoading }) => {
   const topics = groupBy(quotes, (quote) => quote.topics);
   return (
     <>
-      <div className="flex items-center justify-center h-screen bg-purple-300">
+      <div className="flex items-center justify-center h-screen bg-background">
         <h1 className="font-black uppercase text-9xl">Topics Page</h1>
       </div>
       {Object.keys(topics).map((key) => (

@@ -35,7 +35,7 @@ function QuoteOfTheDay({ quotes, isLoading }) {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-screen bg-yellow-300">
+      <div className="flex flex-col items-center justify-center h-screen bg-background">
         <h1 className="font-black uppercase text-9xl">Quote Of The Day</h1>
 
         <p>
