@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ani-quotes/static/css/main.755c14dc.chunk.css",
-    "main.js": "/ani-quotes/static/js/main.b425612f.chunk.js",
-    "main.js.map": "/ani-quotes/static/js/main.b425612f.chunk.js.map",
+    "main.css": "/ani-quotes/static/css/main.792e2a91.chunk.css",
+    "main.js": "/ani-quotes/static/js/main.21b4aa96.chunk.js",
+    "main.js.map": "/ani-quotes/static/js/main.21b4aa96.chunk.js.map",
     "runtime-main.js": "/ani-quotes/static/js/runtime-main.09fb59f1.js",
     "runtime-main.js.map": "/ani-quotes/static/js/runtime-main.09fb59f1.js.map",
     "static/js/2.1dc59b3e.chunk.js": "/ani-quotes/static/js/2.1dc59b3e.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.1a52faa0.chunk.js": "/ani-quotes/static/js/3.1a52faa0.chunk.js",
     "static/js/3.1a52faa0.chunk.js.map": "/ani-quotes/static/js/3.1a52faa0.chunk.js.map",
     "index.html": "/ani-quotes/index.html",
-    "static/css/main.755c14dc.chunk.css.map": "/ani-quotes/static/css/main.755c14dc.chunk.css.map",
+    "static/css/main.792e2a91.chunk.css.map": "/ani-quotes/static/css/main.792e2a91.chunk.css.map",
     "static/js/2.1dc59b3e.chunk.js.LICENSE.txt": "/ani-quotes/static/js/2.1dc59b3e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.09fb59f1.js",
     "static/js/2.1dc59b3e.chunk.js",
-    "static/css/main.755c14dc.chunk.css",
-    "static/js/main.b425612f.chunk.js"
+    "static/css/main.792e2a91.chunk.css",
+    "static/js/main.21b4aa96.chunk.js"
   ]
 }
