@@ -7,20 +7,24 @@ const Topics = ({ quotes, isLoading }) => {
       <div className="flex items-center justify-center h-screen bg-background">
         <h1 className="font-black uppercase text-9xl">Topics Page</h1>
       </div>
-      {Object.keys(topics).map((key) => (
-        <div className="text-5xl">
-          {key}
-          <div>
-            {topics[key].map((quote) => (
-              <>
-                <div className="py-4 text-2xl">
-                  "{quote.text}" - {quote.author.name}
-                </div>
-              </>
-            ))}
-          </div>
-        </div>
-      ))}
+      <div className="mx-32">
+        {Object.keys(topics)
+          .sort()
+          .map((key) => (
+            <div>
+              <span className="text-5xl font-black">{key}</span>
+              <div>
+                {topics[key].map((quote) => (
+                  <>
+                    <div className="py-4 text-2xl font-normal">
+                      "{quote.text}" - {quote.author.name}
+                    </div>
+                  </>
+                ))}
+              </div>
+            </div>
+          ))}
+      </div>
     </>
   );
 };
