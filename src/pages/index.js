@@ -1,12 +1,12 @@
-import React from 'react';
-import Content from '../components/Content';
-import Hero from '../components/Hero';
+import React from "react";
+import Content from "../components/Content";
+import Hero from "../components/Hero";
 
-const Home = ({quotes}) => {
-  console.log("YAY", quotes)
+const Home = ({ quotes, isLoading }) => {
+  console.log("YAY", quotes);
   return (
     <>
-      <Hero quotes={quotes}/>
+      <Hero quotes={quotes} isLoading={isLoading} />
       <Content />
     </>
   );

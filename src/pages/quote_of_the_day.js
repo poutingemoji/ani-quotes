@@ -1,0 +1,79 @@
+import React, { useState, useEffect } from "react";
+import { randomChoice } from "../utils/Helper";
+import Card from "../components/Card";
+import Loading from "../components/Loading";
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+function QuoteOfTheDay({ quotes, isLoading }) {
+  const [date, setDate] = useState(new Date());
+  const [quote, setQuote] = useState(randomChoice(quotes));
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDate(new Date());
+      setQuote(randomChoice(quotes));
+    }, calculateSecondsUntilEndOfDate(date) / 10);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  if (isLoading) return <Loading />;
+  console.log(calculateSecondsUntilEndOfDate(date));
+
+  return (
+    <>
+      <div className="flex flex-col items-center justify-center h-screen bg-yellow-300">
+        <h1 className="font-black uppercase text-9xl">Quote Of The Day</h1>
+
+        <p>
+          {months[date.getMonth()]} {date.getDate() + nth(date.getDate())}
+        </p>
+      </div>
+      <div> {date.getSeconds()} </div>
+
+      <Card
+        image={quote.author.image}
+        title={quote.author.name}
+        content={quote.text}
+      ></Card>
+    </>
+  );
+}
+
+export default QuoteOfTheDay;
+
+function calculateSecondsUntilEndOfDate(date) {
+  return (
+    24 * 60 * 60 -
+    date.getHours() * 60 * 60 -
+    date.getMinutes() * 60 -
+    date.getSeconds()
+  );
+}
+
+function nth(d) {
+  if (d > 3 && d < 21) return "th";
+  switch (d % 10) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+}

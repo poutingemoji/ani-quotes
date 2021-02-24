@@ -4,10 +4,10 @@ import { HashRouter, Route } from "react-router-dom";
 import Home from "./pages";
 import Topics from "./pages/topics";
 import Authors from "./pages/authors";
-import QuoteOfTheDay from "./pages/quote-of-the-day";
+import QuoteOfTheDay from "./pages/quote_of_the_day";
 import Footer from "./components/Footer";
 import Dropdown from "./components/Dropdown";
-import authors from "./data/authors";
+import authorIds from "./data/authorIds";
 
 const url = "https://graphql.anilist.co",
   options = {
@@ -40,16 +40,14 @@ const url = "https://graphql.anilist.co",
         }
       `,
       variables: {
-        id_in: Object.keys(authors),
+        id_in: Object.keys(authorIds),
       },
     }),
   };
 
 function App() {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  //const [authors, setAuthors] = useState(authors);
   const [quotes, setQuotes] = useState([]);
 
   const toggle = () => {
@@ -57,6 +55,29 @@ function App() {
   };
 
   useEffect(() => {
+    fetch(url, options)
+      .then((res) => res.json())
+      .then((result) => {
+        let newQuotes = [];
+        Object.entries(authorIds).forEach(([id, charQuotes]) => {
+          const character = result.data.Page.characters.find(
+            (character) => character.id === parseInt(id)
+          );
+          charQuotes.map((newQuote) =>
+            newQuotes.push(
+              Object.assign(newQuote, {
+                author: {
+                  image: character.image.large,
+                  name: character.name.full,
+                },
+              })
+            )
+          );
+        });
+        setQuotes(newQuotes);
+        setIsLoading(false);
+      });
+
     const hideMenu = () => {
       if (window.innerWidth > 768 && isOpen) {
         setIsOpen(false);
@@ -64,37 +85,9 @@ function App() {
       }
     };
     window.addEventListener("resize", hideMenu);
-    window.removeEventListener("resize", hideMenu);
-
-    const quotes = [];
-    Object.entries(authors).forEach(([key, value]) => {
-      for (let i = 0; i < value.length; i++) {
-        const quote = value[i];
-        quote.author = { id: parseInt(key) };
-        quotes.push(quote);
-      }
-    });
-    fetch(url, options)
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          for (let i = 0; i < quotes.length; i++) {
-            const quote = quotes[i];
-            const character = result.data.Page.characters.find(
-              (character) => character.id === quote.author.id);
-            if (!character) continue;
-            quote.author.name = character.name.full;
-            quote.author.image = character.image.large;
-          }
-          setIsLoaded(true);
-          setQuotes(quotes);
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
-    
+    return () => {
+      window.removeEventListener("resize", hideMenu);
+    };
   }, []);
 
   return (
@@ -102,10 +95,25 @@ function App() {
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
 
-      <Route path="/" exact component={() => <Home quotes={quotes}/>} />
-      <Route path="/authors" component={Authors} />
-      <Route path="/topics" component={Topics} />
-      <Route path="/quote_of_the_day" component={QuoteOfTheDay} />
+      <Route
+        path="/"
+        exact
+        component={() => <Home quotes={quotes} isLoading={isLoading} />}
+      />
+      <Route
+        path="/authors"
+        component={() => <Authors quotes={quotes} isLoading={isLoading} />}
+      />
+      <Route
+        path="/topics"
+        component={() => <Topics quotes={quotes} isLoading={isLoading} />}
+      />
+      <Route
+        path="/quote_of_the_day"
+        component={() => (
+          <QuoteOfTheDay quotes={quotes} isLoading={isLoading} />
+        )}
+      />
       <Footer />
     </HashRouter>
   );

@@ -1,10 +1,27 @@
 import React from "react";
-
-const Topics = () => {
+import { groupBy } from "../utils/Helper";
+const Topics = ({ quotes, isLoading }) => {
+  const topics = groupBy(quotes, (quote) => quote.topics);
   return (
-    <div className="h-screen flex justify-center items-center bg-yellow-300">
-      <h1 className="text-9xl uppercase font-black">Topics Page</h1>
-    </div>
+    <>
+      <div className="flex items-center justify-center h-screen bg-purple-300">
+        <h1 className="font-black uppercase text-9xl">Topics Page</h1>
+      </div>
+      {Object.keys(topics).map((key) => (
+        <div className="text-5xl">
+          {key}
+          <div>
+            {topics[key].map((quote) => (
+              <>
+                <div className="py-4 text-2xl">
+                  "{quote.text}" - {quote.author.name}
+                </div>
+              </>
+            ))}
+          </div>
+        </div>
+      ))}
+    </>
   );
 };
 

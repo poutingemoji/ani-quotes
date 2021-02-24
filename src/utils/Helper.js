@@ -6,3 +6,14 @@ export function randomBetween(min, max) {
 export function randomChoice(arr) {
   return arr[randomBetween(0, arr.length - 1)];
 }
+
+export function groupBy(arr, fn) {
+  return arr.reduce((result, item) => {
+    const keys = Array.isArray(fn(item)) ? fn(item) : [fn(item)];
+    keys.map((key) => {
+      if (!result[key]) result[key] = [];
+      result[key].push(item);
+    });
+    return result;
+  }, {});
+}
