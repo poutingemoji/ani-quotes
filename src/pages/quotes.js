@@ -4,8 +4,8 @@ import Gallery from "../components/Gallery";
 import Loading from "../components/Loading";
 
 const Quotes = ({ quotes, isLoading }) => {
-  if (isLoading) return <Loading />;
   let { topic = "", author = "" } = useParams(); 
+  if (isLoading) return <Loading />;
   return (
     <div className="pt-20">
       {
