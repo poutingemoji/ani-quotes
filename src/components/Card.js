@@ -1,7 +1,7 @@
 import React from "react";
 const Card = ({ image, title, content }) => {
   return (
-    <div className="flex flex-col w-8/12 p-3 sm:w-5/12 md:w-2/12">
+    <div className="flex flex-col p-3 break-inside">
       <div className="flex flex-col flex-1 overflow-hidden rounded-lg shadow-lg bg-foreground">
         <div
           className="bg-cover h-80"

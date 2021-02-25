@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { randomChoice } from "../utils/Helper";
 import Card from "./Card";
-import Loading from "./Loading";
-function Hero({ quotes, isLoading }) {
+
+function Hero({ quotes }) {
   const [quote, setQuote] = useState(randomChoice(quotes));
-  if (isLoading) return <Loading />;
   return (
     <>
       <div className="flex flex-col items-center h-screen bg-background">

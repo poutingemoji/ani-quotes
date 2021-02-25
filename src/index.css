@@ -3,6 +3,42 @@
 @tailwind utilities;
 
 body {
-  color: rgb(201,215,227);
-  background-color: rgb(11,22,34);
+  color: rgb(201, 215, 227);
+  background-color: rgb(11, 22, 34);
+}
+
+@layer utilities {
+  @variants responsive {
+    .masonry {
+      column-count: 1;
+      column-gap: 0;
+    }
+
+    @media only screen and (min-width: 640px) {
+      .masonry {
+        column-count: 2;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .masonry {
+        column-count: 3;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      .masonry {
+        column-count: 4;
+      }
+    }
+
+    @media only screen and (min-width: 1280px) {
+      .masonry {
+        column-count: 5;
+      }
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
 }

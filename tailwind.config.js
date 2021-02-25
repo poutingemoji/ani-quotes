@@ -8,6 +8,14 @@ module.exports = {
     },
 
     extend: {
+      maxHeight: {
+        0: "0",
+        "1/4": "25%",
+        "1/2": "50%",
+        "3/4": "75%",
+        full: "100%",
+      },
+
       colors: {
         background: "rgb(11,22,34)",
         foreground: "rgb(21,31,46)",

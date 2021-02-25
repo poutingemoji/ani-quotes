@@ -1,6 +1,8 @@
 import React from "react";
 import { groupBy } from "../utils/Helper";
+import Loading from "../components/Loading"
 const Topics = ({ quotes, isLoading }) => {
+  if (isLoading) return <Loading />;
   const topics = groupBy(quotes, (quote) => quote.topics);
   return (
     <>
