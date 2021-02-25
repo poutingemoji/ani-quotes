@@ -5,6 +5,7 @@ import Home from "./pages";
 import Topics from "./pages/topics";
 import Authors from "./pages/authors";
 import QuoteOfTheDay from "./pages/quote_of_the_day";
+import Quotes from "./pages/quotes";
 import Footer from "./components/Footer";
 import Dropdown from "./components/Dropdown";
 import authorIds from "./data/authorIds";
@@ -102,11 +103,21 @@ function App() {
       />
       <Route
         path="/authors"
+        exact
         component={() => <Authors quotes={quotes} isLoading={isLoading} />}
       />
       <Route
+        path="/authors/:author"
+        component={() => <Quotes quotes={quotes} isLoading={isLoading} />}
+      />
+      <Route
         path="/topics"
+        exact
         component={() => <Topics quotes={quotes} isLoading={isLoading} />}
+      />
+      <Route
+        path="/topics/:topic"
+        component={() => <Quotes quotes={quotes} isLoading={isLoading} />}
       />
       <Route
         path="/quote_of_the_day"
