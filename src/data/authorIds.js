@@ -1,3 +1,4 @@
+import dragonAndTiger from "../images/quotes/dragon-and-tiger.png"
 const authorIds = {
   496: [{ text: "People die if they are killed...", topics: ["Death"] }],
   2754: [
@@ -16,6 +17,7 @@ const authorIds = {
   ],
   12295: [
     {
+      image: dragonAndTiger,
       text:
         "I'm a dragon, You're a tiger. And for centuries, only dragons and tigers have been considered equals. So it doesn't matter that you're not here with me right now, because I'll transcend space and time so I can always be with you. And my feelings for you will never ever change.",
       topics: ["Love"],

@@ -34,7 +34,7 @@ const Topics = ({ quotes, isLoading }) => {
           {Object.keys(topics).map((key) => (
             <Link to={`/topics/${snakeCase(key)}`}>
               <button
-                className="flex flex-col items-center justify-center m-4 w-80 h-80 hover:underline"
+                className="flex flex-col items-center justify-center m-4 rounded-lg w-80 h-80 hover:underline"
                 style={{
                   backgroundImage: `linear-gradient(rgba(11, 22, 34, 0.5), rgba(11,22,34,0.5)), url(${topics[key].image})`,
                   backgroundSize: "cover",

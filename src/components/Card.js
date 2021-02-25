@@ -6,7 +6,7 @@ const Card = ({ author, text, image }) => {
         {image && (
           <div
             className="bg-cover h-96"
-            style={{ backgroundImage: `url(${image})` }}
+            style={{ background: `url(${image}) no-repeat center center`, backgroundPosition: "center", backgroundSize: "cover" }}
           ></div>
         )}
         <div className="flex flex-col flex-1 p-4">
@@ -18,7 +18,9 @@ const Card = ({ author, text, image }) => {
               className="object-cover w-8 h-8 mr-2 rounded-full"
               src={author.image}
             />
-            <h3 className="mb-2 text-xl font-bold text-gray-900">{author.name}</h3>
+            <h3 className="mb-2 text-xl font-bold text-gray-900">
+              {author.name}
+            </h3>
           </div>
         </div>
       </div>
