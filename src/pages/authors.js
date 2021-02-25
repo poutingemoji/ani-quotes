@@ -19,12 +19,12 @@ const Authors = ({ quotes, isLoading }) => {
             console.log("HERE", authors[key]);
             const author = authors[key][0].author;
             return (
-              <div key={i} className="flex text-4xl">
+              <button key={i} className="flex text-4xl">
                 <Tippy content={author.name}>
                   <img className="m-4 rounded-lg w-60" src={author.image} />
                 </Tippy>
                 {/*<p>{key}</p> */}
-              </div>
+              </button>
             );
           })}
       </div>

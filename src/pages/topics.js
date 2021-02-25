@@ -1,9 +1,9 @@
 import React from "react";
 import { groupBy } from "../utils/Helper";
 import Loading from "../components/Loading";
-import death from "../images/death.png";
-import motivational from "../images/motivational.png";
-import love from "../images/love.png";
+import death from "../images/topics/death.png";
+import motivational from "../images/topics/motivational.png";
+import love from "../images/topics/love.png";
 const topics = {
   Death: {
     icon: "skull-crossbones",
