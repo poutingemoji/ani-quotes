@@ -4,9 +4,9 @@ function Gallery({ quotes }) {
     <div className="mx-5 masonry before:box-inherit after:box-inherit">
       {quotes.map((quote) => (
         <Card
-          image={quote.author.image}
-          title={quote.author.name}
-          content={quote.text}
+          image={quote.image}
+          text={quote.text}
+          author={quote.author}
         />
       ))}
     </div>

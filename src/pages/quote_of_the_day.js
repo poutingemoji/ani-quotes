@@ -46,8 +46,8 @@ function QuoteOfTheDay({ quotes, isLoading }) {
 
       <Card
         image={quote.author.image}
-        title={quote.author.name}
-        content={quote.text}
+        text={quote.text}
+        author={quote.author}
       ></Card>
     </>
   );
