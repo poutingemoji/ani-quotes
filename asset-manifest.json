@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ani-quotes/static/css/main.ece51986.chunk.css",
-    "main.js": "/ani-quotes/static/js/main.105315a6.chunk.js",
-    "main.js.map": "/ani-quotes/static/js/main.105315a6.chunk.js.map",
+    "main.js": "/ani-quotes/static/js/main.f2530dfc.chunk.js",
+    "main.js.map": "/ani-quotes/static/js/main.f2530dfc.chunk.js.map",
     "runtime-main.js": "/ani-quotes/static/js/runtime-main.f0472025.js",
     "runtime-main.js.map": "/ani-quotes/static/js/runtime-main.f0472025.js.map",
     "static/css/2.98d788f3.chunk.css": "/ani-quotes/static/css/2.98d788f3.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.98d788f3.chunk.css",
     "static/js/2.ff771c1c.chunk.js",
     "static/css/main.ece51986.chunk.css",
-    "static/js/main.105315a6.chunk.js"
+    "static/js/main.f2530dfc.chunk.js"
   ]
 }
