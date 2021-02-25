@@ -4,7 +4,7 @@ const Card = ({ image, title, content }) => {
     <div className="flex flex-col p-3 break-inside">
       <div className="flex flex-col flex-1 overflow-hidden rounded-lg shadow-lg bg-foreground">
         <div
-          className="bg-cover h-80"
+          className="bg-cover h-96"
           style={{ backgroundImage: `url(${image})` }}
         ></div>
         <div className="flex flex-col flex-1 p-4">
