@@ -1,4 +1,5 @@
 import Card from "./Card";
+
 function Gallery({ quotes }) {
   return (
     <div className="mx-5 masonry before:box-inherit after:box-inherit">

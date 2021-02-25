@@ -1,25 +1,11 @@
-import React from "react";
-import { groupBy } from "../utils/Helper";
+import { snakeCase } from "change-case";
+import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
 import death from "../images/topics/death.png";
-import motivational from "../images/topics/motivational.png";
 import love from "../images/topics/love.png";
-import { Link } from "react-router-dom";
-import {snakeCase} from "change-case"
-const topics = {
-  death: {
-    icon: "skull-crossbones",
-    image: death,
-  },
-  motivational: {
-    icon: "fire",
-    image: motivational,
-  },
-  love: {
-    icon: "heart",
-    image: love,
-  },
-};
+import motivational from "../images/topics/motivational.png";
+import { groupBy } from "../utils/Helper";
+
 const Topics = ({ quotes, isLoading }) => {
   if (isLoading) return <Loading />;
   const topicsA = groupBy(quotes, (quote) => quote.topics);
@@ -41,7 +27,7 @@ const Topics = ({ quotes, isLoading }) => {
                 }}
               >
                 <i className={` fas fa-${topics[key].icon} fa-5x`}> </i>
-                <p className="text-2xl capitalize">{key}</p>
+                <p className="text-2xl">{key}</p>
               </button>
             </Link>
           ))}
@@ -69,3 +55,18 @@ const Topics = ({ quotes, isLoading }) => {
 };
 
 export default Topics;
+
+const topics = {
+  Death: {
+    icon: "skull-crossbones",
+    image: death,
+  },
+  Motivational: {
+    icon: "fire",
+    image: motivational,
+  },
+  Love: {
+    icon: "heart",
+    image: love,
+  },
+};

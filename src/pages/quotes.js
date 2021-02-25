@@ -1,14 +1,11 @@
-import { useParams } from "react-router-dom";
-import { groupBy } from "../utils/Helper";
-import Loading from "../components/Loading";
-import Gallery from "../components/Gallery";
 import { capitalCase } from "change-case";
+import { useParams } from "react-router-dom";
+import Gallery from "../components/Gallery";
+import Loading from "../components/Loading";
 
 const Quotes = ({ quotes, isLoading }) => {
-  console.log(quotes, isLoading);
-  let { topic = "", author = "" } = useParams();
-  console.log(capitalCase(author))
   if (isLoading) return <Loading />;
+  let { topic = "", author = "" } = useParams(); 
   return (
     <div className="pt-20">
       {

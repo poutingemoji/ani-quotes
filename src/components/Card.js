@@ -1,5 +1,4 @@
-import React from "react";
-const Card = ({ author, text, image }) => {
+function Card({ author, text, image }) {
   return (
     <div className="flex flex-col p-3 break-inside">
       <div className="flex flex-col flex-1 overflow-hidden rounded-lg shadow-lg bg-foreground">

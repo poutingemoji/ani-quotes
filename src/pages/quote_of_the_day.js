@@ -1,21 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { randomChoice } from "../utils/Helper";
+import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import Loading from "../components/Loading";
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+import { randomChoice } from "../utils/Helper";
 
 function QuoteOfTheDay({ quotes, isLoading }) {
   const [date, setDate] = useState(new Date());
@@ -54,6 +40,21 @@ function QuoteOfTheDay({ quotes, isLoading }) {
 }
 
 export default QuoteOfTheDay;
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 function calculateSecondsUntilEndOfDate(date) {
   return (

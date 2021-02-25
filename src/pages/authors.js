@@ -1,10 +1,10 @@
-import React from "react";
-import { groupBy } from "../utils/Helper";
-import Loading from "../components/Loading";
 import Tippy from "@tippyjs/react";
-import "tippy.js/dist/tippy.css";
+import { snakeCase } from "change-case";
 import { Link } from "react-router-dom";
-import {snakeCase } from "change-case"
+import "tippy.js/dist/tippy.css";
+import Loading from "../components/Loading";
+import { groupBy } from "../utils/Helper";
+
 const Authors = ({ quotes, isLoading }) => {
   if (isLoading) return <Loading />;
   const authors = groupBy(quotes, (quote) => quote.author.name);

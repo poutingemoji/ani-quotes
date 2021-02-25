@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { randomChoice } from "../utils/Helper";
-import Card from "./Card";
 
 function Hero({ quotes }) {
   const [quote, setQuote] = useState(randomChoice(quotes));

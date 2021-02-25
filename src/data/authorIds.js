@@ -1,4 +1,5 @@
 import dragonAndTiger from "../images/quotes/dragon-and-tiger.png"
+
 const authorIds = {
   496: [{ text: "People die if they are killed...", topics: ["Death"] }],
   2754: [
