@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../images/logo.png";
 
 const Navbar = ({ toggle }) => {
   return (
@@ -7,13 +8,7 @@ const Navbar = ({ toggle }) => {
       role="navigation"
     >
       <Link to="/" className="pl-8">
-        <span
-          className="text-4xl font-black text-white"
-          style={{ letterSpacing: "-0.2em" }}
-        >
-          A
-        </span>
-        <span className="text-4xl font-black text-blue">Q</span>
+        <img className="h-12"src={logo}/>
       </Link>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg
