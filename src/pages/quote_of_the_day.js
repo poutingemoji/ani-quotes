@@ -22,13 +22,11 @@ function QuoteOfTheDay({ quotes, isLoading }) {
   return (
     <>
       <div className="flex flex-col items-center justify-center h-screen mx-10 bg-background">
-        <h1 className="text-5xl">{quote.text}</h1>
-
-        <p>
+        <h1 className="text-5xl">
           {months[date.getMonth()]} {date.getDate() + nth(date.getDate())}
-        </p>
+        </h1>
+        <p>{quote.text}</p>
       </div>
-      <div> {date.getSeconds()} </div>
     </>
   );
 }

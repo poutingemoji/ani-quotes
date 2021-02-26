@@ -43,7 +43,7 @@ const authorIds = {
     {
       text:
         "If wishes could be granted, if desires could be fulfilled, then I wouldn’t wish or desire for anything after all. The things you’re handed on a silver platter are never genuine, and never everlasting. And that is why I’ll always keep searching.",
-      topics: ["Patience"],
+      topics: ["Patience", "Motivational"],
     },
   ],
 };

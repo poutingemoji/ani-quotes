@@ -29,23 +29,6 @@ const Topics = ({ quotes, isLoading }) => {
           </Link>
         ))}
       </div>
-
-      <div className="mx-32">
-        {Object.keys(topicsA)
-          .sort()
-          .map((key) => (
-            <>
-              <span className="text-5xl font-black">{key}</span>
-              <div>
-                {topicsA[key].map((quote) => (
-                  <div className="py-4 text-2xl font-normal">
-                    "{quote.text}" - {quote.author.name}
-                  </div>
-                ))}
-              </div>
-            </>
-          ))}
-      </div>
     </>
   );
 };

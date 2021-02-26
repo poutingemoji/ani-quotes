@@ -27,9 +27,9 @@ function Card({ author, text, image, tags }) {
               {author.name}
             </h3>
           </div>
-          <div>
+          <div className="flex flex-wrap mt-1">
             {tags && tags.map((tag) => (
-              <span className="px-2 text-white rounded-full" style={{ backgroundColor: topics[tag]?.hex || ""}}>{tag}</span>
+              <span className="px-2 m-1 text-white rounded-full" style={{ backgroundColor: topics[tag]?.hex || ""}}>{tag}</span>
             ))}
           </div>
         </div>
