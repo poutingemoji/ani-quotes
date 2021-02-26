@@ -14,16 +14,15 @@ const Authors = ({ quotes, isLoading }) => {
         <h1 className="text-5xl font-black uppercase">Authors</h1>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 m-4 md:grid-cols-3 md:gap-6 md:m-6 lg:grid-cols-4 2xl:grid-cols-5 bg-background">
+      <div className="grid grid-cols-2 gap-4 m-4 md:grid-cols-3 md:gap-6 md:m-6 lg:grid-cols-4 2xl:grid-cols-5 bg-secondary">
         {Object.keys(authors)
           .sort()
           .map((key, i) => {
             const author = authors[key][0].author;
             return (
-              <Tippy content={author.name}>
+              <Tippy content={author.name} key={i}>
                 <Link to={`/authors/${snakeCase(key)}`}>
                   <button
-                    key={i}
                     className="w-full h-full rounded-lg py-52"
                     style={{
                       backgroundImage: `url(${author.image})`,

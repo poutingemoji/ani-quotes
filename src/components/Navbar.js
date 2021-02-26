@@ -4,11 +4,11 @@ import logo from "../images/logo.png";
 const Navbar = ({ toggle }) => {
   return (
     <nav
-      className="fixed flex items-center justify-between w-full h-16 text-gray-900 shadow-sm md:justify-evenly bg-foreground "
+      className="fixed flex items-center justify-between w-full h-16 shadow-sm text-gray md:justify-evenly bg-primary "
       role="navigation"
     >
       <Link to="/" className="pl-8">
-        <img className="h-12"src={logo}/>
+        <img className="h-12" src={logo} alt="logo"/>
       </Link>
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg

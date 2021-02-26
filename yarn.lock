@@ -11915,9 +11915,9 @@
   "resolved" "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz"
   "version" "1.2.3"
 
-"workbox-background-sync@^5.1.4":
+"workbox-secondary-sync@^5.1.4":
   "integrity" "sha512-AH6x5pYq4vwQvfRDWH+vfOePfPIYQ00nCEB7dJRU1e0n9+9HMRyvI63FlDvtFT2AvXVRsXvUt7DNMEToyJLpSA=="
-  "resolved" "https://registry.yarnpkg.com/workbox-background-sync/-/workbox-background-sync-5.1.4.tgz"
+  "resolved" "https://registry.yarnpkg.com/workbox-secondary-sync/-/workbox-secondary-sync-5.1.4.tgz"
   "version" "5.1.4"
   dependencies:
     "workbox-core" "^5.1.4"
@@ -11956,7 +11956,7 @@
     "strip-comments" "^1.0.2"
     "tempy" "^0.3.0"
     "upath" "^1.2.0"
-    "workbox-background-sync" "^5.1.4"
+    "workbox-secondary-sync" "^5.1.4"
     "workbox-broadcast-update" "^5.1.4"
     "workbox-cacheable-response" "^5.1.4"
     "workbox-core" "^5.1.4"
@@ -11995,7 +11995,7 @@
   "resolved" "https://registry.yarnpkg.com/workbox-google-analytics/-/workbox-google-analytics-5.1.4.tgz"
   "version" "5.1.4"
   dependencies:
-    "workbox-background-sync" "^5.1.4"
+    "workbox-secondary-sync" "^5.1.4"
     "workbox-core" "^5.1.4"
     "workbox-routing" "^5.1.4"
     "workbox-strategies" "^5.1.4"

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  color: rgb(201, 215, 227);
-  background-color: rgb(11, 22, 34);
+  color: theme('colors.gray.DEFAULT');
+  background-color: theme('colors.secondary');
 }
 
 @layer utilities {

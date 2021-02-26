@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Card from "../components/Card";
 import Loading from "../components/Loading";
 import { randomChoice } from "../utils/Helper";
 
@@ -21,7 +20,7 @@ function QuoteOfTheDay({ quotes, isLoading }) {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-screen mx-10 bg-background">
+      <div className="flex flex-col items-center justify-center h-screen mx-10 bg-secondary">
         <h1 className="text-5xl">
           {months[date.getMonth()]} {date.getDate() + nth(date.getDate())}
         </h1>

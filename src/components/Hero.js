@@ -5,7 +5,7 @@ function Hero({ quotes }) {
   const [quote, setQuote] = useState(randomChoice(quotes));
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-screen bg-background">
+      <div className="flex flex-col items-center justify-center h-screen bg-secondary">
         <h1 className="mt-32 mb-2 text-4xl font-bold text-center text-white lg:text-7xl md:text-5xl sm:text-4xl">
           <span className="text-white">Ani</span>
           <span className="text-blue">Quotes</span>
