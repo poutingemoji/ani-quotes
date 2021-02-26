@@ -14,7 +14,7 @@ const Authors = ({ quotes, isLoading }) => {
         <h1 className="text-5xl font-black uppercase">Authors</h1>
       </div>
 
-      <div className="flex flex-row flex-wrap justify-center">
+      <div className="grid grid-cols-2 gap-4 m-4 md:grid-cols-3 md:gap-6 md:m-6 lg:grid-cols-4 2xl:grid-cols-5 bg-background">
         {Object.keys(authors)
           .sort()
           .map((key, i) => {
@@ -22,14 +22,20 @@ const Authors = ({ quotes, isLoading }) => {
             return (
               <Tippy content={author.name}>
                 <Link to={`/authors/${snakeCase(key)}`}>
-                  <button key={i} className="p-4">
-                    <img className="w-64 rounded-lg h-96" src={author.image} />
-                  </button>
+                  <button
+                    key={i}
+                    className="w-full h-full rounded-lg py-52"
+                    style={{
+                      backgroundImage: `url(${author.image})`,
+                      backgroundSize: "cover",
+                    }}
+                  ></button>
                 </Link>
               </Tippy>
             );
           })}
       </div>
+      <div className="flex flex-row flex-wrap justify-center"></div>
     </>
   );
 };
