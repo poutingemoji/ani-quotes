@@ -1,5 +1,4 @@
 import Tippy from "@tippyjs/react";
-import { snakeCase } from "change-case";
 import { Link } from "react-router-dom";
 import "tippy.js/dist/tippy.css";
 import Loading from "../components/Loading";
@@ -21,7 +20,7 @@ const Authors = ({ quotes, isLoading }) => {
             const author = authors[key][0].author;
             return (
               <Tippy content={author.name} key={i}>
-                <Link to={`/authors/${snakeCase(key)}`}>
+                <Link to={`/authors/${author.id}`}>
                   <button
                     className="w-full h-full rounded-lg py-52"
                     style={{

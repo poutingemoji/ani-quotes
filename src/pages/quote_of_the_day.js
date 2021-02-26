@@ -22,7 +22,7 @@ function QuoteOfTheDay({ quotes, isLoading }) {
     <>
       <div className="flex flex-col items-center justify-center h-screen mx-10 bg-secondary">
         <h1 className="text-5xl">
-          {months[date.getMonth()]} {date.getDate() + nth(date.getDate())}
+          {months[date.getMonth()]} {date.getDate()}
         </h1>
         <p>{quote.text}</p>
       </div>
@@ -56,16 +56,3 @@ function calculateSecondsUntilEndOfDate(date) {
   );
 }
 
-function nth(d) {
-  if (d > 3 && d < 21) return "th";
-  switch (d % 10) {
-    case 1:
-      return "st";
-    case 2:
-      return "nd";
-    case 3:
-      return "rd";
-    default:
-      return "th";
-  }
-}

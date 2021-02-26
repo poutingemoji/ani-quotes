@@ -4,7 +4,7 @@ import Gallery from "../components/Gallery";
 import Loading from "../components/Loading";
 
 const Quotes = ({ quotes, isLoading }) => {
-  let { topic = "", author = "" } = useParams(); 
+  let { topic = "", authorId = "" } = useParams(); 
   if (isLoading) return <Loading />;
   return (
     <div className="pt-20">
@@ -12,7 +12,7 @@ const Quotes = ({ quotes, isLoading }) => {
         <Gallery
           quotes={quotes.filter(
             (quote) =>
-              quote.topics.includes(capitalCase(topic)) || quote.author.name === capitalCase(author)
+              quote.topics.includes(capitalCase(topic)) || quote.author.id === authorId
           )}
         ></Gallery>
       }

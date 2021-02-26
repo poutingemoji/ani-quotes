@@ -7,9 +7,17 @@ const Home = ({ quotes, isLoading }) => {
   return (
     <>
       <Hero quotes={quotes} />
-      <Gallery quotes={quotes} />
+      <Gallery quotes={shuffle(quotes)} />
     </>
   );
 };
 
 export default Home;
+
+const shuffle = (arr) =>
+  [...arr].reduceRight(
+    (res, _, __, s) => (
+      res.push(s.splice(0 | (Math.random() * s.length), 1)[0]), res
+    ),
+    []
+  );

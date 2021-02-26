@@ -8,7 +8,7 @@ import QuoteOfTheDay from "./pages/quote_of_the_day";
 import Quotes from "./pages/quotes";
 import Footer from "./components/Footer";
 import Dropdown from "./components/Dropdown";
-import authorIds from "./data/authorIds";
+import authorQuotes from "./data/authorQuotes";
 
 const url = "https://graphql.anilist.co",
   options = {
@@ -41,7 +41,7 @@ const url = "https://graphql.anilist.co",
         }
       `,
       variables: {
-        id_in: Object.keys(authorIds),
+        id_in: Object.keys(authorQuotes),
       },
     }),
   };
@@ -60,16 +60,17 @@ function App() {
       .then((res) => res.json())
       .then((result) => {
         let newQuotes = [];
-        Object.entries(authorIds).forEach(([id, charQuotes]) => {
+        Object.keys(authorQuotes).map((id) => {
           const character = result.data.Page.characters.find(
             (character) => character.id === parseInt(id)
           );
-          charQuotes.map((newQuote) =>
+          authorQuotes[id].map((newQuote) =>
             newQuotes.push(
               Object.assign(newQuote, {
                 author: {
-                  image: character.image.large,
-                  name: character.name.full,
+                  id,
+                  image: character?.image.large,
+                  name: character?.name.full,
                 },
               })
             )
@@ -107,7 +108,7 @@ function App() {
         component={() => <Authors quotes={quotes} isLoading={isLoading} />}
       />
       <Route
-        path="/authors/:author"
+        path="/authors/:authorId"
         component={() => <Quotes quotes={quotes} isLoading={isLoading} />}
       />
       <Route
@@ -131,3 +132,4 @@ function App() {
 }
 
 export default App;
+
