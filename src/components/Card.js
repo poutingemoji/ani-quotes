@@ -9,7 +9,7 @@ function Card({ author, text, image, tags }) {
           <div
             className="bg-cover h-96"
             style={{
-              secondary: `url(${image}) no-repeat center center`,
+              background: `url(${image}) no-repeat center center`,
               backgroundPosition: "center",
               backgroundSize: "cover",
             }}
