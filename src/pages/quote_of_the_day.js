@@ -21,20 +21,14 @@ function QuoteOfTheDay({ quotes, isLoading }) {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-screen bg-background">
-        <h1 className="font-black uppercase text-9xl">Quote Of The Day</h1>
+      <div className="flex flex-col items-center justify-center h-screen mx-10 bg-background">
+        <h1 className="text-5xl">{quote.text}</h1>
 
         <p>
           {months[date.getMonth()]} {date.getDate() + nth(date.getDate())}
         </p>
       </div>
       <div> {date.getSeconds()} </div>
-
-      <Card
-        image={quote.author.image}
-        text={quote.text}
-        author={quote.author}
-      ></Card>
     </>
   );
 }

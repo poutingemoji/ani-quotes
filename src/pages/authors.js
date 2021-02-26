@@ -10,8 +10,8 @@ const Authors = ({ quotes, isLoading }) => {
   const authors = groupBy(quotes, (quote) => quote.author.name);
   return (
     <>
-      <div className="pt-20 mx-32">
-        <h1 className="text-3xl font-black uppercase">Authors</h1>
+      <div className="pt-20 mx-32 text-center">
+        <h1 className="text-5xl font-black uppercase">Authors</h1>
       </div>
 
       <div className="flex flex-row flex-wrap justify-center">

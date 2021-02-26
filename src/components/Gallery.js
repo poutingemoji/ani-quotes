@@ -8,6 +8,7 @@ function Gallery({ quotes }) {
           image={quote.image}
           text={quote.text}
           author={quote.author}
+          tags={quote.topics}
         />
       ))}
     </div>
