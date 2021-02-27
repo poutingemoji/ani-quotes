@@ -8,7 +8,7 @@ function ImageButton({ height = 80, icon, title, numOfQuotes, image }) {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          transition: "all 0.5s",
+          transition: "all 0.3s",
         }}
       >
         <span
