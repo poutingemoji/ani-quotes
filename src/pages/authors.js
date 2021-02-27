@@ -27,7 +27,8 @@ const Authors = ({ quotes, isLoading }) => {
                       backgroundImage: `url(${author.image})`,
                       backgroundSize: "cover",
                     }}
-                  ></button>
+                  >
+                  </button>
                 </Link>
               </Tippy>
             );

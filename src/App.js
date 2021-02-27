@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route, useHistory } from "react-router-dom";
 import Home from "./pages";
 import Topics from "./pages/topics";
 import Authors from "./pages/authors";
@@ -54,6 +54,14 @@ function App() {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const history = useHistory();
+  useEffect(() => {
+    const unlisten = history.listen(() => {
+      window.scrollTo(0, 0);
+    });
+    return unlisten;
+  }, [history]);
 
   useEffect(() => {
     fetch(url, options)
