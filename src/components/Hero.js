@@ -9,7 +9,7 @@ function Hero({ quotes }) {
             width: "calc((100vh * 16) / 9)",
           }}
           className="h-full"
-          src="https://www.youtube.com/embed/z9Ug-3qhrwY?controls=0&autoplay=1&loop=1&mute=1"
+          src="https://www.youtube.com/embed/z9Ug-3qhrwY?controls=0&autoplay=1&loop=1&mute=1&playlist=z9Ug-3qhrwY"
           allowFullScreen
         />
         <div className="absolute z-30 flex flex-col items-center justify-center w-full h-full bg-gradient-to-t from-secondary">
