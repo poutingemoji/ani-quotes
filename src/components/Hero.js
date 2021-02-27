@@ -7,19 +7,18 @@ function Hero({ quotes }) {
     <>
       <div className="flex flex-col items-center justify-center w-full h-screen overflow-x-hidden bg-secondary">
         <iframe
-          style={{ pointerEvents: "none" }}
-          //, height: "133%", zIndex:-1
-          className="absolute h-screen"
-          src="https://www.youtube.com/embed/z9Ug-3qhrwY?controls=0&autoplay=1&loop=1&mute=1&modestbranding=1"
+          style={{ height: "140vh", width: "calc((100vh * 16) / 9)", pointerEvents: "none" }}
+          className="absolute"
+          src="https://www.youtube.com/embed/z9Ug-3qhrwY?controls=0&autoplay=1&loop=1&mute=1"
           allowfullscreen
         />
         <div
           style={{
             background: "linear-gradient(rgba(11, 22, 34, 0.7), rgb(11,22,34))",
           }}
-          className="z-10 flex items-center justify-center w-full h-full bg-black "
+          className="z-30 flex items-center justify-center w-full h-full bg-black "
         >
-          <h1 className="z-10 my-10 text-4xl font-bold text-center text-white lg:text-7xl md:text-5xl sm:text-4xl">
+          <h1 className="z-40 my-10 text-4xl font-bold text-center text-white lg:text-7xl md:text-5xl sm:text-4xl">
             <span className="text-white">Nice</span>
             <span className="text-blue">Try</span>
           </h1>
