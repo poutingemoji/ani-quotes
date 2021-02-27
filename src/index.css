@@ -4,13 +4,7 @@
 
 body {
   color: theme("colors.gray.DEFAULT");
-  background-color: theme("colors.secondary");
-  overflow-x: hidden;
-}
-
-iframe {
-  width: 100%;
-  height: calc((100vw * 9) / 16);
+  background-color: theme("colors.secondary.DEFAULT");
 }
 
 @layer utilities {
@@ -20,27 +14,21 @@ iframe {
       column-gap: 0;
     }
 
-    @media only screen and (min-width: 640px) {
+    @media only screen and (min-width: 768px) {
       .masonry {
         column-count: 2;
       }
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1024px) {
       .masonry {
         column-count: 3;
       }
     }
 
-    @media only screen and (min-width: 1024px) {
-      .masonry {
-        column-count: 4;
-      }
-    }
-
     @media only screen and (min-width: 1280px) {
       .masonry {
-        column-count: 5;
+        column-count: 4;
       }
     }
     .break-inside {
@@ -49,3 +37,7 @@ iframe {
   }
 }
 
+.parent:hover .parent-hover\:scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+}

@@ -9,8 +9,14 @@ module.exports = {
 
     extend: {
       colors: {
-        primary: "rgb(21,31,46)",
-        secondary: "rgb(11,22,34)",
+        primary: {
+          DEFAULT: "rgb(21,31,46)",
+          transparent: "rgba(21,31,46, 0.5)",
+        },
+        secondary: {
+          DEFAULT: "rgb(11,22,34)",
+          transparent: "rgba(11,22,34, 0.5)",
+        },
         gray: {
           DEFAULT: "rgb(201,215,227)",
         },

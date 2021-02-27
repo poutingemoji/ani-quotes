@@ -1,20 +1,21 @@
 import { capitalCase } from "change-case";
 import { useParams } from "react-router-dom";
-import Gallery from "../components/Gallery";
+import Masonry from "../components/Masonry";
 import Loading from "../components/Loading";
 
 const Quotes = ({ quotes, isLoading }) => {
-  let { topic = "", authorId = "" } = useParams(); 
+  let { topic = "", authorId = "" } = useParams();
   if (isLoading) return <Loading />;
   return (
     <div className="pt-20">
       {
-        <Gallery
+        <Masonry
           quotes={quotes.filter(
             (quote) =>
-              quote.topics.includes(capitalCase(topic)) || quote.author.id === authorId
+              quote.topics.includes(capitalCase(topic)) ||
+              quote.author.id === authorId
           )}
-        ></Gallery>
+        ></Masonry>
       }
     </div>
   );

@@ -1,7 +1,7 @@
 import Card from "./Card";
 import FadeInWrapper from "./FadeInWrapper";
 
-function Gallery({ quotes }) {
+function Masonry({ quotes }) {
   return (
     <div className="mx-5 masonry before:box-inherit after:box-inherit">
       {quotes.map((quote, i) => (
@@ -17,4 +17,4 @@ function Gallery({ quotes }) {
     </div>
   );
 }
-export default Gallery;
+export default Masonry;

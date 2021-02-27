@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 const Dropdown = ({ isOpen, toggle }) => {
   return (
     <div
-      className={
+      className={`z-40 fixed w-full ${
         isOpen
           ? "font-semibold grid grid-rows-4 text-center items-center bg-primary"
           : "hidden"
       }
+       
+      `}
       onClick={toggle}
     >
       <Link to="/" className="p-4">

@@ -3,37 +3,37 @@ import { Link } from "react-router-dom";
 import "tippy.js/dist/tippy.css";
 import Loading from "../components/Loading";
 import { groupBy } from "../utils/Helper";
+import ImageButton from "../components/ImageButton";
+import Grid from "../components/Grid";
+import authorQuotes from "../data/authorQuotes";
 
 const Authors = ({ quotes, isLoading }) => {
   if (isLoading) return <Loading />;
-  const authors = groupBy(quotes, (quote) => quote.author.name);
+  const authors = groupBy(quotes, (quote) => quote.author.id);
   return (
     <>
       <div className="pt-20 mx-32 text-center">
         <h1 className="text-5xl font-black uppercase">Authors</h1>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 m-4 md:grid-cols-3 md:gap-6 md:m-6 lg:grid-cols-4 2xl:grid-cols-5 bg-secondary">
+      <Grid>
         {Object.keys(authors)
-          .sort()
+          .sort((a, b) => authorQuotes[b].length - authorQuotes[a].length)
           .map((key, i) => {
             const author = authors[key][0].author;
+            const numOfQuotes = authorQuotes[author.id].length;
             return (
-              <Tippy content={author.name} key={i}>
-                <Link to={`/authors/${author.id}`}>
-                  <button
-                    className="w-full h-full rounded-lg py-52"
-                    style={{
-                      backgroundImage: `url(${author.image})`,
-                      backgroundSize: "cover",
-                    }}
-                  >
-                  </button>
-                </Link>
-              </Tippy>
+              <Link to={`/authors/${author.id}`} key={i}>
+                <ImageButton
+                  className="py-40"
+                  title={author.name}
+                  numOfQuotes={numOfQuotes}
+                  image={author.image}
+                />
+              </Link>
             );
           })}
-      </div>
+      </Grid>
       <div className="flex flex-row flex-wrap justify-center"></div>
     </>
   );

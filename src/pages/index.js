@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import Gallery from "../components/Gallery";
+import Masonry from "../components/Masonry";
 import Loading from "../components/Loading";
 import CountUp from "react-countup";
 import authorQuotes from "../data/authorQuotes";
@@ -33,7 +33,7 @@ const Home = ({ quotes, isLoading }) => {
         </FadeInWrapper>
       </div>
 
-      <Gallery quotes={shuffle(quotes)} />
+      <Masonry quotes={shuffle(quotes)} />
     </>
   );
 };

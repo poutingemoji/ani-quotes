@@ -55,11 +55,19 @@ function App() {
     setIsOpen(!isOpen);
   };
 
+  const hideMenu = () => {
+    if (window.innerWidth > 768 && isOpen) {
+      setIsOpen(false);
+    }
+  };
+
   const history = useHistory();
   useEffect(() => {
     const unlisten = history.listen(() => {
       window.scrollTo(0, 0);
+      hideMenu();
     });
+
     return unlisten;
   }, [history]);
 
@@ -68,11 +76,12 @@ function App() {
       .then((res) => res.json())
       .then((result) => {
         let newQuotes = [];
+        console.log(result.data);
         Object.keys(authorQuotes).map((id) => {
           const character = result.data.Page.characters.find(
             (character) => character.id === parseInt(id)
           );
-          if (!character) return
+          if (!character) return;
           authorQuotes[id].map((newQuote) =>
             newQuotes.push(
               Object.assign(newQuote, {
@@ -89,12 +98,6 @@ function App() {
         setIsLoading(false);
       });
 
-    const hideMenu = () => {
-      if (window.innerWidth > 768 && isOpen) {
-        setIsOpen(false);
-        console.log("i resized");
-      }
-    };
     window.addEventListener("resize", hideMenu);
     return () => {
       window.removeEventListener("resize", hideMenu);
@@ -141,4 +144,3 @@ function App() {
 }
 
 export default App;
-
