@@ -23,7 +23,6 @@ const Topics = ({ quotes, isLoading }) => {
             <Link to={`/topics/${snakeCase(key)}`} key={i}>
               <FadeInWrapper>
                 <ImageButton
-                  className="py-20"
                   icon={topics[key]?.icon}
                   title={key}
                   numOfQuotes={topicQuotes[key].length}

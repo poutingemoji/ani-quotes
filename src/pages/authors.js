@@ -27,7 +27,7 @@ const Authors = ({ quotes, isLoading }) => {
               <Link to={`/authors/${author.id}`} key={i}>
                 <FadeInWrapper>
                   <ImageButton
-                    className="py-40"
+                    height={96}
                     title={author.name}
                     numOfQuotes={numOfQuotes}
                     image={author.image}
