@@ -12,7 +12,7 @@ function ImageButton({ className, icon, title, numOfQuotes, image, children }) {
         }}
       >
         <div
-          className={`${className} flex flex-col items-center justify-center w-full h-full py-32  bg-opacity-50 bg-secondary align-center`}
+          className={`${className} flex flex-col items-center justify-center w-full h-full bg-opacity-50 bg-secondary align-center`}
         >
           {icon && <i className={`fas fa-${icon} fa-5x`}></i>}
           <div className="text-3xl">

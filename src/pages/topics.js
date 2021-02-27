@@ -10,7 +10,7 @@ const Topics = ({ quotes, isLoading }) => {
   const topicQuotes = groupBy(quotes, (quote) => quote.topics);
   return (
     <>
-      <div className="pt-20 mx-32 text-center">
+      <div className="pt-20 text-center">
         <h1 className="text-5xl font-black uppercase">Topics</h1>
       </div>
 
@@ -20,6 +20,7 @@ const Topics = ({ quotes, isLoading }) => {
           .map((key, i) => (
             <Link to={`/topics/${snakeCase(key)}`} key={i}>
               <ImageButton
+                className="py-20"
                 icon={topics[key]?.icon}
                 title={key}
                 numOfQuotes={topicQuotes[key].length}
