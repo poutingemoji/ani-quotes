@@ -4,7 +4,7 @@ import logo from "../images/logo.png";
 const Navbar = ({ toggle }) => {
   return (
     <nav
-      className="fixed flex items-center justify-between w-full h-16 shadow-sm text-gray md:justify-evenly bg-primary "
+      className="fixed z-50 flex items-center justify-between w-full h-16 shadow-sm text-gray md:justify-evenly bg-primary "
       role="navigation"
     >
       <Link to="/" className="pl-8">

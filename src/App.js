@@ -64,6 +64,7 @@ function App() {
           const character = result.data.Page.characters.find(
             (character) => character.id === parseInt(id)
           );
+          if (!character) return
           authorQuotes[id].map((newQuote) =>
             newQuotes.push(
               Object.assign(newQuote, {
