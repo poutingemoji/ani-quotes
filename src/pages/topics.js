@@ -5,6 +5,8 @@ import topics from "../data/topics";
 import ImageButton from "../components/ImageButton";
 import Grid from "../components/Grid";
 import { groupBy } from "../utils/Helper";
+import FadeInWrapper from "../components/FadeInWrapper"
+
 const Topics = ({ quotes, isLoading }) => {
   if (isLoading) return <Loading />;
   const topicQuotes = groupBy(quotes, (quote) => quote.topics);
@@ -19,13 +21,15 @@ const Topics = ({ quotes, isLoading }) => {
           .sort((a, b) => topicQuotes[b].length - topicQuotes[a].length)
           .map((key, i) => (
             <Link to={`/topics/${snakeCase(key)}`} key={i}>
-              <ImageButton
-                className="py-20"
-                icon={topics[key]?.icon}
-                title={key}
-                numOfQuotes={topicQuotes[key].length}
-                image={topics[key]?.image}
-              />
+              <FadeInWrapper>
+                <ImageButton
+                  className="py-20"
+                  icon={topics[key]?.icon}
+                  title={key}
+                  numOfQuotes={topicQuotes[key].length}
+                  image={topics[key]?.image}
+                />
+              </FadeInWrapper>
             </Link>
           ))}
       </Grid>

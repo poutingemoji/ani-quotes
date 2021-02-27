@@ -6,6 +6,7 @@ import { groupBy } from "../utils/Helper";
 import ImageButton from "../components/ImageButton";
 import Grid from "../components/Grid";
 import authorQuotes from "../data/authorQuotes";
+import FadeInWrapper from "../components/FadeInWrapper"
 
 const Authors = ({ quotes, isLoading }) => {
   if (isLoading) return <Loading />;
@@ -24,12 +25,14 @@ const Authors = ({ quotes, isLoading }) => {
             const numOfQuotes = authorQuotes[author.id].length;
             return (
               <Link to={`/authors/${author.id}`} key={i}>
-                <ImageButton
-                  className="py-40"
-                  title={author.name}
-                  numOfQuotes={numOfQuotes}
-                  image={author.image}
-                />
+                <FadeInWrapper>
+                  <ImageButton
+                    className="py-40"
+                    title={author.name}
+                    numOfQuotes={numOfQuotes}
+                    image={author.image}
+                  />
+                </FadeInWrapper>
               </Link>
             );
           })}
