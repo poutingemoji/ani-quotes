@@ -61,7 +61,8 @@ body {
 }
 
 .pagination__link--active {
-  background-color: theme("colors.primary.light") !important;
+  background-color: theme("colors.green.DEFAULT") !important;
+  color:white;
 }
 
 .pagination__link {

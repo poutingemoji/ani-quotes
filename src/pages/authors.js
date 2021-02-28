@@ -56,10 +56,6 @@ export default function App() {
     setCurrentPage(selected);
   }
 
-  const offset = currentPage * PER_PAGE;
-
-  const pageCount = Math.ceil(Object.keys(authorQuotes).length / PER_PAGE);
-
   return (
     <>
       <div className="pt-20 text-center">
@@ -87,7 +83,7 @@ export default function App() {
         <ReactPaginate
           previousLabel={"← Previous"}
           nextLabel={"Next →"}
-          pageCount={pageCount}
+          pageCount={Math.ceil(Object.keys(authorQuotes).length / PER_PAGE)}
           onPageChange={handlePageClick}
           containerClassName={"pagination"}
           previousLinkClassName={"pagination__link"}
