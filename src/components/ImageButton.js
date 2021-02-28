@@ -1,12 +1,11 @@
-function ImageButton({ height = 80, icon, title, numOfQuotes, image }) {
+function ImageButton({ height, icon, title, numOfQuotes, image }) {
   return (
     <button className="w-full h-full overflow-hidden text-white rounded-lg parent">
       <div
         className="flex flex-col items-center justify-center w-full h-full transform parent-hover:scale-105"
         style={{
-          background: `url(${image})`,
+          backgroundImage: `url(${image})`,
           backgroundPosition: "center",
-          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           transition: "all 0.3s",
         }}

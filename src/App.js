@@ -9,42 +9,23 @@ import Quotes from "./pages/quotes";
 import Footer from "./components/Footer";
 import Dropdown from "./components/Dropdown";
 import authorQuotes from "./data/authorQuotes";
-
-const url = "https://graphql.anilist.co",
-  options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
+import {query} from "./utils/Helper"
+const url = "https://graphql.anilist.co";
+const options = {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
+  body: JSON.stringify({
+    query: query,
+    variables: {
+      id_in: Object.keys(authorQuotes),
+      page: 1,
+      perPage: 50,
     },
-    body: JSON.stringify({
-      query: `
-        query ($id_in: [Int]) {
-          Page (page: 1) {
-            pageInfo {
-              total
-              currentPage
-              lastPage
-              hasNextPage
-              perPage
-            }
-            characters (id_in: $id_in) {
-              id
-              image {
-                large
-              }
-              name {
-                full
-              }
-            }
-          }
-        }
-      `,
-      variables: {
-        id_in: Object.keys(authorQuotes),
-      },
-    }),
-  };
+  }),
+};
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -76,7 +57,7 @@ function App() {
       .then((res) => res.json())
       .then((result) => {
         let newQuotes = [];
-        console.log(result.data);
+        console.log(result);
         Object.keys(authorQuotes).map((id) => {
           const character = result.data.Page.characters.find(
             (character) => character.id === parseInt(id)
@@ -106,8 +87,11 @@ function App() {
 
   return (
     <HashRouter basename="/">
+   
+      
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
+     
 
       <Route
         path="/"

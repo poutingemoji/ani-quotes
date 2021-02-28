@@ -42,13 +42,36 @@ body {
   --tw-scale-y: 1.05;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.scroll-snap-wrapper::-webkit-scrollbar {
-  display: none;
+.swiper-container {
+  width: 600px;
+  height: 300px;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.scroll-snap-wrapper {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+.pagination {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  list-style: none;
 }
+
+
+
+.pagination__link--disabled {
+  cursor: not-allowed;
+}
+
+.pagination__link--active {
+  background-color: theme("colors.primary.light") !important;
+}
+
+.pagination__link {
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: theme("colors.primary.DEFAULT");
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+

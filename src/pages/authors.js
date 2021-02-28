@@ -1,43 +1,106 @@
 import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
-import { groupBy } from "../utils/Helper";
+import { groupBy, query } from "../utils/Helper";
 import ImageButton from "../components/ImageButton";
 import Grid from "../components/Grid";
 import authorQuotes from "../data/authorQuotes";
-import FadeInWrapper from "../components/FadeInWrapper"
+import FadeInWrapper from "../components/FadeInWrapper";
+import { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
 
-function Authors({ quotes, isLoading }) {
-  if (isLoading) return <Loading />;
-  const authors = groupBy(quotes, (quote) => quote.author.id);
+const PER_PAGE = 10;
+const url = "https://graphql.anilist.co";
+
+export default function App() {
+  const [currentPage, setCurrentPage] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [data, setData] = useState([]);
+  const pageCache = {};
+
+  useEffect(() => {
+    fetchData();
+  }, [currentPage]);
+
+  function fetchData() {
+    console.log(currentPage);
+    setIsLoaded(false);
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        query: query,
+        variables: {
+          id_in: Object.keys(authorQuotes).sort(
+            (a, b) => authorQuotes[b].length - authorQuotes[a].length
+          ),
+          page: currentPage + 1,
+          perPage: PER_PAGE,
+        },
+      }),
+    };
+    
+    fetch(url, options)
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result.data.Page.characters);
+        setIsLoaded(true);
+        setData(result.data.Page.characters);
+      })
+      .catch((error) => console.error("Error", error));
+  }
+
+  function handlePageClick({ selected }) {
+    setCurrentPage(selected);
+  }
+
+  const offset = currentPage * PER_PAGE;
+
+  const pageCount = Math.ceil(Object.keys(authorQuotes).length / PER_PAGE);
+
   return (
     <>
       <div className="pt-20 text-center">
         <h1 className="text-5xl font-black uppercase">Authors</h1>
       </div>
-
-      <Grid>
-        {Object.keys(authors)
-          .sort((a, b) => authorQuotes[b].length - authorQuotes[a].length)
-          .map((key, i) => {
-            const author = authors[key][0].author;
-            const numOfQuotes = authorQuotes[author.id].length;
+      {isLoaded ? (
+        <Grid>
+          {data.map((author, i) => {
             return (
               <Link to={`/authors/${author.id}`} key={i}>
-                <FadeInWrapper>
-                  <ImageButton
-                    height={96}
-                    title={author.name}
-                    numOfQuotes={numOfQuotes}
-                    image={author.image}
-                  />
-                </FadeInWrapper>
+                <ImageButton
+                  height={96}
+                  title={author.name.full}
+                  numOfQuotes={authorQuotes[author.id].length}
+                  image={author.image.large}
+                />
               </Link>
             );
           })}
-      </Grid>
-      <div className="flex flex-row flex-wrap justify-center"></div>
+        </Grid>
+      ) : (
+        <Loading />
+      )}
+      {isLoaded ? (
+        <ReactPaginate
+          previousLabel={"← Previous"}
+          nextLabel={"Next →"}
+          pageCount={pageCount}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination"}
+          previousLinkClassName={"pagination__link"}
+          breakClassName={"pagination__link"}
+          nextLinkClassName={"pagination__link"}
+          pageClassName={"pagination__link"}
+          disabledClassName={"pagination__link--disabled"}
+          activeClassName={"pagination__link--active"}
+          forcePage={currentPage}
+        />
+      ) : (
+        <Loading />
+      )}
     </>
   );
-};
-
-export default Authors;
+}
