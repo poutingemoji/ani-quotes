@@ -4,7 +4,7 @@ function ImageButton({ height, icon, title, numOfQuotes, image }) {
       <div
         className="flex flex-col items-center justify-center w-full h-full transform parent-hover:scale-105"
         style={{
-          background: `url(${image})`,
+          backgroundImage: `url(${image})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
