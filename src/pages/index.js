@@ -7,8 +7,8 @@ import FadeInWrapper from "../components/FadeInWrapper";
 import Card from "../components/Card";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useState } from "react";
-import {groupBy} from "../utils/Helper"
-
+import { groupBy } from "../utils/Helper";
+import lightYagami from "../images/characters/light-yagami.png";
 function Home({ quotes, isLoading }) {
   const quotesCopy = JSON.parse(JSON.stringify(quotes));
   const [curQuotes, setCurQuotes] = useState(quotes.slice(0, 20));
@@ -36,10 +36,65 @@ function Home({ quotes, isLoading }) {
   return (
     <>
       <Hero quotes={quotes} />
-      <div className="flex items-center justify-center pt-44">
-        <div className="bg-primary w-96 h-96"></div>
+      <div className="flex pt-44 justify-evenly">
+        <img
+          className="hidden md:block xl:w-1/4 rounded-xl"
+          src={lightYagami}
+        />
+        <div className="w-1/3">
+          <h1 className="text-6xl font-bold text-white">What is AniQuotes?</h1>
+          <p className="text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac
+            feugiat sed lectus vestibulum mattis ullamcorper velit sed
+            ullamcorper. Turpis tincidunt id aliquet risus. Lacus sed turpis
+            tincidunt id aliquet risus. Sit amet consectetur adipiscing elit
+            duis. Turpis egestas integer eget aliquet nibh praesent tristique
+            magna sit. Leo vel fringilla est ullamcorper eget nulla facilisi
+            etiam dignissim. Ac felis donec et odio pellentesque. Purus viverra
+            accumsan in nisl nisi scelerisque eu ultrices. Mauris pharetra et
+            ultrices neque ornare aenean. Augue lacus viverra vitae congue eu
+            consequat ac felis donec. Imperdiet sed euismod nisi porta lorem
+            mollis aliquam ut. Amet massa vitae tortor condimentum. Vulputate
+            sapien nec sagittis aliquam. Vitae proin sagittis nisl rhoncus
+            mattis rhoncus urna neque. Cursus metus aliquam eleifend mi.
+          </p>
+        </div>
+      </div>
+      <div className="flex pt-44 justify-evenly">
+        <div className="w-1/3">
+          <h1 className="text-6xl font-bold text-white">
+            Who is poutingemoji?
+          </h1>
+          <p className="text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac
+            feugiat sed lectus vestibulum mattis ullamcorper velit sed
+            ullamcorper. Turpis tincidunt id aliquet risus. Lacus sed turpis
+            tincidunt id aliquet risus. Sit amet consectetur adipiscing elit
+            duis. Turpis egestas integer eget aliquet nibh praesent tristique
+            magna sit. Leo vel fringilla est ullamcorper eget nulla facilisi
+            etiam dignissim. Ac felis donec et odio pellentesque. Purus viverra
+            accumsan in nisl nisi scelerisque eu ultrices. Mauris pharetra et
+            ultrices neque ornare aenean. Augue lacus viverra vitae congue eu
+            consequat ac felis donec. Imperdiet sed euismod nisi porta lorem
+            mollis aliquam ut. Amet massa vitae tortor condimentum. Vulputate
+            sapien nec sagittis aliquam. Vitae proin sagittis nisl rhoncus
+            mattis rhoncus urna neque. Cursus metus aliquam eleifend mi.
+          </p>
+        </div>
+        <img
+          className="hidden md:block xl:w-1/4 rounded-xl"
+          src={lightYagami}
+        />
+      </div>
+      <div className="flex items-center justify-center py-44">
+        <img
+          className="hidden md:block xl:w-1/4 rounded-xl"
+          src={lightYagami}
+        />
         <FadeInWrapper>
-          <div className="flex flex-col text-6xl font-bold text-center text-white ">
+          <div className="flex flex-col text-5xl font-bold text-center text-white xl:text-6xl 2xl:text-7xl">
             The Numbers
             <hr className="mt-5"></hr>
             {Object.keys(theNumbersData).map((key, i) => (
@@ -51,7 +106,9 @@ function Home({ quotes, isLoading }) {
           </div>
         </FadeInWrapper>
       </div>
-
+      <h3 className="py-1 text-4xl font-bold text-center uppercase">
+        Once upon a time... 📖
+      </h3>
       <InfiniteScroll
         dataLength={curQuotes.length}
         next={fetchMoreData}

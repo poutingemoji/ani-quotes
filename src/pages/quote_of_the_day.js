@@ -5,11 +5,19 @@ import { randomChoice } from "../utils/Helper";
 function QuoteOfTheDay({ quotes, isLoading }) {
   const [date, setDate] = useState(new Date());
   const [quote, setQuote] = useState(randomChoice(quotes));
+  const [motivationQuote, setMotivationQuote] = useState(
+    randomChoice(quotes.filter((quote) => quote.topics.includes("Motivational")))
+  );
   useEffect(() => {
     const interval = setInterval(() => {
       setDate(new Date());
       setQuote(randomChoice(quotes));
-    }, calculateSecondsUntilEndOfDate(date) / 10);
+      setMotivationQuote(
+        randomChoice(
+          quotes.filter((quote) => quote.topics.includes("Motivational"))
+        )
+      );
+    }, calculateSecondsUntilEndOfDate(date) * 1000);
     return () => {
       clearInterval(interval);
     };
@@ -20,11 +28,14 @@ function QuoteOfTheDay({ quotes, isLoading }) {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-screen mx-10 bg-secondary">
+      <div className="flex flex-col items-center justify-center h-screen mx-10 bg-primary">
         <h1 className="text-5xl">
           {months[date.getMonth()]} {date.getDate()}
         </h1>
         <p>{quote.text}</p>
+      </div>
+      <div className="flex flex-col items-center justify-center h-screen mx-10 bg-secondary">
+        <p>{motivationQuote.text}</p>
       </div>
     </>
   );
@@ -55,4 +66,3 @@ function calculateSecondsUntilEndOfDate(date) {
     date.getSeconds()
   );
 }
-
