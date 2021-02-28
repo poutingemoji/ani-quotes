@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ani-quotes/static/css/main.9ba3d610.chunk.css",
-    "main.js": "/ani-quotes/static/js/main.fee1e970.chunk.js",
-    "main.js.map": "/ani-quotes/static/js/main.fee1e970.chunk.js.map",
+    "main.css": "/ani-quotes/static/css/main.8128fa1b.chunk.css",
+    "main.js": "/ani-quotes/static/js/main.735d021c.chunk.js",
+    "main.js.map": "/ani-quotes/static/js/main.735d021c.chunk.js.map",
     "runtime-main.js": "/ani-quotes/static/js/runtime-main.68e96056.js",
     "runtime-main.js.map": "/ani-quotes/static/js/runtime-main.68e96056.js.map",
     "static/js/2.b7137d19.chunk.js": "/ani-quotes/static/js/2.b7137d19.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.345bfa29.chunk.js": "/ani-quotes/static/js/3.345bfa29.chunk.js",
     "static/js/3.345bfa29.chunk.js.map": "/ani-quotes/static/js/3.345bfa29.chunk.js.map",
     "index.html": "/ani-quotes/index.html",
-    "static/css/main.9ba3d610.chunk.css.map": "/ani-quotes/static/css/main.9ba3d610.chunk.css.map",
+    "static/css/main.8128fa1b.chunk.css.map": "/ani-quotes/static/css/main.8128fa1b.chunk.css.map",
     "static/js/2.b7137d19.chunk.js.LICENSE.txt": "/ani-quotes/static/js/2.b7137d19.chunk.js.LICENSE.txt",
     "static/media/blackbeard-dreams.73594e62.png": "/ani-quotes/static/media/blackbeard-dreams.73594e62.png",
     "static/media/death.6766dd21.png": "/ani-quotes/static/media/death.6766dd21.png",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.68e96056.js",
     "static/js/2.b7137d19.chunk.js",
-    "static/css/main.9ba3d610.chunk.css",
-    "static/js/main.fee1e970.chunk.js"
+    "static/css/main.8128fa1b.chunk.css",
+    "static/js/main.735d021c.chunk.js"
   ]
 }
