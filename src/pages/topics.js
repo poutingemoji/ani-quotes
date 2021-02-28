@@ -7,7 +7,7 @@ import Grid from "../components/Grid";
 import { groupBy } from "../utils/Helper";
 import FadeInWrapper from "../components/FadeInWrapper"
 
-const Topics = ({ quotes, isLoading }) => {
+function Topics({ quotes, isLoading }) {
   if (isLoading) return <Loading />;
   const topicQuotes = groupBy(quotes, (quote) => quote.topics);
   return (

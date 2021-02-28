@@ -1,6 +1,4 @@
-import Tippy from "@tippyjs/react";
 import { Link } from "react-router-dom";
-import "tippy.js/dist/tippy.css";
 import Loading from "../components/Loading";
 import { groupBy } from "../utils/Helper";
 import ImageButton from "../components/ImageButton";
@@ -8,7 +6,7 @@ import Grid from "../components/Grid";
 import authorQuotes from "../data/authorQuotes";
 import FadeInWrapper from "../components/FadeInWrapper"
 
-const Authors = ({ quotes, isLoading }) => {
+function Authors({ quotes, isLoading }) {
   if (isLoading) return <Loading />;
   const authors = groupBy(quotes, (quote) => quote.author.id);
   return (
