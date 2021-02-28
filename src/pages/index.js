@@ -9,6 +9,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { useState } from "react";
 import { groupBy } from "../utils/Helper";
 import lightYagami from "../images/characters/light-yagami.png";
+
 function Home({ quotes, isLoading }) {
   const quotesCopy = JSON.parse(JSON.stringify(quotes));
   const [curQuotes, setCurQuotes] = useState(quotes.slice(0, 20));
@@ -40,6 +41,7 @@ function Home({ quotes, isLoading }) {
         <img
           className="hidden md:block xl:w-1/4 rounded-xl"
           src={lightYagami}
+          alt="light-yagami"
         />
         <div className="w-1/3">
           <h1 className="text-6xl font-bold text-white">What is AniQuotes?</h1>
@@ -86,12 +88,14 @@ function Home({ quotes, isLoading }) {
         <img
           className="hidden md:block xl:w-1/4 rounded-xl"
           src={lightYagami}
+          alt="light-yagami"
         />
       </div>
       <div className="flex items-center justify-center py-44">
         <img
           className="hidden md:block xl:w-1/4 rounded-xl"
           src={lightYagami}
+          alt="light-yagami"
         />
         <FadeInWrapper>
           <div className="flex flex-col text-5xl font-bold text-center text-white xl:text-6xl 2xl:text-7xl">
@@ -107,7 +111,7 @@ function Home({ quotes, isLoading }) {
         </FadeInWrapper>
       </div>
       <h3 className="py-1 text-4xl font-bold text-center uppercase">
-        Once upon a time... 📖
+        📖 Once upon a time...
       </h3>
       <InfiniteScroll
         dataLength={curQuotes.length}
@@ -139,6 +143,7 @@ function Home({ quotes, isLoading }) {
 
 export default Home;
 
+/*
 function getRandom(arr, n) {
   const result = new Array(n),
     len = arr.length,
@@ -160,3 +165,5 @@ const shuffle = (arr) =>
     ),
     []
   );
+
+*/

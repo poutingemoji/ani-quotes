@@ -21,7 +21,7 @@ function Hero({ quotes }) {
         easing: "easeOutExpo",
         duration: 600,
         delay: (el, i) => 70 * (i + 1),
-      })
+      });
   }, []);
 
   return (

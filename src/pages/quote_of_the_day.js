@@ -6,9 +6,13 @@ function QuoteOfTheDay({ quotes, isLoading }) {
   const [date, setDate] = useState(new Date());
   const [quote, setQuote] = useState(randomChoice(quotes));
   const [motivationQuote, setMotivationQuote] = useState(
-    randomChoice(quotes.filter((quote) => quote.topics.includes("Motivational")))
+    randomChoice(
+      quotes.filter((quote) => quote.topics.includes("Motivational"))
+    )
   );
   useEffect(() => {
+    const element = document.getElementById("footer");
+    element.classList.add("hidden");
     const interval = setInterval(() => {
       setDate(new Date());
       setQuote(randomChoice(quotes));
@@ -19,6 +23,7 @@ function QuoteOfTheDay({ quotes, isLoading }) {
       );
     }, calculateSecondsUntilEndOfDate(date) * 1000);
     return () => {
+      element.classList.remove("hidden");
       clearInterval(interval);
     };
   }, []);
@@ -27,17 +32,29 @@ function QuoteOfTheDay({ quotes, isLoading }) {
   console.log(calculateSecondsUntilEndOfDate(date));
 
   return (
-    <>
-      <div className="flex flex-col items-center justify-center h-screen mx-10 bg-primary">
-        <h1 className="text-5xl">
-          {months[date.getMonth()]} {date.getDate()}
+    <div
+      className="h-screen overflow-y-scroll scroll-snap-wrapper"
+      style={{ scrollSnapType: "y mandatory" }}
+    >
+      <div className="absolute w-screen pt-20 ">
+        <h1 className="text-4xl font-bold text-center ">
+          📅 {`${months[date.getMonth()]} ${date.getDate()}`}
         </h1>
+      </div>
+
+      <div
+        className="flex flex-col items-center justify-center h-screen bg-primary"
+        style={{ scrollSnapAlign: "start" }}
+      >
         <p>{quote.text}</p>
       </div>
-      <div className="flex flex-col items-center justify-center h-screen mx-10 bg-secondary">
+      <div
+        className="flex flex-col items-center justify-center h-screen bg-secondary"
+        style={{ scrollSnapAlign: "start" }}
+      >
         <p>{motivationQuote.text}</p>
       </div>
-    </>
+    </div>
   );
 }
 
