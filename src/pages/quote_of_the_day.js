@@ -8,7 +8,7 @@ function QuoteOfTheDay({ quotes, isLoading }) {
   const [quote, setQuote] = useState(randomChoice(quotes));
   const [motivationQuote, setMotivationQuote] = useState(
     randomChoice(
-      quotes.filter((quote) => quote.topics.includes("Motivational"))
+      quotes.filter((quote) => quote.topics.includes("motivational"))
     )
   );
   useEffect(() => {
@@ -20,7 +20,7 @@ function QuoteOfTheDay({ quotes, isLoading }) {
       setQuote(randomChoice(quotes));
       setMotivationQuote(
         randomChoice(
-          quotes.filter((quote) => quote.topics.includes("Motivational"))
+          quotes.filter((quote) => quote.topics.includes("motivational"))
         )
       );
     }, calculateSecondsUntilEndOfDate(date) * 1000);

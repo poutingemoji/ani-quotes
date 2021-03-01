@@ -9,48 +9,10 @@ import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
 const PER_PAGE = 10;
-const url = "https://graphql.anilist.co";
 
-export default function App() {
+function Authors({ authors }) {
   const [currentPage, setCurrentPage] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [data, setData] = useState([]);
-  const pageCache = {};
-
-  useEffect(() => {
-    fetchData();
-  }, [currentPage]);
-
-  function fetchData() {
-    console.log(currentPage);
-    setIsLoaded(false);
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        query: query,
-        variables: {
-          id_in: Object.keys(authorQuotes).sort(
-            (a, b) => authorQuotes[b].length - authorQuotes[a].length
-          ),
-          page: currentPage + 1,
-          perPage: PER_PAGE,
-        },
-      }),
-    };
-    
-    fetch(url, options)
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result.data.Page.characters);
-        setIsLoaded(true);
-        setData(result.data.Page.characters);
-      })
-      .catch((error) => console.error("Error", error));
-  }
+  const offset = currentPage * PER_PAGE;
 
   function handlePageClick({ selected }) {
     setCurrentPage(selected);
@@ -61,42 +23,38 @@ export default function App() {
       <div className="pt-20 text-center">
         <h1 className="text-5xl font-black uppercase">Authors</h1>
       </div>
-      {isLoaded ? (
-        <Grid>
-          {data.map((author, i) => {
-            return (
-              <Link to={`/authors/${author.id}`} key={i}>
-                <ImageButton
-                  height={96}
-                  title={author.name.full}
-                  numOfQuotes={authorQuotes[author.id].length}
-                  image={author.image.large}
-                />
-              </Link>
-            );
-          })}
-        </Grid>
-      ) : (
-        <Loading />
-      )}
-      {isLoaded ? (
-        <ReactPaginate
-          previousLabel={"← Previous"}
-          nextLabel={"Next →"}
-          pageCount={Math.ceil(Object.keys(authorQuotes).length / PER_PAGE)}
-          onPageChange={handlePageClick}
-          containerClassName={"pagination"}
-          previousLinkClassName={"pagination__link"}
-          breakClassName={"pagination__link"}
-          nextLinkClassName={"pagination__link"}
-          pageClassName={"pagination__link"}
-          disabledClassName={"pagination__link--disabled"}
-          activeClassName={"pagination__link--active"}
-          forcePage={currentPage}
-        />
-      ) : (
-        <Loading />
-      )}
+
+      <Grid>
+        {authors.slice(offset, offset + PER_PAGE).map((author, i) => {
+          return (
+            <Link to={`/authors/${author.id}`} key={i}>
+              <ImageButton
+                height={96}
+                title={author.name.full}
+                numOfQuotes={authorQuotes[author.id].length}
+                image={author.image.large}
+              />
+            </Link>
+          );
+        })}
+      </Grid>
+
+      <ReactPaginate
+        previousLabel={"← Previous"}
+        nextLabel={"Next →"}
+        pageCount={Math.ceil(authors.length / PER_PAGE)}
+        onPageChange={handlePageClick}
+        containerClassName={"pagination"}
+        previousLinkClassName={"pagination__link"}
+        breakClassName={"pagination__link"}
+        nextLinkClassName={"pagination__link"}
+        pageClassName={"pagination__link"}
+        disabledClassName={"pagination__link--disabled"}
+        activeClassName={"pagination__link--active"}
+        forcePage={currentPage}
+      />
     </>
   );
 }
+
+export default Authors;

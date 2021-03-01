@@ -4,7 +4,7 @@ const authorQuotes = {
   3: [
     {
       text:
-        "Everything has a beginning and an end. Life is just a cycle of starts and stops. There are ends we don’t desire, but they’re inevitable, we have to face them. It’s what being human is all about.",
+        "Everything has a beginning and an end. life is just a cycle of starts and stops. There are ends we don’t desire, but they’re inevitable, we have to face them. It’s what being human is all about.",
       topics: ["Faith"],
     },
   ],
@@ -25,7 +25,7 @@ const authorQuotes = {
   17: [
     {
       text: "If you don’t like your destiny, don’t accept it.",
-      topics: ["Future"],
+      topics: ["future"],
     },
     {
       text:
@@ -41,10 +41,10 @@ const authorQuotes = {
     },
   ],
   40: [
-    { text: "If I get reincarnated… I wanna become a clam.", topics: ["Life"] },
+    { text: "If I get reincarnated… I wanna become a clam.", topics: ["life"] },
     {
       text: "If you don’t take risks, you can’t create a future!",
-      topics: ["Future"],
+      topics: ["future"],
     },
     {
       text: "The wound may heal, but it has already left a scar.",
@@ -90,7 +90,7 @@ const authorQuotes = {
     },
     {
       text:
-        "You’ll only realize that you truly love someone if they already caused you enormous pain. Your enemies can never hurt you the way your loved ones can. It’s the people close to your heart that can give you the most piercing wound. Love is a double-edged sword, it can heal the wound faster or it can sink the blade even deeper.",
+        "You’ll only realize that you truly love someone if they already caused you enormous pain. Your enemies can never hurt you the way your loved ones can. It’s the people close to your heart that can give you the most piercing wound. love is a double-edged sword, it can heal the wound faster or it can sink the blade even deeper.",
       topics: [],
     },
   ],
@@ -98,13 +98,13 @@ const authorQuotes = {
     {
       text:
         "I couldn’t confess my feelings for you, so I watched you from afar, being happy with someone else.",
-      topics: ["Love"],
+      topics: ["love"],
     },
   ],
   306: [
     {
       text: "A dropout will beat a genius through hard work.",
-      topics: ["Motivational"],
+      topics: ["motivational"],
     },
   ],
   307: [
@@ -121,7 +121,7 @@ const authorQuotes = {
       topics: [],
     },
   ],
-  496: [{ text: "People die if they are killed...", topics: ["Death"] }],
+  496: [{ text: "People die if they are killed...", topics: ["death"] }],
   601: [
     {
       text:
@@ -133,10 +133,10 @@ const authorQuotes = {
     {
       text:
         "Every journey begins with a single step. We just have to have patience.",
-      topics: ["Patience"],
+      topics: ["patience"],
     },
   ],
-  2072: [{ text: "We have to live a life of no regrets.", topics: ["Life"] }],
+  2072: [{ text: "We have to live a life of no regrets.", topics: ["life"] }],
   2087: [
     {
       text: "It is at the moment of death that humanity has value.",
@@ -147,7 +147,7 @@ const authorQuotes = {
     {
       text:
         "Don’t be so quick to throw away your life. No matter how disgraceful or embarrassing it may be, you need to keep struggling to find your way out until the very end.",
-      topics: ["Life"],
+      topics: ["life"],
     },
   ],
   2257: [
@@ -179,14 +179,14 @@ const authorQuotes = {
     {
       text:
         "Those who stand at the top determine what's wrong and what's right! This very place is neutral ground! Justice will prevail, you say? But of course it will! Whoever wins this war becomes justice!",
-      topics: ["Leadership"],
+      topics: ["leadership"],
     },
   ],
   2767: [
     {
       text:
         "People become stronger because they have memories they can’t forget.",
-      topics: ["Strength"],
+      topics: ["strength"],
     },
   ],
   3180: [
@@ -199,7 +199,7 @@ const authorQuotes = {
     {
       image: blackbeardDreams,
       text: "People’s dreams... have no end!!",
-      topics: ["Motivational", "Dreams"],
+      topics: ["motivational", "dreams"],
     },
     {
       text:
@@ -217,8 +217,8 @@ const authorQuotes = {
   4883: [
     {
       text:
-        "Destiny. Fate. Dreams. These unstoppable ideas are held deep in the heart of man. As long as there are people who seek freedom in this life, these things shall not vanish from the Earth.",
-      topics: ["Freedom", "Dreams"],
+        "Destiny. Fate. dreams. These unstoppable ideas are held deep in the heart of man. As long as there are people who seek freedom in this life, these things shall not vanish from the Earth.",
+      topics: ["Freedom", "dreams"],
     },
   ],
   4884: [
@@ -232,7 +232,7 @@ const authorQuotes = {
     {
       text:
         "We don’t have to know what tomorrow holds! That’s why we can live for everything we’re worth today!",
-      topics: ["Future"],
+      topics: ["future"],
     },
   ],
   5189: [
@@ -246,14 +246,14 @@ const authorQuotes = {
     {
       text:
         "Hatred and Sorrow are power. They are yours to control. All you have to do is to turn them into strength and use that strength to move forward.",
-      topics: ["Strength"],
+      topics: ["strength"],
     },
   ],
   12064: [
     {
       text:
         "You stupid, idiotic, blockhead, mongrel. Or that’s what I’d normally say.",
-      topics: ["Love"],
+      topics: ["love"],
     },
   ],
   12295: [
@@ -261,14 +261,14 @@ const authorQuotes = {
       image: dragonAndTiger,
       text:
         "I'm a dragon, You're a tiger. And for centuries, only dragons and tigers have been considered equals. So it doesn't matter that you're not here with me right now, because I'll transcend space and time so I can always be with you. And my feelings for you will never ever change.",
-      topics: ["Love"],
+      topics: ["love"],
     },
   ],
   12305: [
     {
       text:
         "I don't want to get so caught up in searching for what I can't see, that I lose sight of what I can.",
-      topics: ["Future"],
+      topics: ["future"],
     },
   ],
   12862: [
@@ -302,7 +302,7 @@ const authorQuotes = {
     {
       text:
         "Fear is not evil. It tells you what your weakness is. And once you know your weakness, you can become stronger as well as kinder.",
-      topics: ["Fear", "Strength"],
+      topics: ["Fear", "strength"],
     },
   ],
   31274: [
@@ -341,23 +341,23 @@ const authorQuotes = {
   55131: [
     {
       text: "The best way to tame a mystery is with another mystery.",
-      topics: ["Imagination"],
+      topics: ["imagination"],
     },
   ],
   55133: [
-    { text: "I find myself hard to understand sometimes", topics: ["Life"] },
+    { text: "I find myself hard to understand sometimes", topics: ["life"] },
   ],
   67065: [
     {
       text:
         "If wishes could be granted, if desires could be fulfilled, then I wouldn’t wish or desire for anything after all. The things you’re handed on a silver platter are never genuine, and never everlasting. And that is why I’ll always keep searching.",
-      topics: ["Patience", "Motivational"],
+      topics: ["patience", "motivational"],
     },
   ],
   73935: [
     {
       text: "I’ll leave tomorrow’s problems to tomorrow’s me.",
-      topics: ["Future"],
+      topics: ["future"],
     },
     {
       text:
@@ -373,8 +373,8 @@ const authorQuotes = {
   80891: [
     {
       text:
-        "Life comes at a cost. Wouldn’t it be arrogant to die before you’ve repaid that debt?",
-      topics: ["Life"],
+        "life comes at a cost. Wouldn’t it be arrogant to die before you’ve repaid that debt?",
+      topics: ["life"],
     },
     {
       text:
@@ -391,7 +391,7 @@ const authorQuotes = {
   84677: [
     {
       text:
-        "Life and death are like light and shadow. They’re both always there. But people don’t like thinking about death, so subconsciously, they always look away from it.",
+        "life and death are like light and shadow. They’re both always there. But people don’t like thinking about death, so subconsciously, they always look away from it.",
       topics: [],
     },
   ],
@@ -406,7 +406,7 @@ const authorQuotes = {
     {
       text:
         "If you wanna make people dream, you’ve gotta start by believing in that dream yourself!",
-      topics: ["Dreams"],
+      topics: ["dreams"],
     },
   ],
   124521: [
