@@ -54,25 +54,19 @@ body {
   list-style: none;
 }
 
-
-
-.pagination__link--disabled {
+.disabled.pagination-link {
   cursor: not-allowed;
 }
 
-.pagination__link--active {
+.active.pagination-link a {
   background-color: theme("colors.green.DEFAULT") !important;
   color:white;
 }
 
-.pagination__link {
-  border-radius: 6px;
-  cursor: pointer;
-  padding: 10px;
-  background-color: theme("colors.primary.DEFAULT");
-  border-radius: 6px;
-  margin-right: 10px;
-  cursor: pointer;
-  font-size: 20px;
+.pagination-link a {
+  @apply p-4 mx-1 text-xl rounded-lg cursor-pointer bg-primary;
 }
 
+a.pagination-link {
+  @apply p-4 text-xl
+}

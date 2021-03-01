@@ -40,17 +40,17 @@ function Authors({ authors }) {
       </Grid>
 
       <ReactPaginate
-        previousLabel={"← Previous"}
-        nextLabel={"Next →"}
+        previousLabel={"«"}
+        nextLabel={"»"}
         pageCount={Math.ceil(authors.length / PER_PAGE)}
         onPageChange={handlePageClick}
         containerClassName={"pagination"}
-        previousLinkClassName={"pagination__link"}
-        breakClassName={"pagination__link"}
-        nextLinkClassName={"pagination__link"}
-        pageClassName={"pagination__link"}
-        disabledClassName={"pagination__link--disabled"}
-        activeClassName={"pagination__link--active"}
+        previousLinkClassName={"previous pagination-link"}
+        breakClassName={"break pagination-link"}
+        nextLinkClassName={"next pagination-link"}
+        pageClassName={"page pagination-link"}
+        disabledClassName={"disabled pagination-link"}
+        activeClassName={"active pagination-link"}
         forcePage={currentPage}
       />
     </>
