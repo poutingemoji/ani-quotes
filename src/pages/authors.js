@@ -26,7 +26,7 @@ function Authors({ authors }) {
           return (
             <Link to={`/authors/${author.id}`} key={i}>
               <ImageButton
-                height={96}
+                className={"h-96"}
                 title={author.name.full}
                 numOfQuotes={authorQuotes[author.id].length}
                 image={author.image.large}

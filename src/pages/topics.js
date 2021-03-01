@@ -21,7 +21,7 @@ function Topics({ quotes }) {
             <Link to={`/topics/${snakeCase(key)}`} key={i}>
               <FadeInWrapper>
                 <ImageButton
-                  height={80}
+                  className={"h-80"}
                   icon={topics[key]?.icon}
                   title={key}
                   numOfQuotes={topicQuotes[key].length}

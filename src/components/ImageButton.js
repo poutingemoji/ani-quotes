@@ -1,4 +1,4 @@
-function ImageButton({ height, icon, title, numOfQuotes, image }) {
+function ImageButton({ className, icon, title, numOfQuotes, image }) {
   return (
     <button className="w-full h-full overflow-hidden text-white rounded-lg parent">
       <div
@@ -12,7 +12,7 @@ function ImageButton({ height, icon, title, numOfQuotes, image }) {
         }}
       >
         <span
-          className={`h-${height} flex flex-col items-center justify-center w-full bg-opacity-50 bg-secondary`}
+          className={`${className} flex flex-col items-center justify-center w-full bg-opacity-50 bg-secondary`}
         >
           {icon && <i className={`fas fa-${icon} fa-5x`}></i>}
           <span className="text-3xl capitalize">
