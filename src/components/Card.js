@@ -16,7 +16,7 @@ function Card({ author, text, image, tags }) {
         )}
         <div className="flex flex-col flex-1 p-4">
           <div className="flex-1 mb-2 text-xl text-gray">
-            <p className="text-base lg:text-lg">"{text}"</p>
+            <p className="text-lg lg:text-lg">"{text}"</p>
           </div>
           <div className="flex">
             <img
@@ -24,7 +24,7 @@ function Card({ author, text, image, tags }) {
               src={author.image}
               alt="author"
             />
-            <h3 className="mb-2 text-base font-bold lg:text-lg text-gray">
+            <h3 className="mb-2 text-lg font-bold lg:text-lg text-gray">
               {author.name}
             </h3>
           </div>

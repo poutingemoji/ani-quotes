@@ -4,7 +4,6 @@ import topics from "../data/topics";
 import ImageButton from "../components/ImageButton";
 import Grid from "../components/Grid";
 import { groupBy } from "../utils/Helper";
-import FadeInWrapper from "../components/FadeInWrapper"
 
 function Topics({ quotes }) {
   const topicQuotes = groupBy(quotes, (quote) => quote.topics);
@@ -19,20 +18,18 @@ function Topics({ quotes }) {
           .sort((a, b) => topicQuotes[b].length - topicQuotes[a].length)
           .map((key, i) => (
             <Link to={`/topics/${snakeCase(key)}`} key={i}>
-              <FadeInWrapper>
-                <ImageButton
-                  className={"h-80"}
-                  icon={topics[key]?.icon}
-                  title={key}
-                  numOfQuotes={topicQuotes[key].length}
-                  image={topics[key]?.image}
-                />
-              </FadeInWrapper>
+              <ImageButton
+                className={"h-80"}
+                icon={topics[key]?.icon}
+                title={key}
+                numOfQuotes={topicQuotes[key].length}
+                image={topics[key]?.image}
+              />
             </Link>
           ))}
       </Grid>
     </>
   );
-};
+}
 
 export default Topics;

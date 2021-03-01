@@ -3,7 +3,6 @@ import Masonry from "../components/Masonry";
 import Loading from "../components/Loading";
 import CountUp from "react-countup";
 import authorQuotes from "../data/authorQuotes";
-import FadeInWrapper from "../components/FadeInWrapper";
 import Card from "../components/Card";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useState } from "react";
@@ -14,6 +13,7 @@ function Home({ quotes, authors }) {
   const quotesCopy = JSON.parse(JSON.stringify(quotes));
   const [curQuotes, setCurQuotes] = useState(quotes.slice(0, 20));
   const [hasMore, setHasMore] = useState(true);
+  
   function fetchMoreData() {
     if (curQuotes.length >= quotes.length) {
       setHasMore(false);
@@ -26,7 +26,7 @@ function Home({ quotes, authors }) {
     }
     setCurQuotes(curQuotes.concat(twentyMoreQuotes));
   }
-  
+
   const theNumbersData = {
     "Total Quotes": quotes,
     "Total Authors": authors,
@@ -38,11 +38,11 @@ function Home({ quotes, authors }) {
       <Hero quotes={quotes} />
       <div className="flex pt-44 justify-evenly">
         <img
-          className="hidden md:block xl:w-1/4 rounded-xl"
+          className="hidden lg:block xl:w-1/4 rounded-xl"
           src={lightYagami}
           alt="light-yagami"
         />
-        <div className="w-1/3">
+        <div className="p-10">
           <h1 className="text-6xl font-bold text-white">What is AniQuotes?</h1>
           <p className="text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -62,8 +62,8 @@ function Home({ quotes, authors }) {
           </p>
         </div>
       </div>
-      <div className="flex pt-44 justify-evenly">
-        <div className="w-1/3">
+      <div className="flex py-auto justify-evenly">
+        <div className="p-10">
           <h1 className="text-6xl font-bold text-white">
             Who is poutingemoji?
           </h1>
@@ -85,29 +85,28 @@ function Home({ quotes, authors }) {
           </p>
         </div>
         <img
-          className="hidden md:block xl:w-1/4 rounded-xl"
+          className="hidden w-1/5 lg:block xl:w-1/4 rounded-xl"
           src={lightYagami}
           alt="light-yagami"
         />
       </div>
-      <div className="flex items-center justify-center py-44">
+      <div className="flex items-center justify-center py-auto">
         <img
           className="hidden md:block xl:w-1/4 rounded-xl"
           src={lightYagami}
           alt="light-yagami"
         />
-        <FadeInWrapper>
-          <div className="flex flex-col text-5xl font-bold text-center text-white xl:text-6xl 2xl:text-7xl">
-            The Numbers
-            <hr className="mt-5"></hr>
-            {Object.keys(theNumbersData).map((key, i) => (
-              <div key={i} className="my-3">
-                <CountUp end={theNumbersData[key].length} duration={5} />
-                <p className="text-xl font-medium uppercase text-gray">{key}</p>
-              </div>
-            ))}
-          </div>
-        </FadeInWrapper>
+
+        <div className="flex flex-col text-5xl font-bold text-center text-white xl:text-6xl 2xl:text-7xl">
+          The Numbers
+          <hr className="mt-5"></hr>
+          {Object.keys(theNumbersData).map((key, i) => (
+            <div key={i} className="my-3">
+              <CountUp end={theNumbersData[key].length} duration={5} />
+              <p className="text-xl font-medium uppercase text-gray">{key}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <h3 className="py-1 text-4xl font-bold text-center uppercase">
         📖 Once upon a time...
