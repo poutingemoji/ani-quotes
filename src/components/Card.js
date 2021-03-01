@@ -33,7 +33,7 @@ function Card({ author, text, image, tags }) {
               tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="px-2 m-1 text-white rounded-full "
+                  className="px-2 m-1 text-white capitalize rounded-full "
                   style={{ background: topics[tag]?.hex || "" }}
                 >
                   {tag}

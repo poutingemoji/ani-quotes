@@ -54,7 +54,7 @@ function App() {
         )
       );
     });
-    console.log(newQuotes, authors);
+    console.log(Object.keys(authorQuotes).length, newQuotes, authors);
     setQuotes(newQuotes);
     setIsLoading(false);
   }, [authors]);
@@ -62,6 +62,7 @@ function App() {
   useEffect(async () => {
     let newAuthors = [];
     let page = 1;
+    let h;
     while (true) {
       const res = await fetch("https://graphql.anilist.co", {
         method: "POST",
@@ -100,12 +101,13 @@ function App() {
         }),
       });
       const result = await res.json();
-      if (!result.data.Page.pageInfo.hasNextPage) break;
       page++;
       newAuthors = newAuthors.concat(result.data.Page.characters);
-      console.log("HERE", newAuthors);
+      if (!result.data.Page.pageInfo.hasNextPage) break;
     }
-    setAuthors(newAuthors);
+    setAuthors(
+      newAuthors.sort((a, b) => authorQuotes[b.id].length - authorQuotes[a.id].length)
+    );
   }, []);
 
   useEffect(() => {
@@ -121,7 +123,11 @@ function App() {
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
 
-      <Route path="/" exact component={() => <Home quotes={quotes} authors={authors} />} />
+      <Route
+        path="/"
+        exact
+        component={() => <Home quotes={quotes} authors={authors} />}
+      />
       <Route
         path="/authors"
         exact

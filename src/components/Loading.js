@@ -1,5 +1,9 @@
 function Loading() {
-  return <div>Loading...</div>
+  return (
+    <div className="flex items-center justify-center animate-spin">
+      (＠＾◡＾)
+    </div>
+  );
 }
 
-export default Loading
+export default Loading;

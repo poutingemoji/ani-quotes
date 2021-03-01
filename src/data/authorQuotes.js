@@ -5,7 +5,7 @@ const authorQuotes = {
     {
       text:
         "Everything has a beginning and an end. life is just a cycle of starts and stops. There are ends we don’t desire, but they’re inevitable, we have to face them. It’s what being human is all about.",
-      topics: ["Faith"],
+      topics: ["faith"],
     },
   ],
   11: [
@@ -19,7 +19,7 @@ const authorQuotes = {
     {
       text:
         "People’s lives don’t end when they die, it ends when they lose faith.",
-      topics: ["Faith"],
+      topics: ["faith"],
     },
   ],
   17: [
@@ -52,18 +52,18 @@ const authorQuotes = {
     },
     {
       text: "Being lonely is more painful then getting hurt.",
-      topics: ["Alone"],
+      topics: ["alone"],
     },
   ],
   62: [
     {
       text: "If I die here, then I’m a man that could only make it this far.",
-      topics: ["Failure"],
+      topics: ["failure"],
     },
     {
       text:
         "You want to keep everyone from dying? That’s naive. It’s war. People die.",
-      topics: ["War"],
+      topics: ["war"],
     },
     {
       text:
@@ -75,6 +75,12 @@ const authorQuotes = {
     {
       text:
         "The world’s not perfect, but it’s there for us trying the best it can. That’s what makes it so damn beautiful.",
+      topics: [],
+    },
+  ],
+  87: [
+    {
+      text: "The world is not beautiful, and that is why it is beautiful.",
       topics: [],
     },
   ],
@@ -91,6 +97,20 @@ const authorQuotes = {
     {
       text:
         "You’ll only realize that you truly love someone if they already caused you enormous pain. Your enemies can never hurt you the way your loved ones can. It’s the people close to your heart that can give you the most piercing wound. love is a double-edged sword, it can heal the wound faster or it can sink the blade even deeper.",
+      topics: [],
+    },
+  ],
+  236: [
+    {
+      text:
+        "There is no such thing as a coincidence in this world. There is only the inevitable.",
+      topics: [],
+    },
+  ],
+  246: [
+    {
+      text:
+        "I am the hope of the universe. I am the answer to all living things that cry out for peace. I am protector of the innocent. I am the light in the darkness. I am truth. Ally to good! Nightmare to you!",
       topics: [],
     },
   ],
@@ -114,6 +134,13 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  354: [
+    {
+      text:
+        "As time passes, the day will come when everything will fade to memories. But those miraculous days, when you and I, along with everyone else, searched together for just that one thing, will continue revolving forever somewhere deep in my heart, as my bittersweet memory.",
+      topics: [],
+    },
+  ],
   477: [
     {
       text:
@@ -126,7 +153,14 @@ const authorQuotes = {
     {
       text:
         "Giving up kills people. When people reject giving up… they finally win the right to transcend humanity.",
-      topics: ["Failure"],
+      topics: ["failure"],
+    },
+  ],
+  672: [
+    {
+      text:
+        "The country? The skies? You can have them. I’m busy just protecting what’s right in front of me. I don’t know what’ll happen to me in the future, but if something has fallen at my feet, then the least I can do is pick it up.",
+      topics: [],
     },
   ],
   714: [
@@ -136,10 +170,41 @@ const authorQuotes = {
       topics: ["patience"],
     },
   ],
+  1795: [
+    {
+      text: `We weep for the blood of a bird, but not for the blood of a fish. Blessed are those with a voice. If the dolls could speak, no doubt they'd scream, "I didn't want to become human."`,
+      topics: [],
+    },
+  ],
+  1997: [
+    {
+      text:
+        "Inside my mind, there's a beautiful cup. A very beautiful, clear cup. And tiny drops kept falling into it, 'drip, drip, drip', slowly but steadily, everyday. And today, I felt the cup had finally become completely full.",
+      topics: [],
+    },
+  ],
+  2030: [
+    {
+      text:
+        "You can't judge how beautiful a girl really is by the way she looks.",
+      topics: [],
+    },
+  ],
   2072: [{ text: "We have to live a life of no regrets.", topics: ["life"] }],
   2087: [
     {
       text: "It is at the moment of death that humanity has value.",
+      topics: [],
+    },
+    {
+      text: `
+        I am the bone of my sword
+        Steel is my body and fire is my blood
+        I have created over a thousand blades
+        Unknown to Death, Nor known to Life
+        Have withstood pain to create many weapons
+        Yet, those hands will never hold anything
+        So as I pray, Unlimited Blade Works.`,
       topics: [],
     },
   ],
@@ -165,6 +230,12 @@ const authorQuotes = {
     {
       text:
         "A place where someone still thinks about you is a place you can call home.",
+      topics: [],
+    },
+  ],
+  2511: [
+    {
+      text: "You are already dead.",
       topics: [],
     },
   ],
@@ -204,7 +275,7 @@ const authorQuotes = {
     {
       text:
         "When you aim high, you sometimes come across fights not worth fighting.",
-      topics: ["Wisdom"],
+      topics: ["wisdom"],
     },
   ],
   4631: [
@@ -214,18 +285,25 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  4693: [
+    {
+      text:
+        "There are no miracles in this world. There is only coincidence and necessity, and what people make of it.",
+      topics: [],
+    },
+  ],
   4883: [
     {
       text:
         "Destiny. Fate. dreams. These unstoppable ideas are held deep in the heart of man. As long as there are people who seek freedom in this life, these things shall not vanish from the Earth.",
-      topics: ["Freedom", "dreams"],
+      topics: ["freedom", "dreams"],
     },
   ],
   4884: [
     {
       text:
         "There can be no happiness in a world where the undesirables are thrown away.",
-      topics: ["Equality"],
+      topics: ["equality"],
     },
   ],
   5187: [
@@ -239,6 +317,19 @@ const authorQuotes = {
     {
       text:
         "Moving on doesn’t mean you forget about things. It just means you have to accept what’s happened and continue living.",
+      topics: [],
+    },
+  ],
+  5552: [
+    {
+      text:
+        "Freedom is something that you need to actively acquire. It's not something that's given with no strings attached. To be free means to take responsibility, and to prepare yourself for what's to come.",
+      topics: [],
+    },
+  ],
+  6752: [
+    {
+      text: "May all your bacon burn",
       topics: [],
     },
   ],
@@ -274,7 +365,7 @@ const authorQuotes = {
   12862: [
     {
       text: "When you give up, that’s when the game ends.",
-      topics: ["Failure"],
+      topics: ["failure"],
     },
   ],
   13468: [
@@ -291,23 +382,36 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  19271: [
+    {
+      text:
+        "When do you think people die? When they are shot through the heart by the bullet of a pistol? No. When they are ravaged by an incurable disease? No. When they drink a soup made from a poisonous mushroom!? No! It’s when they are forgotten.",
+      topics: [],
+    },
+  ],
   22253: [
     {
       text:
         "There’s no shame in falling down! True shame is to not stand up again!",
-      topics: ["Failure"],
+      topics: ["failure"],
     },
   ],
   29502: [
     {
       text:
         "Fear is not evil. It tells you what your weakness is. And once you know your weakness, you can become stronger as well as kinder.",
-      topics: ["Fear", "strength"],
+      topics: ["fear", "strength"],
     },
   ],
   31274: [
     {
       text: "Simplicity is the easiest path to true beauty.",
+      topics: [],
+    },
+  ],
+  40881: [
+    {
+      text: "The world is cruel, but also very beautiful.",
       topics: [],
     },
   ],
@@ -354,6 +458,13 @@ const authorQuotes = {
       topics: ["patience", "motivational"],
     },
   ],
+  67751: [
+    {
+      text:
+        "If you simply obey orders without question to protect your master, that isn't your greatest wish, but your greatest tragedy.",
+      topics: [],
+    },
+  ],
   73935: [
     {
       text: "I’ll leave tomorrow’s problems to tomorrow’s me.",
@@ -388,6 +499,13 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  83799: [
+    {
+      text:
+        "Fear is freedom! Subjugation is liberation! Contradiction is truth! Those are the facts of this world! And you will all surrender to them, you pigs in human clothing!",
+      topics: [],
+    },
+  ],
   84677: [
     {
       text:
@@ -399,6 +517,13 @@ const authorQuotes = {
     {
       text:
         "Why should I apologize for being a monster? Has anyone ever apologized for turning me into one?",
+      topics: [],
+    },
+  ],
+  88265: [
+    {
+      text:
+        "In order for a mediocre man to defeat a genius, he has to become a monster.",
       topics: [],
     },
   ],
