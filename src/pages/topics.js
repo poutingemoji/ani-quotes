@@ -1,14 +1,12 @@
 import { snakeCase } from "change-case";
 import { Link } from "react-router-dom";
-import Loading from "../components/Loading";
 import topics from "../data/topics";
 import ImageButton from "../components/ImageButton";
 import Grid from "../components/Grid";
 import { groupBy } from "../utils/Helper";
 import FadeInWrapper from "../components/FadeInWrapper"
 
-function Topics({ quotes, isLoading }) {
-  if (isLoading) return <Loading />;
+function Topics({ quotes }) {
   const topicQuotes = groupBy(quotes, (quote) => quote.topics);
   return (
     <>

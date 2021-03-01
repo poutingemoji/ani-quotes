@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
-import Loading from "../components/Loading";
-import { groupBy, query } from "../utils/Helper";
 import ImageButton from "../components/ImageButton";
 import Grid from "../components/Grid";
 import authorQuotes from "../data/authorQuotes";
-import FadeInWrapper from "../components/FadeInWrapper";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ReactPaginate from "react-paginate";
 
 const PER_PAGE = 10;

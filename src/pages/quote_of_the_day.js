@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import Loading from "../components/Loading";
 import { randomChoice } from "../utils/Helper";
 import Swiper from "swiper";
 
-function QuoteOfTheDay({ quotes, isLoading }) {
+function QuoteOfTheDay({ quotes }) {
   const [date, setDate] = useState(new Date());
   const [quote, setQuote] = useState(randomChoice(quotes));
   const [motivationQuote, setMotivationQuote] = useState(
@@ -29,8 +28,6 @@ function QuoteOfTheDay({ quotes, isLoading }) {
       clearInterval(interval);
     };
   }, []);
-
-  if (isLoading) return <Loading />;
   console.log(calculateSecondsUntilEndOfDate(date));
 
   return (

@@ -9,7 +9,6 @@ import Quotes from "./pages/quotes";
 import Footer from "./components/Footer";
 import Dropdown from "./components/Dropdown";
 import authorQuotes from "./data/authorQuotes";
-import { query } from "./utils/Helper";
 import Loading from "./components/Loading";
 
 function App() {
@@ -55,7 +54,7 @@ function App() {
         )
       );
     });
-    console.log(newQuotes, authors)
+    console.log(newQuotes, authors);
     setQuotes(newQuotes);
     setIsLoading(false);
   }, [authors]);
@@ -71,7 +70,28 @@ function App() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          query: query,
+          query: `
+            query ($id_in: [Int], $page: Int, $perPage: Int) {
+              Page (page: $page, perPage: $perPage) {
+                pageInfo {
+                  total
+                  currentPage
+                  lastPage
+                  hasNextPage
+                  perPage
+                }
+                characters (id_in: $id_in) {
+                  id
+                  image {
+                    large
+                  }
+                  name {
+                    full
+                  }
+                }
+              }
+            }
+          `,
           variables: {
             id_in: Object.keys(authorQuotes),
             page: page,
@@ -82,11 +102,10 @@ function App() {
       const result = await res.json();
       if (!result.data.Page.pageInfo.hasNextPage) break;
       page++;
-      
-      newAuthors.push(result.data.Page.characters);
-      console.log("HERE" ,newAuthors);
+      newAuthors = newAuthors.concat(result.data.Page.characters);
+      console.log("HERE", newAuthors);
     }
-    setAuthors(newAuthors.flat());
+    setAuthors(newAuthors);
   }, []);
 
   useEffect(() => {
@@ -94,18 +113,15 @@ function App() {
     return () => {
       window.removeEventListener("resize", hideMenu);
     };
-  });
+  }, []);
+
   if (isLoading) return <Loading />;
   return (
     <HashRouter basename="/">
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
 
-      <Route
-        path="/"
-        exact
-        component={() => <Home quotes={quotes}/>}
-      />
+      <Route path="/" exact component={() => <Home quotes={quotes} authors={authors} />} />
       <Route
         path="/authors"
         exact
@@ -126,9 +142,7 @@ function App() {
       />
       <Route
         path="/quote_of_the_day"
-        component={() => (
-          <QuoteOfTheDay quotes={quotes} />
-        )}
+        component={() => <QuoteOfTheDay quotes={quotes} />}
       />
       <Footer />
     </HashRouter>

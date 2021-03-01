@@ -10,7 +10,7 @@ import { useState } from "react";
 import { groupBy } from "../utils/Helper";
 import lightYagami from "../images/characters/light-yagami.png";
 
-function Home({ quotes, isLoading }) {
+function Home({ quotes, authors }) {
   const quotesCopy = JSON.parse(JSON.stringify(quotes));
   const [curQuotes, setCurQuotes] = useState(quotes.slice(0, 20));
   const [hasMore, setHasMore] = useState(true);
@@ -26,11 +26,10 @@ function Home({ quotes, isLoading }) {
     }
     setCurQuotes(curQuotes.concat(twentyMoreQuotes));
   }
-
-  if (isLoading) return <Loading />;
+  
   const theNumbersData = {
-    "Total Quotes": Object.values(authorQuotes).flat(),
-    "Total Authors": Object.keys(authorQuotes),
+    "Total Quotes": quotes,
+    "Total Authors": authors,
     Topics: Object.keys(groupBy(quotes, (quote) => quote.topics)),
   };
 
