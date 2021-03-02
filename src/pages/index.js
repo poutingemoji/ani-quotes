@@ -38,18 +38,18 @@ function Home({ quotes, authors }) {
   return (
     <>
       <Hero quotes={quotes} />
-      <div className="pt-24">
-        <div className="flex flex-col items-center justify-center">
-          <div>
+      <div className="mt-24 md:mt-44 md:mx-10">
+        <div className="flex flex-col items-center justify-center lg:flex-row lg:my-32">
+          <div className="lg:mr-10 lg:w-1/2 xl:w-2/5">
             <img
-              className=""
+              className="md:rounded-xl"
               src={roxyEmbarrassment}
               alt="nino-confrontation"
             />
           </div>
 
-          <div className="p-5">
-            <h1 className="py-4 text-5xl font-bold text-white">
+          <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5 md:my-10">
+            <h1 className="py-4 text-5xl font-bold text-white lg:-ml-8">
               What is AniQuotes?
             </h1>
             <p className="text-lg">
@@ -71,8 +71,8 @@ function Home({ quotes, authors }) {
             </p>
           </div>
         </div>
-        <div className="">
-          <div className="p-5">
+        <div className="flex flex-col items-center justify-center lg:flex-row lg:my-32">
+          <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5 md:my-10">
             <h1 className="py-4 text-5xl font-bold text-white ">
               Who is poutingemoji?
             </h1>
@@ -94,25 +94,25 @@ function Home({ quotes, authors }) {
               aliquam eleifend mi.
             </p>
           </div>
-          <div>
+          <div className="lg:ml-10 lg:w-1/2 xl:w-2/5">
             <img
-              className="hidden rounded-xl"
+              className="md:rounded-xl"
               src={ninoConfrontation}
               alt="roxy-embarrassment"
             />
           </div>
         </div>
-        <div className="flex items-center justify-center">
-          <div>
+        <div className="flex items-center justify-center lg:flex-row my-36 md:flex-col">
+          <div className="lg:w-1/2 lg:m-10 2xl:w-1/3">
             <img
-              className="hidden w-96 rounded-xl"
+              className="hidden md:block rounded-xl"
               src={sengokuConfession}
               alt="sengoku-confession"
             />
           </div>
 
-          <div className="flex flex-col text-6xl font-bold text-center text-white my-36">
-            <h1 className="text-4xl">The Numbers</h1>
+          <div className="flex flex-col my-10 text-6xl font-bold text-center text-white md:text-6xl">
+            <h1 className="text-5xl md:text-5xl">The Numbers</h1>
             <hr className="mt-5"></hr>
             {Object.keys(theNumbersData).map((key, i) => (
               <div key={i} className="my-3">
@@ -124,8 +124,8 @@ function Home({ quotes, authors }) {
         </div>
       </div>
 
-      <h3 className="py-1 text-4xl font-bold text-center uppercase">
-        📖 Once upon a time...
+      <h3 className="py-1 text-3xl font-bold text-center uppercase md:text-3xl">
+        📖 Once Upon a Time
       </h3>
       <InfiniteScroll
         dataLength={curQuotes.length}
@@ -134,7 +134,7 @@ function Home({ quotes, authors }) {
         loader={<Loading />}
         scrollThreshold={"100%"}
         endMessage={
-          <h3 className="py-1 text-4xl font-bold text-center uppercase">
+          <h3 className="py-1 text-3xl font-bold text-center uppercase md:text-4xl">
             The End 📕
           </h3>
         }

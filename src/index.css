@@ -47,28 +47,6 @@ body {
   height: 300px;
 }
 
-/*
-.pagination {
-  @apply flex items-center justify-center;
-}
-
-.disabled.pagination-link {
-  cursor: not-allowed;
-}
-
-.active.pagination-link a {
-  background-color: theme("colors.green.DEFAULT") !important;
-  color:white;
-}
-
-.pagination-link a {
-  @apply p-4 mx-1 text-xl rounded-lg cursor-pointer bg-primary;
-}
-
-a.pagination-link {
-  @apply p-4 text-xl
-}*/
-
 .pagination {
     display: flex;
     align-items: center;
