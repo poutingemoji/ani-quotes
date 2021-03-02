@@ -12,57 +12,14 @@ import authorQuotes from "./data/authorQuotes";
 import Loading from "./components/Loading";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
   const [quotes, setQuotes] = useState([]);
   const [authors, setAuthors] = useState([]);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const hideMenu = () => {
-    if (window.innerWidth > 768 && isOpen) {
-      setIsOpen(false);
-    }
-  };
-
-  const history = useHistory();
-  useEffect(() => {
-    const unlisten = history.listen(() => {
-      window.scrollTo(0, 0);
-      hideMenu();
-    });
-
-    return unlisten;
-  }, [history]);
-
-  useEffect(() => {
-    let newQuotes = [];
-    Object.keys(authorQuotes).map((id) => {
-      const character = authors.find((author) => author.id === parseInt(id));
-      if (!character) return;
-      authorQuotes[id].map((newQuote) =>
-        newQuotes.push(
-          Object.assign(newQuote, {
-            author: {
-              id,
-              image: character?.image.large,
-              name: character?.name.full,
-            },
-          })
-        )
-      );
-    });
-    console.log(Object.keys(authorQuotes).length, newQuotes, authors);
-    setQuotes(newQuotes);
-    setIsLoading(false);
-  }, [authors]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(async () => {
     let newAuthors = [];
     let page = 1;
-    let h;
     while (true) {
       const res = await fetch("https://graphql.anilist.co", {
         method: "POST",
@@ -106,9 +63,48 @@ function App() {
       if (!result.data.Page.pageInfo.hasNextPage) break;
     }
     setAuthors(
-      newAuthors.sort((a, b) => authorQuotes[b.id].length - authorQuotes[a.id].length)
+      newAuthors.sort(
+        (a, b) => authorQuotes[b.id].length - authorQuotes[a.id].length
+      )
     );
   }, []);
+
+  useEffect(() => {
+    let newQuotes = [];
+    Object.keys(authorQuotes).map((id) => {
+      const character = authors.find((author) => author.id === parseInt(id));
+      if (!character) return;
+      authorQuotes[id].map((newQuote) =>
+        newQuotes.push(
+          Object.assign(newQuote, {
+            author: {
+              id,
+              image: character?.image.large,
+              name: character?.name.full,
+            },
+          })
+        )
+      );
+    });
+    console.log(Object.keys(authorQuotes).length, newQuotes, authors);
+    setQuotes(newQuotes);
+    setIsLoading(false);
+  }, [authors]);
+
+  const history = useHistory();
+  useEffect(() => {
+    const unlisten = history.listen(() => {
+      window.scrollTo(0, 0);
+      hideMenu();
+    });
+
+    return unlisten;
+  }, [history]);
+
+  const toggle = () => setIsOpen(!isOpen);
+  const hideMenu = () => {
+    if (window.innerWidth > 768 && isOpen) setIsOpen(false);
+  };
 
   useEffect(() => {
     window.addEventListener("resize", hideMenu);

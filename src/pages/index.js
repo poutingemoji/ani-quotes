@@ -7,13 +7,15 @@ import Card from "../components/Card";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useState } from "react";
 import { groupBy } from "../utils/Helper";
-import lightYagami from "../images/characters/light-yagami.png";
+import ninoConfrontation from "../images/nino-confrontation.jpg";
+import roxyEmbarrassment from "../images/roxy-embarrassment.jpg";
+import sengokuConfession from "../images/sengoku-confession.jpg";
 
 function Home({ quotes, authors }) {
   const quotesCopy = JSON.parse(JSON.stringify(quotes));
   const [curQuotes, setCurQuotes] = useState(quotes.slice(0, 20));
   const [hasMore, setHasMore] = useState(true);
-  
+
   function fetchMoreData() {
     if (curQuotes.length >= quotes.length) {
       setHasMore(false);
@@ -36,78 +38,92 @@ function Home({ quotes, authors }) {
   return (
     <>
       <Hero quotes={quotes} />
-      <div className="flex pt-44 justify-evenly">
-        <img
-          className="hidden lg:block xl:w-1/4 rounded-xl"
-          src={lightYagami}
-          alt="light-yagami"
-        />
-        <div className="p-10">
-          <h1 className="text-6xl font-bold text-white">What is AniQuotes?</h1>
-          <p className="text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac
-            feugiat sed lectus vestibulum mattis ullamcorper velit sed
-            ullamcorper. Turpis tincidunt id aliquet risus. Lacus sed turpis
-            tincidunt id aliquet risus. Sit amet consectetur adipiscing elit
-            duis. Turpis egestas integer eget aliquet nibh praesent tristique
-            magna sit. Leo vel fringilla est ullamcorper eget nulla facilisi
-            etiam dignissim. Ac felis donec et odio pellentesque. Purus viverra
-            accumsan in nisl nisi scelerisque eu ultrices. Mauris pharetra et
-            ultrices neque ornare aenean. Augue lacus viverra vitae congue eu
-            consequat ac felis donec. Imperdiet sed euismod nisi porta lorem
-            mollis aliquam ut. Amet massa vitae tortor condimentum. Vulputate
-            sapien nec sagittis aliquam. Vitae proin sagittis nisl rhoncus
-            mattis rhoncus urna neque. Cursus metus aliquam eleifend mi.
-          </p>
-        </div>
-      </div>
-      <div className="flex py-auto justify-evenly">
-        <div className="p-10">
-          <h1 className="text-6xl font-bold text-white">
-            Who is poutingemoji?
-          </h1>
-          <p className="text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac
-            feugiat sed lectus vestibulum mattis ullamcorper velit sed
-            ullamcorper. Turpis tincidunt id aliquet risus. Lacus sed turpis
-            tincidunt id aliquet risus. Sit amet consectetur adipiscing elit
-            duis. Turpis egestas integer eget aliquet nibh praesent tristique
-            magna sit. Leo vel fringilla est ullamcorper eget nulla facilisi
-            etiam dignissim. Ac felis donec et odio pellentesque. Purus viverra
-            accumsan in nisl nisi scelerisque eu ultrices. Mauris pharetra et
-            ultrices neque ornare aenean. Augue lacus viverra vitae congue eu
-            consequat ac felis donec. Imperdiet sed euismod nisi porta lorem
-            mollis aliquam ut. Amet massa vitae tortor condimentum. Vulputate
-            sapien nec sagittis aliquam. Vitae proin sagittis nisl rhoncus
-            mattis rhoncus urna neque. Cursus metus aliquam eleifend mi.
-          </p>
-        </div>
-        <img
-          className="hidden w-1/5 lg:block xl:w-1/4 rounded-xl"
-          src={lightYagami}
-          alt="light-yagami"
-        />
-      </div>
-      <div className="flex items-center justify-center py-auto">
-        <img
-          className="hidden md:block xl:w-1/4 rounded-xl"
-          src={lightYagami}
-          alt="light-yagami"
-        />
+      <div className="pt-24">
+        <div className="flex flex-col items-center justify-center">
+          <div>
+            <img
+              className=""
+              src={roxyEmbarrassment}
+              alt="nino-confrontation"
+            />
+          </div>
 
-        <div className="flex flex-col text-5xl font-bold text-center text-white xl:text-6xl 2xl:text-7xl">
-          The Numbers
-          <hr className="mt-5"></hr>
-          {Object.keys(theNumbersData).map((key, i) => (
-            <div key={i} className="my-3">
-              <CountUp end={theNumbersData[key].length} duration={5} />
-              <p className="text-xl font-medium uppercase text-gray">{key}</p>
-            </div>
-          ))}
+          <div className="p-5">
+            <h1 className="py-4 text-5xl font-bold text-white">
+              What is AniQuotes?
+            </h1>
+            <p className="text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac
+              feugiat sed lectus vestibulum mattis ullamcorper velit sed
+              ullamcorper. Turpis tincidunt id aliquet risus. Lacus sed turpis
+              tincidunt id aliquet risus. Sit amet consectetur adipiscing elit
+              duis. Turpis egestas integer eget aliquet nibh praesent tristique
+              magna sit. Leo vel fringilla est ullamcorper eget nulla facilisi
+              etiam dignissim. Ac felis donec et odio pellentesque. Purus
+              viverra accumsan in nisl nisi scelerisque eu ultrices. Mauris
+              pharetra et ultrices neque ornare aenean. Augue lacus viverra
+              vitae congue eu consequat ac felis donec. Imperdiet sed euismod
+              nisi porta lorem mollis aliquam ut. Amet massa vitae tortor
+              condimentum. Vulputate sapien nec sagittis aliquam. Vitae proin
+              sagittis nisl rhoncus mattis rhoncus urna neque. Cursus metus
+              aliquam eleifend mi.
+            </p>
+          </div>
+        </div>
+        <div className="">
+          <div className="p-5">
+            <h1 className="py-4 text-5xl font-bold text-white ">
+              Who is poutingemoji?
+            </h1>
+            <p className="text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac
+              feugiat sed lectus vestibulum mattis ullamcorper velit sed
+              ullamcorper. Turpis tincidunt id aliquet risus. Lacus sed turpis
+              tincidunt id aliquet risus. Sit amet consectetur adipiscing elit
+              duis. Turpis egestas integer eget aliquet nibh praesent tristique
+              magna sit. Leo vel fringilla est ullamcorper eget nulla facilisi
+              etiam dignissim. Ac felis donec et odio pellentesque. Purus
+              viverra accumsan in nisl nisi scelerisque eu ultrices. Mauris
+              pharetra et ultrices neque ornare aenean. Augue lacus viverra
+              vitae congue eu consequat ac felis donec. Imperdiet sed euismod
+              nisi porta lorem mollis aliquam ut. Amet massa vitae tortor
+              condimentum. Vulputate sapien nec sagittis aliquam. Vitae proin
+              sagittis nisl rhoncus mattis rhoncus urna neque. Cursus metus
+              aliquam eleifend mi.
+            </p>
+          </div>
+          <div>
+            <img
+              className="hidden rounded-xl"
+              src={ninoConfrontation}
+              alt="roxy-embarrassment"
+            />
+          </div>
+        </div>
+        <div className="flex items-center justify-center">
+          <div>
+            <img
+              className="hidden w-96 rounded-xl"
+              src={sengokuConfession}
+              alt="sengoku-confession"
+            />
+          </div>
+
+          <div className="flex flex-col text-6xl font-bold text-center text-white my-36">
+            <h1 className="text-4xl">The Numbers</h1>
+            <hr className="mt-5"></hr>
+            {Object.keys(theNumbersData).map((key, i) => (
+              <div key={i} className="my-3">
+                <CountUp end={theNumbersData[key].length} duration={5} />
+                <p className="text-lg font-medium uppercase text-gray">{key}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
       <h3 className="py-1 text-4xl font-bold text-center uppercase">
         📖 Once upon a time...
       </h3>

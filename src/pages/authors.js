@@ -5,13 +5,13 @@ import authorQuotes from "../data/authorQuotes";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 
-const PER_PAGE = 10;
+const PER_PAGE = 18;
 
 function Authors({ authors }) {
   const [currentPage, setCurrentPage] = useState(0);
   const offset = currentPage * PER_PAGE;
 
-  function handlePageClick({ selected }) {
+  function handlePageChange({ selected }) {
     setCurrentPage(selected);
   }
 
@@ -40,14 +40,10 @@ function Authors({ authors }) {
         previousLabel={"«"}
         nextLabel={"»"}
         pageCount={Math.ceil(authors.length / PER_PAGE)}
-        onPageChange={handlePageClick}
+        pageRangeDisplayed={10}
+        onPageChange={handlePageChange}
         containerClassName={"pagination"}
-        previousLinkClassName={"previous pagination-link"}
-        breakClassName={"break pagination-link"}
-        nextLinkClassName={"next pagination-link"}
-        pageClassName={"page pagination-link"}
-        disabledClassName={"disabled pagination-link"}
-        activeClassName={"active pagination-link"}
+        activeClassName={"active"}
         forcePage={currentPage}
       />
     </>

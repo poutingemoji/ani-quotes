@@ -38,7 +38,7 @@ function Hero({ quotes }) {
           allowFullScreen
         />
         <div className="absolute z-30 flex flex-col items-center justify-center w-full h-full bg-gradient-to-t from-secondary">
-          <div className="text-6xl text-left lg:text-7xl xl:text-8xl">
+          <div className="text-5xl text-left md:text-6xl lg:text-7xl xl:text-8xl">
             <span className="font-light text-white letters">
               poutingemoji's
             </span>
