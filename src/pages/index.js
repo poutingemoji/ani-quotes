@@ -49,25 +49,14 @@ function Home({ quotes, authors }) {
           </div>
 
           <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5 md:my-10">
-            <h1 className="py-4 text-5xl font-bold text-white lg:-ml-8">
+            <h1 className="py-4 text-5xl font-bold text-white">
               What is AniQuotes?
             </h1>
             <p className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac
-              feugiat sed lectus vestibulum mattis ullamcorper velit sed
-              ullamcorper. Turpis tincidunt id aliquet risus. Lacus sed turpis
-              tincidunt id aliquet risus. Sit amet consectetur adipiscing elit
-              duis. Turpis egestas integer eget aliquet nibh praesent tristique
-              magna sit. Leo vel fringilla est ullamcorper eget nulla facilisi
-              etiam dignissim. Ac felis donec et odio pellentesque. Purus
-              viverra accumsan in nisl nisi scelerisque eu ultrices. Mauris
-              pharetra et ultrices neque ornare aenean. Augue lacus viverra
-              vitae congue eu consequat ac felis donec. Imperdiet sed euismod
-              nisi porta lorem mollis aliquam ut. Amet massa vitae tortor
-              condimentum. Vulputate sapien nec sagittis aliquam. Vitae proin
-              sagittis nisl rhoncus mattis rhoncus urna neque. Cursus metus
-              aliquam eleifend mi.
+              AniQuotes is a collection of quotes from a variety of anime
+              characters that span a diverse range of topics. The primary focus
+              of AniQuotes is to allow anime quotes to be more accessible and
+              bring light to relatable quotes that carry a powerful message.
             </p>
           </div>
         </div>
@@ -124,7 +113,7 @@ function Home({ quotes, authors }) {
         </div>
       </div>
 
-      <h3 className="py-1 text-3xl font-bold text-center uppercase md:text-3xl">
+      <h3 className="py-1 text-3xl font-bold text-center uppercase md:text-4xl">
         📖 Once Upon a Time
       </h3>
       <InfiniteScroll

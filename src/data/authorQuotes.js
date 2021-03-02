@@ -4,15 +4,15 @@ const authorQuotes = {
   3: [
     {
       text:
-        "Everything has a beginning and an end. life is just a cycle of starts and stops. There are ends we don’t desire, but they’re inevitable, we have to face them. It’s what being human is all about.",
-      topics: ["faith"],
+        "Everything has a beginning and an end. Life is just a cycle of starts and stops. There are ends we don’t desire, but they’re inevitable, we have to face them. It’s what being human is all about.",
+      topics: ["life"],
     },
   ],
   11: [
     {
       text:
         "A lesson without pain is meaningless. That’s because no one can gain without sacrificing something. But by enduring that pain and overcoming it, he shall obtain a powerful, unmatched heart.",
-      topics: [],
+      topics: ["pain"],
     },
   ],
   14: [
@@ -30,7 +30,7 @@ const authorQuotes = {
     {
       text:
         "Hard work is worthless for those that don’t believe in themselves.",
-      topics: [],
+      topics: ["believe_in_yourself"],
     },
   ],
   18: [
@@ -41,14 +41,17 @@ const authorQuotes = {
     },
   ],
   40: [
-    { text: "If I get reincarnated… I wanna become a clam.", topics: ["life"] },
+    {
+      text: "If I get reincarnated… I wanna become a clam.",
+      topics: ["funny"],
+    },
     {
       text: "If you don’t take risks, you can’t create a future!",
       topics: ["future"],
     },
     {
       text: "The wound may heal, but it has already left a scar.",
-      topics: [],
+      topics: ["friendship"],
     },
     {
       text: "Being lonely is more painful then getting hurt.",
@@ -68,43 +71,43 @@ const authorQuotes = {
     {
       text:
         "You need to accept the fact that you’re not the best and have all the will to strive to be better than anyone you face.",
-      topics: [],
+      topics: ["motivational"],
     },
   ],
   68: [
     {
       text:
         "The world’s not perfect, but it’s there for us trying the best it can. That’s what makes it so damn beautiful.",
-      topics: [],
+      topics: ["positive"],
     },
   ],
   87: [
     {
       text: "The world is not beautiful, and that is why it is beautiful.",
-      topics: [],
+      topics: ["wisdom"],
     },
   ],
   147: [
     {
       text:
         "Whatever you lose, you’ll find it again. But what you throw away you’ll never get back.",
-      topics: [],
+      topics: ["loss"],
     },
     {
       text: "You can die anytime, but living takes true courage.",
-      topics: [],
+      topics: ["strength", "life"],
     },
     {
       text:
-        "You’ll only realize that you truly love someone if they already caused you enormous pain. Your enemies can never hurt you the way your loved ones can. It’s the people close to your heart that can give you the most piercing wound. love is a double-edged sword, it can heal the wound faster or it can sink the blade even deeper.",
-      topics: [],
+        "You’ll only realize that you truly love someone if they already caused you enormous pain. Your enemies can never hurt you the way your loved ones can. It’s the people close to your heart that can give you the most piercing wound. Love is a double-edged sword, it can heal the wound faster or it can sink the blade even deeper.",
+      topics: ["love", "pain"],
     },
   ],
   236: [
     {
       text:
         "There is no such thing as a coincidence in this world. There is only the inevitable.",
-      topics: [],
+      topics: ["fate"],
     },
   ],
   246: [
@@ -131,7 +134,7 @@ const authorQuotes = {
     {
       text:
         "It’s not always possible to do what we want to do, but it’s important to believe in something before you actually do it.",
-      topics: [],
+      topics: ["believe_in_yourself"],
     },
   ],
   354: [
@@ -160,7 +163,7 @@ const authorQuotes = {
     {
       text:
         "The country? The skies? You can have them. I’m busy just protecting what’s right in front of me. I don’t know what’ll happen to me in the future, but if something has fallen at my feet, then the least I can do is pick it up.",
-      topics: [],
+      topics: ["future"],
     },
   ],
   714: [
@@ -194,10 +197,11 @@ const authorQuotes = {
   2087: [
     {
       text: "It is at the moment of death that humanity has value.",
-      topics: [],
+      topics: ["death"],
     },
     {
-      text: "I am the bone of my sword. Steel is my body and fire is my blood. I have created over a thousand blades. Unknown to Death, Nor known to Life. Have withstood pain to create many weapons. Yet, those hands will never hold anything. So as I pray, Unlimited Blade Works.",
+      text:
+        "I am the bone of my sword. Steel is my body and fire is my blood. I have created over a thousand blades. Unknown to Death, Nor known to Life. Have withstood pain to create many weapons. Yet, those hands will never hold anything. So as I pray, Unlimited Blade Works.",
       topics: [],
     },
   ],
@@ -229,14 +233,14 @@ const authorQuotes = {
   2511: [
     {
       text: "You are already dead.",
-      topics: [],
+      topics: ["funny"],
     },
   ],
   2749: [
     {
       text:
         "Wake up princess, I’m tired of your useless ideals. It’s gotten pathetic. What good are your happy ideals if you can’t do anything to make them a reality? They’re nothing but dreams, and your dreams don’t stand a chance.",
-      topics: [],
+      topics: ["dreams"],
     },
   ],
   2754: [
@@ -255,8 +259,8 @@ const authorQuotes = {
   ],
   3180: [
     {
-      text: "If you don’t share someone’s pain, you can never understand them.",
-      topics: [],
+      text: "If you don't share someone's pain, you can never understand them.",
+      topics: ["pain"],
     },
   ],
   3331: [
@@ -275,7 +279,7 @@ const authorQuotes = {
     {
       text:
         "Anything can happen. No one ever thinks it will until it does. What will happen, happens. That’s how the world is. The most important thing is to not let the tragedy defeat you. To believe that you can get through it.",
-      topics: [],
+      topics: ["believe_in_yourself"],
     },
   ],
   4693: [
@@ -298,12 +302,17 @@ const authorQuotes = {
         "There can be no happiness in a world where the undesirables are thrown away.",
       topics: ["equality"],
     },
-  ],
-  5187: [
     {
       text:
         "We don’t have to know what tomorrow holds! That’s why we can live for everything we’re worth today!",
       topics: ["future"],
+    },
+  ],
+  5187: [
+    {
+      text:
+        "The moment you think of giving up, think of the reason why you held on so long.",
+      topics: ["motivational"],
     },
   ],
   5189: [
@@ -323,7 +332,7 @@ const authorQuotes = {
   6752: [
     {
       text: "May all your bacon burn",
-      topics: [],
+      topics: ["funny"],
     },
   ],
   10863: [
@@ -371,7 +380,7 @@ const authorQuotes = {
   14989: [
     {
       text:
-        "Compared to the “righteous” greed of the rulers, the criminals of the world seem much more honorable. When scum rules the world, only more scum is born.",
+        'Compared to the "righteous" greed of the rulers, the criminals of the world seem much more honorable. When scum rules the world, only more scum is born.',
       topics: [],
     },
   ],
@@ -379,7 +388,7 @@ const authorQuotes = {
     {
       text:
         "When do you think people die? When they are shot through the heart by the bullet of a pistol? No. When they are ravaged by an incurable disease? No. When they drink a soup made from a poisonous mushroom!? No! It’s when they are forgotten.",
-      topics: [],
+      topics: ["death"],
     },
   ],
   22253: [
@@ -448,7 +457,7 @@ const authorQuotes = {
     {
       text:
         "If wishes could be granted, if desires could be fulfilled, then I wouldn’t wish or desire for anything after all. The things you’re handed on a silver platter are never genuine, and never everlasting. And that is why I’ll always keep searching.",
-      topics: ["patience", "motivational"],
+      topics: ["patience"],
     },
   ],
   67751: [
@@ -466,18 +475,25 @@ const authorQuotes = {
     {
       text:
         "If you really want to be strong… Stop caring about what your surrounding thinks of you!",
-      topics: [],
+      topics: ["strength"],
     },
     {
       text:
         "Who decides limits? And based on what? You said you worked hard? Well, maybe you need to work a little harder. Is that really the limit of your strength? Could the you of tomorrow beat you today? Instead of giving in, move forward.",
-      topics: [],
+      topics: ["strength", "motivational"],
+    },
+  ],
+  74695: [
+    {
+      text:
+        "Sometimes, your future is already set, and there's nothing you can do about it. There are some things you just can't change, no matter how hard you work. Unfair, don't you think? It isn't an easy fact to accept, and I'm not telling you to, but that's just how life is. Unfair.",
+      topics: ["future", "life", "unfair"],
     },
   ],
   80891: [
     {
       text:
-        "life comes at a cost. Wouldn’t it be arrogant to die before you’ve repaid that debt?",
+        "Life comes at a cost. Wouldn’t it be arrogant to die before you’ve repaid that debt?",
       topics: ["life"],
     },
     {
@@ -492,6 +508,12 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  82523: [
+    {
+      text: "Life is not a game of luck if you wanna win work hard.",
+      topics: ["life"],
+    },
+  ],
   83799: [
     {
       text:
@@ -502,8 +524,8 @@ const authorQuotes = {
   84677: [
     {
       text:
-        "life and death are like light and shadow. They’re both always there. But people don’t like thinking about death, so subconsciously, they always look away from it.",
-      topics: [],
+        "Life and death are like light and shadow. They’re both always there. But people don’t like thinking about death, so subconsciously, they always look away from it.",
+      topics: ["life", "death"],
     },
   ],
   87971: [
@@ -524,6 +546,13 @@ const authorQuotes = {
     {
       text:
         "If you wanna make people dream, you’ve gotta start by believing in that dream yourself!",
+      topics: ["dreams"],
+    },
+  ],
+  89224: [
+    {
+      text:
+        "It’s not bad to dream. But you also have to consider what’s realistic.",
       topics: ["dreams"],
     },
   ],

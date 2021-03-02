@@ -16,9 +16,9 @@ function ImageButton({ className, icon, title, numOfQuotes, image }) {
         >
           {icon && <i className={`fas fa-${icon} fa-5x`}></i>}
           <span className="text-3xl capitalize">
-            {title}
+            {title.replace(/_/g, " ")}
             <p className="font-light">
-              {numOfQuotes} Quote{numOfQuotes > 1 ? "s" : ""}
+              {numOfQuotes} Quote{numOfQuotes !== 1 ? "s" : ""}
             </p>
           </span>
         </span>

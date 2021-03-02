@@ -3,7 +3,7 @@ import Masonry from "../components/Masonry";
 import Card from "../components/Card";
 
 function Quotes({ quotes }) {
-  let { topic = "", authorId = "" } = useParams();
+  const { topic = "", authorId = "" } = useParams();
   return (
     <div className="pt-20">
       {
