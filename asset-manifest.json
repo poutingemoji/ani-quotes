@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ani-quotes/static/css/main.c8ee0cbc.chunk.css",
-    "main.js": "/ani-quotes/static/js/main.0f5d615a.chunk.js",
-    "main.js.map": "/ani-quotes/static/js/main.0f5d615a.chunk.js.map",
+    "main.css": "/ani-quotes/static/css/main.c430d274.chunk.css",
+    "main.js": "/ani-quotes/static/js/main.c639e39d.chunk.js",
+    "main.js.map": "/ani-quotes/static/js/main.c639e39d.chunk.js.map",
     "runtime-main.js": "/ani-quotes/static/js/runtime-main.fa4dcc9c.js",
     "runtime-main.js.map": "/ani-quotes/static/js/runtime-main.fa4dcc9c.js.map",
     "static/js/2.725e2b62.chunk.js": "/ani-quotes/static/js/2.725e2b62.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.4f725588.chunk.js": "/ani-quotes/static/js/3.4f725588.chunk.js",
     "static/js/3.4f725588.chunk.js.map": "/ani-quotes/static/js/3.4f725588.chunk.js.map",
     "index.html": "/ani-quotes/index.html",
-    "static/css/main.c8ee0cbc.chunk.css.map": "/ani-quotes/static/css/main.c8ee0cbc.chunk.css.map",
+    "static/css/main.c430d274.chunk.css.map": "/ani-quotes/static/css/main.c430d274.chunk.css.map",
     "static/js/2.725e2b62.chunk.js.LICENSE.txt": "/ani-quotes/static/js/2.725e2b62.chunk.js.LICENSE.txt",
     "static/media/blackbeard-dreams.73594e62.png": "/ani-quotes/static/media/blackbeard-dreams.73594e62.png",
     "static/media/death.6766dd21.png": "/ani-quotes/static/media/death.6766dd21.png",
@@ -21,11 +21,13 @@
     "static/media/imagination.027c3501.png": "/ani-quotes/static/media/imagination.027c3501.png",
     "static/media/leadership.ebae3a84.png": "/ani-quotes/static/media/leadership.ebae3a84.png",
     "static/media/life.ac21f935.png": "/ani-quotes/static/media/life.ac21f935.png",
-    "static/media/light-yagami.fe204cb7.png": "/ani-quotes/static/media/light-yagami.fe204cb7.png",
     "static/media/logo.cdc91b7f.png": "/ani-quotes/static/media/logo.cdc91b7f.png",
     "static/media/love.692a75f3.png": "/ani-quotes/static/media/love.692a75f3.png",
     "static/media/motivational.080c72a4.png": "/ani-quotes/static/media/motivational.080c72a4.png",
+    "static/media/nino-confrontation.436c6eb1.jpg": "/ani-quotes/static/media/nino-confrontation.436c6eb1.jpg",
     "static/media/patience.0ac070e8.png": "/ani-quotes/static/media/patience.0ac070e8.png",
+    "static/media/roxy-embarrassment.093dd1aa.jpg": "/ani-quotes/static/media/roxy-embarrassment.093dd1aa.jpg",
+    "static/media/sengoku-confession.cac63096.jpg": "/ani-quotes/static/media/sengoku-confession.cac63096.jpg",
     "static/media/strength.068c1bde.png": "/ani-quotes/static/media/strength.068c1bde.png",
     "static/media/war.960ea017.png": "/ani-quotes/static/media/war.960ea017.png",
     "static/media/wisdom.b67606ef.png": "/ani-quotes/static/media/wisdom.b67606ef.png"
@@ -33,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.fa4dcc9c.js",
     "static/js/2.725e2b62.chunk.js",
-    "static/css/main.c8ee0cbc.chunk.css",
-    "static/js/main.0f5d615a.chunk.js"
+    "static/css/main.c430d274.chunk.css",
+    "static/js/main.c639e39d.chunk.js"
   ]
 }
