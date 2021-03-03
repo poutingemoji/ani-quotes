@@ -15,6 +15,7 @@ function Topics({ quotes }) {
 
       <Grid>
         {Object.keys(topicQuotes)
+          .sort()
           .sort((a, b) => topicQuotes[b].length - topicQuotes[a].length)
           .map((key, i) => (
             <Link to={`/topics/${snakeCase(key)}`} key={i}>
