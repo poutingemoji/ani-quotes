@@ -33,8 +33,8 @@ function Card({ author, text, image, tags }) {
               tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="px-2 m-1 text-white capitalize rounded-full "
-                  style={{ background: topics[tag]?.hex || "" }}
+                  className="px-2 m-1 text-white capitalize rounded-full bg-primary-light"
+                  style={{ background: topics[tag]?.hex}}
                 >
                   {tag.replace(/_/g, " ")}
                 </span>
