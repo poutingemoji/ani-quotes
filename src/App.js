@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import { HashRouter, Route, useHistory } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import Home from "./pages";
 import Topics from "./pages/topics";
 import Authors from "./pages/authors";
@@ -16,7 +16,6 @@ function App() {
   const [quotes, setQuotes] = useState([]);
   const [authors, setAuthors] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(async () => {
@@ -93,34 +92,14 @@ function App() {
     setIsLoading(false);
   }, [authors]);
 
-  const history = useHistory();
-  useEffect(() => {
-    const unlisten = history.listen(() => {
-      window.scrollTo(0, 0);
-      hideMenu();
-    });
-
-    return unlisten;
-  }, [history]);
-
-  const toggle = () => setIsOpen(!isOpen);
-  const hideMenu = () => {
-    if (window.innerWidth > 768 && isOpen) setIsOpen(false);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", hideMenu);
-    return () => {
-      window.removeEventListener("resize", hideMenu);
-    };
-  }, []);
-
   if (isLoading) return <Loading />;
   return (
     <HashRouter basename="/">
-      <Navbar toggle={toggle} setIsVisible={setIsVisible} />
-      <Dropdown isOpen={isOpen} toggle={toggle} />
-      {isVisible ? <Search quotes={quotes} setIsVisible={setIsVisible}/> : null}
+      <Navbar setIsVisible={setIsVisible} />
+
+      {isVisible ? (
+        <Search quotes={quotes} setIsVisible={setIsVisible} />
+      ) : null}
       <Route
         path="/"
         exact
