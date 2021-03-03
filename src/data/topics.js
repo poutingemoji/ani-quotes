@@ -24,7 +24,7 @@ const topics = {
   friendship: {},
   funny: {},
   future: { hex: "#5899E2", icon: "clock", image: futureImage },
-
+  happiness: {},
   imagination: { hex: "#759FBC", icon: "lightbulb", image: imaginationImage },
   inspirational: {},
 
@@ -43,6 +43,7 @@ const topics = {
   strength: { hex: "#D64045", icon: "dumbbell", image: strengthImage },
   success: {},
   trust: {},
+  truth: {},
   unfair: {},
   war: { hex: "#606D5D", icon: "chess-knight", image: warImage },
   wisdom: { hex: "#7B904B", icon: "brain", image: wisdomImage },
