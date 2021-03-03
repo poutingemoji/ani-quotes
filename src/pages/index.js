@@ -120,7 +120,7 @@ function Home({ quotes, authors }) {
                 artists. And here we are, almost a year later!
               </ReadMore>
             </p>
-            <p className="text-sm uppercase">Written March 2, 2021</p>
+            <p className="mt-1 text-sm uppercase">Written March 2, 2021</p>
           </div>
           <div className="lg:ml-10 lg:w-1/2 xl:w-2/5">
             <img
