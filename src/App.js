@@ -63,9 +63,9 @@ function App() {
       if (!result.data.Page.pageInfo.hasNextPage) break;
     }
     setAuthors(
-      newAuthors.sort(
-        (a, b) => authorQuotes[b.id].length - authorQuotes[a.id].length
-      )
+      newAuthors
+        .sort((a, b) => a.name.full.localeCompare(b.name.full))
+        .sort((a, b) => authorQuotes[b.id].length - authorQuotes[a.id].length)
     );
   }, []);
 

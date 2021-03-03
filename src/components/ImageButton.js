@@ -1,6 +1,6 @@
 function ImageButton({ className, icon, title, numOfQuotes, image }) {
   return (
-    <button className="w-full h-full overflow-hidden text-white rounded-lg parent">
+    <button className="w-full h-full overflow-hidden text-white rounded-lg parent bg-primary-light">
       <div
         className="flex flex-col items-center justify-center w-full h-full transform parent-hover:scale-105"
         style={{
