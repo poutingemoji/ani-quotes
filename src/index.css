@@ -141,3 +141,7 @@ body {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
   }
+
+.read-less, .read-more {
+  @apply text-blue
+}

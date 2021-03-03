@@ -2,11 +2,6 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      display: "Overpass",
-      body: "Roboto",
-    },
-
     extend: {
       colors: {
         primary: {

@@ -10,6 +10,7 @@ import { groupBy } from "../utils/Helper";
 import ninoConfrontation from "../images/nino-confrontation.jpg";
 import roxyEmbarrassment from "../images/roxy-embarrassment.jpg";
 import sengokuConfession from "../images/sengoku-confession.jpg";
+import ReadMore from "react-read-more-read-less";
 
 function Home({ quotes, authors }) {
   const quotesCopy = JSON.parse(JSON.stringify(quotes));
@@ -53,10 +54,15 @@ function Home({ quotes, authors }) {
               What is AniQuotes?
             </h1>
             <p className="text-lg">
-              AniQuotes is a collection of quotes from a variety of anime
-              characters that span a diverse range of topics. The primary focus
-              of AniQuotes is to allow anime quotes to be more accessible and
-              bring light to relatable quotes that carry a powerful message.
+              AniQuotes is a collection of quotes by anime characters. The
+              primary focus of AniQuotes is to allow anime quotes to be more
+              accessible and to bring attention to all the beautiful quotes that
+              can be found in anime and manga. The idea for AniQuotes came about
+              from my friend introducing me to AniList, a website that tracks
+              your anime and manga progress, and BrainyQuote, a quotation site I
+              used to visit for my essays. This is the first multi-page website
+              I've built with Create React App and Tailwind CSS and I hope you
+              find a quote you can resonate with :)
             </p>
           </div>
         </div>
@@ -65,23 +71,56 @@ function Home({ quotes, authors }) {
             <h1 className="py-4 text-5xl font-bold text-white ">
               Who is poutingemoji?
             </h1>
+
             <p className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac
-              feugiat sed lectus vestibulum mattis ullamcorper velit sed
-              ullamcorper. Turpis tincidunt id aliquet risus. Lacus sed turpis
-              tincidunt id aliquet risus. Sit amet consectetur adipiscing elit
-              duis. Turpis egestas integer eget aliquet nibh praesent tristique
-              magna sit. Leo vel fringilla est ullamcorper eget nulla facilisi
-              etiam dignissim. Ac felis donec et odio pellentesque. Purus
-              viverra accumsan in nisl nisi scelerisque eu ultrices. Mauris
-              pharetra et ultrices neque ornare aenean. Augue lacus viverra
-              vitae congue eu consequat ac felis donec. Imperdiet sed euismod
-              nisi porta lorem mollis aliquam ut. Amet massa vitae tortor
-              condimentum. Vulputate sapien nec sagittis aliquam. Vitae proin
-              sagittis nisl rhoncus mattis rhoncus urna neque. Cursus metus
-              aliquam eleifend mi.
+              <ReadMore
+                charLimit={700}
+                readMoreText={"see more"}
+                readLessText={"see less"}
+                readMoreClassName="read-more"
+                readLessClassName="read-less"
+              >
+                😎🤡 I think that says enough about me. Anyways... I really
+                enjoy making Discord Bots and websites but it hasn't always been
+                this way. I started scripting around the beginning of April last
+                year because my long time ROBLOX and Discord friend was willing
+                to teach me the basics of RLua. After I got a grasp of RLua, I
+                began making a fighting and simulator game and helped new
+                developers in Roblox Studio Community on the side. This went on
+                for many months. Eventually I realized I didn't like making
+                games as much as I thought because I invested a great deal of
+                time into developing and saw little to no return in terms of
+                progress or improvement in my scripting ability. Around the
+                middle of June, I had a strong urge to make Discord Bots so
+                that's what I set out to do. This was also when my friend,
+                nekoama, showed me the website he made in Web Design class.
+                (Will be important later!) I began learning discord.js (Yes, I
+                learned a library while learning the language 🤷‍♂️) and created
+                poutingbot. I felt like making Discord Bots was the right choice
+                for me because I could immediately show what I made to my
+                friends and they could interact with it easily. In late July, I
+                created my first website to show off poutingbot's features and
+                commands with HTML, CSS, JS and Bulma. It was a miracle that
+                website even worked (It doesn't anymore 😢) but besides that
+                point, I really liked making websites because once I published
+                it to GitHub Pages, anyone could see it and I really loved that
+                (Also partly because I didn't need to host a server if I just
+                made static websites 😗). Things went downhill from there. I
+                began making an RPG game with poutingbot and spent many months
+                creating and removing features and didn't even bother to create
+                a design for the game beforehand (Pretty embarrassing since I've
+                had experience with making games before) all while still helping
+                out in Roblox Studio Community. So there goes 7 months... At the
+                start of February 2021, nekoama showed me another one of his Web
+                Design assignments, a showcase of his favorite anime, manga, and
+                characters, and it made me realize why I loved making websites
+                so much. So, after a bit of trial and error, I picked up React
+                and Tailwind CSS and made a timeline of the most memorable songs
+                from each period in my life and showcased my favorite songs and
+                artists. And here we are, almost a year later!
+              </ReadMore>
             </p>
+            <p className="text-sm uppercase">Written March 2, 2021</p>
           </div>
           <div className="lg:ml-10 lg:w-1/2 xl:w-2/5">
             <img
