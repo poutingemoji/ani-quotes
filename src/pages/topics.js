@@ -1,4 +1,3 @@
-import { snakeCase } from "change-case";
 import { Link } from "react-router-dom";
 import topics from "../data/topics";
 import ImageButton from "../components/ImageButton";
@@ -18,7 +17,7 @@ function Topics({ quotes }) {
           .sort()
           .sort((a, b) => topicQuotes[b].length - topicQuotes[a].length)
           .map((key, i) => (
-            <Link to={`/topics/${snakeCase(key)}`} key={i}>
+            <Link to={`/topics/${key}`} key={i}>
               <ImageButton
                 className={"h-80"}
                 icon={topics[key]?.icon}

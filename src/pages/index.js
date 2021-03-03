@@ -66,7 +66,7 @@ function Home({ quotes, authors }) {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center lg:flex-row lg:my-32">
+        <div className="flex flex-col justify-center lg:flex-row lg:my-32">
           <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5 md:my-10">
             <h1 className="py-4 text-5xl font-bold text-white ">
               Who is poutingemoji?
