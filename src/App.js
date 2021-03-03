@@ -10,12 +10,14 @@ import Footer from "./components/Footer";
 import Dropdown from "./components/Dropdown";
 import authorQuotes from "./data/authorQuotes";
 import Loading from "./components/Loading";
+import Search from "./pages/search";
 
 function App() {
   const [quotes, setQuotes] = useState([]);
   const [authors, setAuthors] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(async () => {
     let newAuthors = [];
@@ -116,9 +118,9 @@ function App() {
   if (isLoading) return <Loading />;
   return (
     <HashRouter basename="/">
-      <Navbar toggle={toggle} />
+      <Navbar toggle={toggle} setIsVisible={setIsVisible} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
-
+      {isVisible ? <Search quotes={quotes} setIsVisible={setIsVisible}/> : null}
       <Route
         path="/"
         exact

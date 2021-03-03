@@ -2,10 +2,9 @@ import Hero from "../components/Hero";
 import Masonry from "../components/Masonry";
 import Loading from "../components/Loading";
 import CountUp from "react-countup";
-import authorQuotes from "../data/authorQuotes";
 import Card from "../components/Card";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { useState } from "react";
+import { useState, memo } from "react";
 import { groupBy } from "../utils/Helper";
 import ninoConfrontation from "../images/nino-confrontation.jpg";
 import roxyEmbarrassment from "../images/roxy-embarrassment.jpg";
@@ -38,7 +37,7 @@ function Home({ quotes, authors }) {
 
   return (
     <>
-      <Hero quotes={quotes} />
+      <Hero />
       <div className="mt-24 md:mt-44 md:mx-10">
         <div className="flex flex-col items-center justify-center lg:flex-row lg:my-32">
           <div className="lg:mr-10 lg:w-1/2 xl:w-2/5">

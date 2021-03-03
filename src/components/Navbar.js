@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, setIsVisible }) => {
   return (
     <nav
       className="fixed z-50 flex items-center justify-between w-full h-16 shadow-sm text-gray md:justify-evenly bg-primary "
       role="navigation"
     >
       <Link to="/" className="pl-8">
-        <img className="h-12" src={logo} alt="logo"/>
+        <img className="h-12" src={logo} alt="logo" />
       </Link>
-      <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
+      <div
+        className="order-last px-4 cursor-pointer md:hidden md:order-2"
+        onClick={toggle}
+      >
         <svg
           className="w-8 h-8"
           fill="none"
@@ -40,7 +43,9 @@ const Navbar = ({ toggle }) => {
           Quote Of The Day
         </Link>
       </div>
-      <div className="hidden md:block"></div>
+      <button onClick={() => setIsVisible(true)}>
+        <i className="fas fa-search fa-lg hover:text-white"></i>
+      </button>
     </nav>
   );
 };

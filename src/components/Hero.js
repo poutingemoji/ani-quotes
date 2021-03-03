@@ -1,7 +1,7 @@
 import { memo, useEffect } from "react";
 import anime from "animejs/lib/anime.es.js";
 
-function Hero({ quotes }) {
+function Hero() {
   useEffect(() => {
     const textWrappers = document.getElementsByClassName("letters");
     for (let i = 0; i < textWrappers.length; i++) {
@@ -55,4 +55,4 @@ function Hero({ quotes }) {
   );
 }
 
-export default memo(Hero);
+export default Hero;
