@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      height: {
+        "screen/2": "50vh",
+      },
       colors: {
         primary: {
           light: "#1e2d43",

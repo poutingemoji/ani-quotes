@@ -4,19 +4,19 @@ const authorQuotes = {
   3: [
     {
       text:
-        "Everything has a beginning and an end. Life is just a cycle of starts and stops. There are ends we don’t desire, but they’re inevitable, we have to face them. It’s what being human is all about.",
+        "Everything has a beginning and an end. Life is just a cycle of starts and stops. There are ends we don't desire, but they're inevitable, we have to face them. It's what being human is all about.",
       topics: ["life"],
     },
     {
       text:
-        "For some reason, I didn’t feel sad or broken up— it just didn’t seem real. But slowly I realized that it was real; that you were gone. And little by little I felt something inside of me go numb. After six months I made a kind of bet with myself; a pledge, that I would leave this planet and start a new life if you didn’t return by the time the watch stopped. I didn’t come here to blame you, I... I just wanted to know why. Why you disappeared like that.",
+        "For some reason, I didn't feel sad or broken up— it just didn't seem real. But slowly I realized that it was real; that you were gone. And little by little I felt something inside of me go numb. After six months I made a kind of bet with myself; a pledge, that I would leave this planet and start a new life if you didn't return by the time the watch stopped. I didn't come here to blame you, I... I just wanted to know why. Why you disappeared like that.",
       topics: ["loss"],
     },
   ],
   11: [
     {
       text:
-        "A lesson without pain is meaningless. That’s because no one can gain without sacrificing something. But by enduring that pain and overcoming it, he shall obtain a powerful, unmatched heart.",
+        "A lesson without pain is meaningless. That's because no one can gain without sacrificing something. But by enduring that pain and overcoming it, he shall obtain a powerful, unmatched heart.",
       topics: ["pain"],
     },
     {
@@ -28,7 +28,7 @@ const authorQuotes = {
   14: [
     {
       text:
-        "People’s lives don’t end when they die, it ends when they lose faith.",
+        "People's lives don't end when they die, it ends when they lose faith.",
       topics: ["faith"],
     },
     {
@@ -44,12 +44,12 @@ const authorQuotes = {
   ],
   17: [
     {
-      text: "If you don’t like your destiny, don’t accept it.",
+      text: "If you don't like your destiny, don't accept it.",
       topics: ["future"],
     },
     {
       text:
-        "Hard work is worthless for those that don’t believe in themselves.",
+        "Hard work is worthless for those that don't believe in themselves.",
       topics: ["believe_in_yourself"],
     },
   ],
@@ -66,7 +66,7 @@ const authorQuotes = {
       topics: ["funny"],
     },
     {
-      text: "If you don’t take risks, you can’t create a future!",
+      text: "If you don't take risks, you can't create a future!",
       topics: ["future"],
     },
     {
@@ -80,24 +80,24 @@ const authorQuotes = {
   ],
   62: [
     {
-      text: "If I die here, then I’m a man that could only make it this far.",
+      text: "If I die here, then I'm a man that could only make it this far.",
       topics: ["failure"],
     },
     {
       text:
-        "You want to keep everyone from dying? That’s naive. It’s war. People die.",
+        "You want to keep everyone from dying? That's naive. It's war. People die.",
       topics: ["war"],
     },
     {
       text:
-        "You need to accept the fact that you’re not the best and have all the will to strive to be better than anyone you face.",
+        "You need to accept the fact that you're not the best and have all the will to strive to be better than anyone you face.",
       topics: ["motivational"],
     },
   ],
   68: [
     {
       text:
-        "The world’s not perfect, but it’s there for us trying the best it can. That’s what makes it so damn beautiful.",
+        "The world's not perfect, but it's there for us trying the best it can. That's what makes it so damn beautiful.",
       topics: ["positive"],
     },
   ],
@@ -117,7 +117,7 @@ const authorQuotes = {
   147: [
     {
       text:
-        "Whatever you lose, you’ll find it again. But what you throw away you’ll never get back.",
+        "Whatever you lose, you'll find it again. But what you throw away you'll never get back.",
       topics: ["loss"],
     },
     {
@@ -126,7 +126,7 @@ const authorQuotes = {
     },
     {
       text:
-        "You’ll only realize that you truly love someone if they already caused you enormous pain. Your enemies can never hurt you the way your loved ones can. It’s the people close to your heart that can give you the most piercing wound. Love is a double-edged sword, it can heal the wound faster or it can sink the blade even deeper.",
+        "You'll only realize that you truly love someone if they already caused you enormous pain. Your enemies can never hurt you the way your loved ones can. It's the people close to your heart that can give you the most piercing wound. Love is a double-edged sword, it can heal the wound faster or it can sink the blade even deeper.",
       topics: ["love", "pain"],
     },
   ],
@@ -154,7 +154,7 @@ const authorQuotes = {
   305: [
     {
       text:
-        "I couldn’t confess my feelings for you, so I watched you from afar, being happy with someone else.",
+        "I couldn't confess my feelings for you, so I watched you from afar, being happy with someone else.",
       topics: ["love"],
     },
   ],
@@ -167,7 +167,7 @@ const authorQuotes = {
   307: [
     {
       text:
-        "It’s not always possible to do what we want to do, but it’s important to believe in something before you actually do it.",
+        "It's not always possible to do what we want to do, but it's important to believe in something before you actually do it.",
       topics: ["believe_in_yourself"],
     },
   ],
@@ -188,7 +188,7 @@ const authorQuotes = {
   477: [
     {
       text:
-        "Don’t beg for things. Do it yourself, or else you won’t get anything.",
+        "Don't beg for things. Do it yourself, or else you won't get anything.",
       topics: [],
     },
   ],
@@ -203,7 +203,7 @@ const authorQuotes = {
   672: [
     {
       text:
-        "The country? The skies? You can have them. I’m busy just protecting what’s right in front of me. I don’t know what’ll happen to me in the future, but if something has fallen at my feet, then the least I can do is pick it up.",
+        "The country? The skies? You can have them. I'm busy just protecting what's right in front of me. I don't know what'll happen to me in the future, but if something has fallen at my feet, then the least I can do is pick it up.",
       topics: ["future"],
     },
     {
@@ -285,7 +285,7 @@ const authorQuotes = {
   2188: [
     {
       text:
-        "Don’t be so quick to throw away your life. No matter how disgraceful or embarrassing it may be, you need to keep struggling to find your way out until the very end.",
+        "Don't be so quick to throw away your life. No matter how disgraceful or embarrassing it may be, you need to keep struggling to find your way out until the very end.",
       topics: ["life"],
     },
   ],
@@ -298,7 +298,7 @@ const authorQuotes = {
   2423: [
     {
       text:
-        "A person grows up when he’s able to overcome hardships. Protection is important, but there are some things that a person must learn on his own.",
+        "A person grows up when he's able to overcome hardships. Protection is important, but there are some things that a person must learn on his own.",
       topics: [],
     },
     {
@@ -323,7 +323,7 @@ const authorQuotes = {
   2749: [
     {
       text:
-        "Wake up princess, I’m tired of your useless ideals. It’s gotten pathetic. What good are your happy ideals if you can’t do anything to make them a reality? They’re nothing but dreams, and your dreams don’t stand a chance.",
+        "Wake up princess, I'm tired of your useless ideals. It's gotten pathetic. What good are your happy ideals if you can't do anything to make them a reality? They're nothing but dreams, and your dreams don't stand a chance.",
       topics: ["dreams"],
     },
   ],
@@ -337,7 +337,7 @@ const authorQuotes = {
   2767: [
     {
       text:
-        "People become stronger because they have memories they can’t forget.",
+        "People become stronger because they have memories they can't forget.",
       topics: ["strength"],
     },
   ],
@@ -355,14 +355,14 @@ const authorQuotes = {
     },
     {
       text:
-        "Religion, ideology, resources, land, spite, love or just because… No matter how pathetic the reason, it’s enough to start war. War will never cease to exist… reasons can be thought up after the fact… Human nature pursues strife.",
+        "Religion, ideology, resources, land, spite, love or just because… No matter how pathetic the reason, it's enough to start war. War will never cease to exist… reasons can be thought up after the fact… Human nature pursues strife.",
       topics: ["war", "nature"],
     },
   ],
   3331: [
     {
       image: blackbeardDreams,
-      text: "People’s dreams... have no end!!",
+      text: "People's dreams... have no end!!",
       topics: ["motivational", "dreams"],
     },
     {
@@ -374,7 +374,7 @@ const authorQuotes = {
   4631: [
     {
       text:
-        "Anything can happen. No one ever thinks it will until it does. What will happen, happens. That’s how the world is. The most important thing is to not let the tragedy defeat you. To believe that you can get through it.",
+        "Anything can happen. No one ever thinks it will until it does. What will happen, happens. That's how the world is. The most important thing is to not let the tragedy defeat you. To believe that you can get through it.",
       topics: ["believe_in_yourself"],
     },
   ],
@@ -400,7 +400,7 @@ const authorQuotes = {
     },
     {
       text:
-        "We don’t have to know what tomorrow holds! That’s why we can live for everything we’re worth today!",
+        "We don't have to know what tomorrow holds! That's why we can live for everything we're worth today!",
       topics: ["future"],
     },
   ],
@@ -414,7 +414,7 @@ const authorQuotes = {
   5189: [
     {
       text:
-        "Moving on doesn’t mean you forget about things. It just means you have to accept what’s happened and continue living.",
+        "Moving on doesn't mean you forget about things. It just means you have to accept what's happened and continue living.",
       topics: [],
     },
     {
@@ -445,7 +445,7 @@ const authorQuotes = {
   12064: [
     {
       text:
-        "You stupid, idiotic, blockhead, mongrel. Or that’s what I’d normally say.",
+        "You stupid, idiotic, blockhead, mongrel. Or that's what I'd normally say.",
       topics: ["love"],
     },
   ],
@@ -480,14 +480,14 @@ const authorQuotes = {
   ],
   12862: [
     {
-      text: "When you give up, that’s when the game ends.",
+      text: "When you give up, that's when the game ends.",
       topics: ["failure"],
     },
   ],
   13468: [
     {
       text:
-        "Don’t be upset because of what you can’t do. Do what you do best, live as carefree and optimistically as you can, because some people aren’t able to do that.",
+        "Don't be upset because of what you can't do. Do what you do best, live as carefree and optimistically as you can, because some people aren't able to do that.",
       topics: [],
     },
     {
@@ -527,14 +527,14 @@ const authorQuotes = {
   19271: [
     {
       text:
-        "When do you think people die? When they are shot through the heart by the bullet of a pistol? No. When they are ravaged by an incurable disease? No. When they drink a soup made from a poisonous mushroom!? No! It’s when they are forgotten.",
+        "When do you think people die? When they are shot through the heart by the bullet of a pistol? No. When they are ravaged by an incurable disease? No. When they drink a soup made from a poisonous mushroom!? No! It's when they are forgotten.",
       topics: ["death"],
     },
   ],
   22253: [
     {
       text:
-        "There’s no shame in falling down! True shame is to not stand up again!",
+        "There's no shame in falling down! True shame is to not stand up again!",
       topics: ["failure"],
     },
   ],
@@ -594,7 +594,7 @@ const authorQuotes = {
   42501: [
     {
       text:
-        "If nobody cares to accept you and wants you in this world, accept yourself and you will see that you don’t need them and their selfish ideas.",
+        "If nobody cares to accept you and wants you in this world, accept yourself and you will see that you don't need them and their selfish ideas.",
       topics: [],
     },
   ],
@@ -638,20 +638,20 @@ const authorQuotes = {
   46496: [
     {
       text:
-        "If you begin to regret, you’ll dull your future decisions and let others make your choices for you. All that’s left for you then is to die. Nobody can foretell the outcome. Each decision you make holds meaning only by affecting your next decision.",
+        "If you begin to regret, you'll dull your future decisions and let others make your choices for you. All that's left for you then is to die. Nobody can foretell the outcome. Each decision you make holds meaning only by affecting your next decision.",
       topics: [],
     },
   ],
   50163: [
     {
       text:
-        "Mistakes are not shackles that halt one from stepping forward. Rather, they are that which sustain and grow one’s heart.",
+        "Mistakes are not shackles that halt one from stepping forward. Rather, they are that which sustain and grow one's heart.",
       topics: ["mistakes"],
     },
   ],
   51595: [
     {
-      text: "It doesn’t do any good to pretend you can’t see what’s going on.",
+      text: "It doesn't do any good to pretend you can't see what's going on.",
       topics: [],
     },
   ],
@@ -711,7 +711,7 @@ const authorQuotes = {
   67065: [
     {
       text:
-        "If wishes could be granted, if desires could be fulfilled, then I wouldn’t wish or desire for anything after all. The things you’re handed on a silver platter are never genuine, and never everlasting. And that is why I’ll always keep searching.",
+        "If wishes could be granted, if desires could be fulfilled, then I wouldn't wish or desire for anything after all. The things you're handed on a silver platter are never genuine, and never everlasting. And that is why I'll always keep searching.",
       topics: ["patience"],
     },
     {
@@ -802,7 +802,7 @@ const authorQuotes = {
   ],
   73935: [
     {
-      text: "I’ll leave tomorrow’s problems to tomorrow’s me.",
+      text: "I'll leave tomorrow's problems to tomorrow's me.",
       topics: ["future"],
     },
     {
@@ -836,7 +836,7 @@ const authorQuotes = {
   80891: [
     {
       text:
-        "Life comes at a cost. Wouldn’t it be arrogant to die before you’ve repaid that debt?",
+        "Life comes at a cost. Wouldn't it be arrogant to die before you've repaid that debt?",
       topics: ["life"],
     },
     {
@@ -847,7 +847,7 @@ const authorQuotes = {
   ],
   81367: [
     {
-      text: "If you can’t do something, then don’t. Focus on what you can.",
+      text: "If you can't do something, then don't. Focus on what you can.",
       topics: [],
     },
   ],
@@ -873,14 +873,14 @@ const authorQuotes = {
   84677: [
     {
       text:
-        "Life and death are like light and shadow. They’re both always there. But people don’t like thinking about death, so subconsciously, they always look away from it.",
+        "Life and death are like light and shadow. They're both always there. But people don't like thinking about death, so subconsciously, they always look away from it.",
       topics: ["life", "death"],
     },
   ],
   87971: [
     {
       text:
-        "If you wanna make people dream, you’ve gotta start by believing in that dream yourself!",
+        "If you wanna make people dream, you've gotta start by believing in that dream yourself!",
       topics: ["dreams"],
     },
   ],
@@ -920,7 +920,7 @@ const authorQuotes = {
   89224: [
     {
       text:
-        "It’s not bad to dream. But you also have to consider what’s realistic.",
+        "It's not bad to dream. But you also have to consider what's realistic.",
       topics: ["dreams"],
     },
   ],
@@ -968,7 +968,7 @@ const authorQuotes = {
   124547: [
     {
       text:
-        "Sometimes, people are just mean. Don’t fight mean with mean. Hold your head high.",
+        "Sometimes, people are just mean. Don't fight mean with mean. Hold your head high.",
       topics: [],
     },
     {
@@ -978,7 +978,7 @@ const authorQuotes = {
     },
     {
       text:
-        "When you hit the point of no return, that’s the moment it truly becomes a journey. If you can still turn back, it’s not really a journey.",
+        "When you hit the point of no return, that's the moment it truly becomes a journey. If you can still turn back, it's not really a journey.",
       topics: [],
     },
   ],

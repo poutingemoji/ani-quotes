@@ -38,8 +38,8 @@ function Home({ quotes, authors }) {
   return (
     <>
       <Hero />
-      <div className="mt-24 md:mt-44 md:mx-10">
-        <div className="flex flex-col items-center justify-center lg:flex-row lg:my-32">
+      <div className="mt-24 md:my-44 md:mx-10">
+        <div className="flex flex-col items-center justify-center h-screen lg:flex-row md:h-screen/2">
           <div className="lg:mr-10 lg:w-1/2 xl:w-2/5">
             <img
               className="md:rounded-xl"
@@ -48,7 +48,7 @@ function Home({ quotes, authors }) {
             />
           </div>
 
-          <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5 md:my-10">
+          <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5">
             <h1 className="py-4 text-5xl font-bold text-white">
               What is AniQuotes?
             </h1>
@@ -65,8 +65,8 @@ function Home({ quotes, authors }) {
             </p>
           </div>
         </div>
-        <div className="flex flex-col justify-center lg:flex-row lg:my-32">
-          <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5 md:my-10">
+        <div className="flex flex-col items-center justify-center h-screen lg:flex-row md:h-screen/2">
+          <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5">
             <h1 className="py-4 text-5xl font-bold text-white ">
               Who is poutingemoji?
             </h1>
@@ -129,7 +129,7 @@ function Home({ quotes, authors }) {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center lg:flex-row my-36 md:flex-col">
+        <div className="flex items-center justify-center h-screen lg:flex-row md:flex-col md:h-screen/2">
           <div className="lg:w-1/2 lg:m-10 2xl:w-1/3">
             <img
               className="hidden md:block rounded-xl"
