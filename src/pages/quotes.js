@@ -11,7 +11,8 @@ function Quotes({ quotes }) {
           {quotes
             .filter(
               (quote) =>
-                quote.topics.includes(topic) || quote.author.id === authorId
+                quote.topics.includes(topic) ||
+                quote.author.id === parseInt(authorId)
             )
             .map((quote, i) => (
               <Card

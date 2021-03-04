@@ -26,7 +26,7 @@ function Card({ author, text, image, tags }) {
             />
             <h3 className="mb-2 text-lg font-semibold lg:text-lg text-gray">
               {author.name.full}{" "}
-              {author.media ? `(${author.media.title.english})` : null}
+              {author.media !== null ? `(${author.media.title.english})` : null}
             </h3>
           </div>
           <div className="flex flex-wrap mt-1">
