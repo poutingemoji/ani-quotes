@@ -24,7 +24,7 @@ function Search({ quotes, authors }) {
   );
   console.log(topicResults);
   return (
-    <div className="pt-20">
+    <div className="flex flex-col items-center pt-20">
       <input
         className="h-10 text-black w-96"
         type="text"
