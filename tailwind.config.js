@@ -18,8 +18,7 @@ module.exports = {
           transparent: "rgba(11,22,34, 0.75)",
         },
         gray: {
-          light: "rgb(201,215,227)",
-          DEFAULT: "#9fadbd",
+          DEFAULT: "#e0e0e0",
         },
         green: {
           DEFAULT: "rgb(74,189,78)",

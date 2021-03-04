@@ -38,7 +38,7 @@ function Home({ quotes, authors }) {
   return (
     <>
       <Hero />
-      <div className="mt-24 md:my-36 md:mx-10">
+      <div className="mt-24 mb-0 md:mt-40 md:mb-14 md:mx-10">
         <div className="flex flex-col items-center justify-center h-screen lg:flex-row lg:h-screen/2">
           <div className="lg:mr-10 lg:w-1/2 xl:w-2/5">
             <img
@@ -49,7 +49,7 @@ function Home({ quotes, authors }) {
           </div>
 
           <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5">
-            <h1 className="py-4 text-4xl font-semibold text-gray-light">
+            <h1 className="py-4 text-4xl font-semibold text-white">
               What is AniQuotes?
             </h1>
             <p className="text-lg">
@@ -67,7 +67,7 @@ function Home({ quotes, authors }) {
         </div>
         <div className="flex flex-col items-center justify-center h-screen lg:flex-row lg:h-screen/2">
           <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5">
-            <h1 className="py-4 text-4xl font-semibold text-gray-light ">
+            <h1 className="py-4 text-4xl font-semibold text-white ">
               Who is poutingemoji?
             </h1>
 
@@ -138,22 +138,25 @@ function Home({ quotes, authors }) {
             />
           </div>
 
-          <div className="flex flex-col my-10 text-4xl font-semibold text-center text-gray-light md:text-5xl">
+          <div className="flex flex-col my-10 text-4xl font-semibold text-center text-white md:text-5xl">
             <h1 className="text-4xl">The Numbers</h1>
             <hr className="mt-2 border-gray"></hr>
             {Object.keys(theNumbersData).map((key, i) => (
               <div key={i} className="my-2">
                 <CountUp end={theNumbersData[key].length} duration={5} />
-                <p className="text-lg font-medium text-gray">{key}</p>
+                <p className="text-lg font-normal text-gray">{key}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
+      <div className="flex flex-col items-center text-center animate-bounce">
+        <div className="text-2xl text-white">
+          <h1 className="font-semibold ">Scroll Down</h1>
+          <i className="fas fa-arrow-down"></i>
+        </div>
+      </div>
 
-      <h3 className="py-1 text-3xl font-semibold text-center text-gray-light">
-        📖 Once Upon a Time...
-      </h3>
       <InfiniteScroll
         dataLength={curQuotes.length}
         next={fetchMoreData}
@@ -161,9 +164,9 @@ function Home({ quotes, authors }) {
         loader={<Loading />}
         scrollThreshold={"100%"}
         endMessage={
-          <h3 className="py-1 text-3xl font-semibold text-center text-gray-light md:text-4xl">
-            The End 📕
-          </h3>
+          <h1 className="py-1 text-2xl font-semibold text-center text-white">
+            You reached the end! 🥳
+          </h1>
         }
       >
         <Masonry>

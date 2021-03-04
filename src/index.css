@@ -147,5 +147,5 @@ body {
 }
 
 .active {
-  color: theme("colors.gray.light");
+  @apply text-white
 }

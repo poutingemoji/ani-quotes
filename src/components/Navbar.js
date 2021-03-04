@@ -51,12 +51,12 @@ const Navbar = () => {
             />
           </svg>
         </div>
-        <div className="hidden pr-8 font-semibold md:block">
+        <div className="hidden pr-8 text-lg font-semibold md:block">
           <NavLink
             to="/"
             exact
             activeClassName="active"
-            className="p-4 hover:text-gray-light"
+            className="p-4 hover:text-white"
           >
             Home
           </NavLink>
@@ -64,7 +64,7 @@ const Navbar = () => {
             to="/authors"
             exact
             activeClassName="active"
-            className="p-4 hover:text-gray-light"
+            className="p-4 hover:text-white"
           >
             Authors
           </NavLink>
@@ -72,7 +72,7 @@ const Navbar = () => {
             to="/topics"
             exact
             activeClassName="active"
-            className="p-4 hover:text-gray-light"
+            className="p-4 hover:text-white"
           >
             Topics
           </NavLink>
@@ -80,12 +80,12 @@ const Navbar = () => {
             to="/quote_of_the_day"
             exact
             activeClassName="active"
-            className="p-4 hover:text-gray-light"
+            className="p-4 hover:text-white"
           >
             Quote Of The Day
           </NavLink>
         </div>
-        <Link to="/search" className="p-4 hover:text-gray-light">
+        <Link to="/search" className="p-4 hover:text-white">
           <i className="fas fa-search fa-lg"></i>
         </Link>
       </nav>

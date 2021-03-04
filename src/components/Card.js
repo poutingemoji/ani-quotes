@@ -19,13 +19,13 @@ function Card({ author, text, image, tags }) {
             <p className="text-lg lg:text-lg">"{text}"</p>
           </div>
           <Link to={`/authors/${author.id}`}>
-            <div className="flex">
+            <div className="flex hover:underline">
               <img
                 className="object-cover w-8 h-8 mr-2 rounded-full"
                 src={author.image.large}
                 alt="author"
               />
-              <h3 className="mb-2 text-lg font-semibold lg:text-lg text-gray-light">
+              <h3 className="mb-2 text-lg font-semibold text-white lg:text-lg">
                 {author.name.full}
               </h3>
             </div>
@@ -35,7 +35,7 @@ function Card({ author, text, image, tags }) {
               tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="px-2 mr-2 text-white capitalize rounded-full bg-primary-light"
+                  className="px-2 mr-2 text-white capitalize rounded-full hover:text-gray bg-primary-light"
                   style={{ background: topics[tag]?.hex }}
                 >
                   <Link to={`/topics/${tag}`}>{tag.replace(/_/g, " ")}</Link>
