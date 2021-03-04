@@ -21,11 +21,12 @@ function Card({ author, text, image, tags }) {
           <div className="flex">
             <img
               className="object-cover w-8 h-8 mr-2 rounded-full"
-              src={author.image}
+              src={author.image.large}
               alt="author"
             />
-            <h3 className="mb-2 text-lg font-bold lg:text-lg text-gray">
-              {author.name}
+            <h3 className="mb-2 text-lg font-semibold lg:text-lg text-gray">
+              {author.name.full}{" "}
+              {author.media ? `(${author.media.title.english})` : null}
             </h3>
           </div>
           <div className="flex flex-wrap mt-1">
@@ -34,7 +35,7 @@ function Card({ author, text, image, tags }) {
                 <span
                   key={i}
                   className="px-2 mr-2 text-white capitalize rounded-full bg-primary-light"
-                  style={{ background: topics[tag]?.hex}}
+                  style={{ background: topics[tag]?.hex }}
                 >
                   {tag.replace(/_/g, " ")}
                 </span>

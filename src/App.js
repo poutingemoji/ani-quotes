@@ -20,6 +20,7 @@ function App() {
 
   useEffect(async () => {
     let newAuthors = [];
+    let media = []
     let page = 1;
     while (true) {
       const res = await fetch("https://graphql.anilist.co", {
@@ -47,6 +48,11 @@ function App() {
                   name {
                     full
                   }
+                  media {
+                    nodes {
+                      id
+                    } 
+                  }
                 }
               }
             }
@@ -63,8 +69,55 @@ function App() {
       newAuthors = newAuthors.concat(result.data.Page.characters);
       if (!result.data.Page.pageInfo.hasNextPage) break;
     }
+
+     page = 1;
+     while (true) {
+       const res = await fetch("https://graphql.anilist.co", {
+         method: "POST",
+         headers: {
+           "Content-Type": "application/json",
+           Accept: "application/json",
+         },
+         body: JSON.stringify({
+           query: `
+            query ($id_in: [Int], $page: Int, $perPage: Int) {
+              Page (page: $page, perPage: $perPage) {
+                pageInfo {
+                  total
+                  currentPage
+                  lastPage
+                  hasNextPage
+                  perPage
+                }
+                media(id_in: $id_in) {
+                  id
+                  title {
+                    english
+                  }
+                  bannerImage
+                }
+              }
+            }
+          `,
+           variables: {
+             id_in: newAuthors.map((author) => author.media.nodes[0].id),
+             page: page,
+             perPage: 50,
+           },
+         }),
+       });
+       const result = await res.json();
+       page++;
+       media = media.concat(result.data.Page.media);
+       if (!result.data.Page.pageInfo.hasNextPage) break;
+     }
+
     setAuthors(
       newAuthors
+        .map((author) => ({
+          ...author,
+          media: media.find((media) => media.id === author.media.nodes[0].id),
+        }))
         .sort((a, b) => a.name.full.localeCompare(b.name.full))
         .sort((a, b) => authorQuotes[b.id].length - authorQuotes[a.id].length)
     );
@@ -76,15 +129,7 @@ function App() {
       const character = authors.find((author) => author.id === parseInt(id));
       if (!character) return;
       authorQuotes[id].map((newQuote) =>
-        newQuotes.push(
-          Object.assign(newQuote, {
-            author: {
-              id,
-              image: character?.image.large,
-              name: character?.name.full,
-            },
-          })
-        )
+        newQuotes.push({...newQuote, author: character})
       );
     });
     console.log(Object.keys(authorQuotes).length, newQuotes, authors);
