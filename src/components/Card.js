@@ -21,12 +21,12 @@ function Card({ author, text, image, tags }) {
           <div className="flex">
             <img
               className="object-cover w-8 h-8 mr-2 rounded-full"
-              src={author.image.large}
+              src={author?.image.large}
               alt="author"
             />
             <h3 className="mb-2 text-lg font-semibold lg:text-lg text-gray">
-              {author.name.full}{" "}
-              {author.media !== null ? `(${author.media.title.english})` : null}
+              {author?.name.full}{" "}
+              {author?.media !== null ? `(${author?.media.title.english})` : null}
             </h3>
           </div>
           <div className="flex flex-wrap mt-1">

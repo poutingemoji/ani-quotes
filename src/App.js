@@ -20,7 +20,7 @@ function App() {
 
   useEffect(async () => {
     let newAuthors = [];
-    let media = []
+    let media = [];
     let page = 1;
     while (true) {
       const res = await fetch("https://graphql.anilist.co", {
@@ -70,16 +70,16 @@ function App() {
       if (!result.data.Page.pageInfo.hasNextPage) break;
     }
 
-     page = 1;
-     while (true) {
-       const res = await fetch("https://graphql.anilist.co", {
-         method: "POST",
-         headers: {
-           "Content-Type": "application/json",
-           Accept: "application/json",
-         },
-         body: JSON.stringify({
-           query: `
+    page = 1;
+    while (true) {
+      const res = await fetch("https://graphql.anilist.co", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          query: `
             query ($id_in: [Int], $page: Int, $perPage: Int) {
               Page (page: $page, perPage: $perPage) {
                 pageInfo {
@@ -99,18 +99,18 @@ function App() {
               }
             }
           `,
-           variables: {
-             id_in: newAuthors.map((author) => author.media.nodes[0].id),
-             page: page,
-             perPage: 50,
-           },
-         }),
-       });
-       const result = await res.json();
-       page++;
-       media = media.concat(result.data.Page.media);
-       if (!result.data.Page.pageInfo.hasNextPage) break;
-     }
+          variables: {
+            id_in: newAuthors.map((author) => author.media.nodes[0].id),
+            page: page,
+            perPage: 50,
+          },
+        }),
+      });
+      const result = await res.json();
+      page++;
+      media = media.concat(result.data.Page.media);
+      if (!result.data.Page.pageInfo.hasNextPage) break;
+    }
 
     setAuthors(
       newAuthors
@@ -129,7 +129,7 @@ function App() {
       const character = authors.find((author) => author.id === parseInt(id));
       if (!character) return;
       authorQuotes[id].map((newQuote) =>
-        newQuotes.push({...newQuote, author: character})
+        newQuotes.push({ ...newQuote, author: character })
       );
     });
     console.log(Object.keys(authorQuotes).length, newQuotes, authors);
@@ -140,11 +140,7 @@ function App() {
   if (isLoading) return <Loading />;
   return (
     <HashRouter basename="/">
-      <Navbar setIsVisible={setIsVisible} />
-
-      {isVisible ? (
-        <Search quotes={quotes} setIsVisible={setIsVisible} />
-      ) : null}
+      <Navbar />
       <Route
         path="/"
         exact
@@ -171,6 +167,10 @@ function App() {
       <Route
         path="/quote_of_the_day"
         component={() => <QuoteOfTheDay quotes={quotes} />}
+      />
+      <Route
+        path="/search"
+        component={() => <Search quotes={quotes} authors={authors} />}
       />
       <Footer />
     </HashRouter>

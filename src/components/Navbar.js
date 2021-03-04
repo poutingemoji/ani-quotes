@@ -8,7 +8,7 @@ const Navbar = () => {
   const hideMenu = () => {
     if (window.innerWidth > 768 && isOpen) setIsOpen(false);
   };
-  
+
   const history = useHistory();
   useEffect(() => {
     const unlisten = history.listen(() => {
@@ -17,7 +17,7 @@ const Navbar = () => {
     });
     return unlisten;
   }, [history]);
-    
+
   useEffect(() => {
     window.addEventListener("resize", hideMenu);
     return () => window.removeEventListener("resize", hideMenu);
@@ -65,9 +65,9 @@ const Navbar = () => {
             Quote Of The Day
           </Link>
         </div>
-        <button>
-          <i className="fas fa-search fa-lg hover:text-white"></i>
-        </button>
+        <Link to="/search" className="p-4 hover:text-white">
+          <i className="fas fa-search fa-lg"></i>
+        </Link>
       </nav>
       <Dropdown isOpen={isOpen} toggle={toggle} />
     </>
