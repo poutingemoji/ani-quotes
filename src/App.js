@@ -153,7 +153,7 @@ function App() {
       />
       <Route
         path="/authors/:authorId"
-        component={() => <Quotes quotes={quotes} />}
+        component={() => <Quotes quotes={quotes} authors={authors} />}
       />
       <Route
         path="/topics"

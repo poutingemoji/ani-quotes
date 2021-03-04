@@ -38,8 +38,8 @@ function Home({ quotes, authors }) {
   return (
     <>
       <Hero />
-      <div className="mt-24 md:my-44 md:mx-10">
-        <div className="flex flex-col items-center justify-center h-screen lg:flex-row md:h-screen/2">
+      <div className="mt-24 md:my-36 md:mx-10">
+        <div className="flex flex-col items-center justify-center h-screen lg:flex-row lg:h-screen/2">
           <div className="lg:mr-10 lg:w-1/2 xl:w-2/5">
             <img
               className="md:rounded-xl"
@@ -49,7 +49,7 @@ function Home({ quotes, authors }) {
           </div>
 
           <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5">
-            <h1 className="py-4 text-5xl font-bold text-white">
+            <h1 className="py-4 text-4xl font-semibold text-gray-light">
               What is AniQuotes?
             </h1>
             <p className="text-lg">
@@ -65,9 +65,9 @@ function Home({ quotes, authors }) {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center h-screen lg:flex-row md:h-screen/2">
+        <div className="flex flex-col items-center justify-center h-screen lg:flex-row lg:h-screen/2">
           <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5">
-            <h1 className="py-4 text-5xl font-bold text-white ">
+            <h1 className="py-4 text-4xl font-semibold text-gray-light ">
               Who is poutingemoji?
             </h1>
 
@@ -119,7 +119,7 @@ function Home({ quotes, authors }) {
                 artists. And here we are, almost a year later!
               </ReadMore>
             </p>
-            <p className="mt-1 text-sm uppercase">Written March 2, 2021</p>
+            <p className="mt-1 mb-4 text-sm uppercase">Written March 2, 2021</p>
           </div>
           <div className="lg:ml-10 lg:w-1/2 xl:w-2/5">
             <img
@@ -129,30 +129,30 @@ function Home({ quotes, authors }) {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center h-screen lg:flex-row md:flex-col md:h-screen/2">
-          <div className="lg:w-1/2 lg:m-10 2xl:w-1/3">
+        <div className="flex flex-col items-center justify-center h-screen lg:flex-row lg:h-screen/2">
+          <div className="lg:w-1/3 lg:m-10">
             <img
-              className="hidden md:block rounded-xl"
+              className="md:rounded-xl"
               src={sengokuConfession}
               alt="sengoku-confession"
             />
           </div>
 
-          <div className="flex flex-col my-10 text-6xl font-bold text-center text-white md:text-6xl">
-            <h1 className="text-5xl md:text-5xl">The Numbers</h1>
-            <hr className="mt-5"></hr>
+          <div className="flex flex-col my-10 text-4xl font-semibold text-center text-gray-light md:text-5xl">
+            <h1 className="text-4xl">The Numbers</h1>
+            <hr className="mt-2 border-gray"></hr>
             {Object.keys(theNumbersData).map((key, i) => (
-              <div key={i} className="my-3">
+              <div key={i} className="my-2">
                 <CountUp end={theNumbersData[key].length} duration={5} />
-                <p className="text-lg font-medium uppercase text-gray">{key}</p>
+                <p className="text-lg font-medium text-gray">{key}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <h3 className="py-1 text-3xl font-bold text-center uppercase md:text-4xl">
-        📖 Once Upon a Time
+      <h3 className="py-1 text-3xl font-semibold text-center text-gray-light">
+        📖 Once Upon a Time...
       </h3>
       <InfiniteScroll
         dataLength={curQuotes.length}
@@ -161,7 +161,7 @@ function Home({ quotes, authors }) {
         loader={<Loading />}
         scrollThreshold={"100%"}
         endMessage={
-          <h3 className="py-1 text-3xl font-bold text-center uppercase md:text-4xl">
+          <h3 className="py-1 text-3xl font-semibold text-center text-gray-light md:text-4xl">
             The End 📕
           </h3>
         }

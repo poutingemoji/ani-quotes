@@ -145,3 +145,7 @@ body {
 .read-less, .read-more {
   @apply text-blue
 }
+
+.active {
+  color: theme("colors.gray.light");
+}

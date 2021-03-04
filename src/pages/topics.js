@@ -8,10 +8,7 @@ function Topics({ quotes }) {
   const topicQuotes = groupBy(quotes, (quote) => quote.topics);
   return (
     <>
-      <div className="pt-20 text-center">
-        <h1 className="text-5xl font-black uppercase">Topics</h1>
-      </div>
-
+      <div className="pt-20" />
       <Grid>
         {Object.keys(topicQuotes)
           .sort()

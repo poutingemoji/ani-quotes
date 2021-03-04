@@ -2,10 +2,23 @@ import { useParams } from "react-router-dom";
 import Masonry from "../components/Masonry";
 import Card from "../components/Card";
 
-function Quotes({ quotes }) {
-  const { topic = "", authorId = "" } = useParams();
+function Quotes({ quotes, authors }) {
+  const { topic, authorId } = useParams();
+  const author = authors?.find((author) => author.id === parseInt(authorId));
+  console.log(author?.media);
   return (
-    <div className="pt-20">
+    <div className="">
+      {authorId && author?.media.bannerImage && (
+        <div
+          className="h-screen/2"
+          style={{
+            background: `url(${author.media.bannerImage}) no-repeat center center`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        />
+      )}
+      <div className="bg-primary h-screen/3"></div>
       <Masonry>
         {quotes
           .filter(
@@ -28,3 +41,4 @@ function Quotes({ quotes }) {
 }
 
 export default Quotes;
+//

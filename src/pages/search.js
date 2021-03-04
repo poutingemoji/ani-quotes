@@ -1,10 +1,5 @@
 import Card from "../components/Card";
-import topics from "../data/topics";
 import { useState } from "react";
-import ImageButton from "../components/ImageButton";
-import { Link } from "react-router-dom";
-import authorQuotes from "../data/authorQuotes";
-import { groupBy } from "../utils/Helper";
 import Masonry from "../components/Masonry";
 import ReactPaginate from "react-paginate";
 

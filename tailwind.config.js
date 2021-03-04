@@ -5,11 +5,12 @@ module.exports = {
     extend: {
       height: {
         "screen/2": "50vh",
+        "screen/3": "33vh",
       },
       colors: {
         primary: {
-          light: "#1e2d43",
-          DEFAULT: "rgb(21,31,46)",
+          light: "#152232",
+          DEFAULT: "#151f2e",
           transparent: "rgba(21,31,46, 0.75)",
         },
         secondary: {
@@ -17,7 +18,8 @@ module.exports = {
           transparent: "rgba(11,22,34, 0.75)",
         },
         gray: {
-          DEFAULT: "rgb(201,215,227)",
+          light: "rgb(201,215,227)",
+          DEFAULT: "#9fadbd",
         },
         green: {
           DEFAULT: "rgb(74,189,78)",

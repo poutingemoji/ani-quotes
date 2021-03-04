@@ -17,10 +17,7 @@ function Authors({ authors }) {
 
   return (
     <>
-      <div className="pt-20 text-center">
-        <h1 className="text-5xl font-black uppercase">Authors</h1>
-      </div>
-
+      <div className="pt-20" />
       <Grid>
         {authors.slice(offset, offset + PER_PAGE).map((author, i) => {
           return (

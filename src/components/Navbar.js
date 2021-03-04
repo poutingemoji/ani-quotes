@@ -1,4 +1,4 @@
-import { Link, useHistory } from "react-router-dom";
+import { NavLink, Link, useHistory } from "react-router-dom";
 import logo from "../images/logo.png";
 import Dropdown from "../components/Dropdown";
 import { useState, useEffect } from "react";
@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="fixed z-50 flex items-center justify-between w-full h-16 shadow-sm text-gray md:justify-evenly bg-primary "
+        className="fixed z-50 flex items-center justify-between w-full h-16 shadow-sm text-gray md:justify-evenly bg-primary-light"
         role="navigation"
       >
         <Link to="/" className="pl-8">
@@ -52,20 +52,40 @@ const Navbar = () => {
           </svg>
         </div>
         <div className="hidden pr-8 font-semibold md:block">
-          <Link to="/" className="p-4 hover:text-white">
+          <NavLink
+            to="/"
+            exact
+            activeClassName="active"
+            className="p-4 hover:text-gray-light"
+          >
             Home
-          </Link>
-          <Link to="/authors" className="p-4 hover:text-white">
+          </NavLink>
+          <NavLink
+            to="/authors"
+            exact
+            activeClassName="active"
+            className="p-4 hover:text-gray-light"
+          >
             Authors
-          </Link>
-          <Link to="/topics" className="p-4 hover:text-white">
+          </NavLink>
+          <NavLink
+            to="/topics"
+            exact
+            activeClassName="active"
+            className="p-4 hover:text-gray-light"
+          >
             Topics
-          </Link>
-          <Link to="/quote_of_the_day" className="p-4 hover:text-white">
+          </NavLink>
+          <NavLink
+            to="/quote_of_the_day"
+            exact
+            activeClassName="active"
+            className="p-4 hover:text-gray-light"
+          >
             Quote Of The Day
-          </Link>
+          </NavLink>
         </div>
-        <Link to="/search" className="p-4 hover:text-white">
+        <Link to="/search" className="p-4 hover:text-gray-light">
           <i className="fas fa-search fa-lg"></i>
         </Link>
       </nav>

@@ -1,5 +1,5 @@
 import topics from "../data/topics";
-
+import { Link } from "react-router-dom";
 function Card({ author, text, image, tags }) {
   return (
     <div className="flex flex-col p-3 break-inside">
@@ -18,17 +18,18 @@ function Card({ author, text, image, tags }) {
           <div className="flex-1 mb-2 text-xl text-gray">
             <p className="text-lg lg:text-lg">"{text}"</p>
           </div>
-          <div className="flex">
-            <img
-              className="object-cover w-8 h-8 mr-2 rounded-full"
-              src={author.image.large}
-              alt="author"
-            />
-            <h3 className="mb-2 text-lg font-semibold lg:text-lg text-gray">
-              {author.name.full}{" "}
-              {author.media !== null ? `(${author.media.title.english})` : null}
-            </h3>
-          </div>
+          <Link to={`/authors/${author.id}`}>
+            <div className="flex">
+              <img
+                className="object-cover w-8 h-8 mr-2 rounded-full"
+                src={author.image.large}
+                alt="author"
+              />
+              <h3 className="mb-2 text-lg font-semibold lg:text-lg text-gray-light">
+                {author.name.full}
+              </h3>
+            </div>
+          </Link>
           <div className="flex flex-wrap mt-1">
             {tags &&
               tags.map((tag, i) => (
@@ -37,7 +38,7 @@ function Card({ author, text, image, tags }) {
                   className="px-2 mr-2 text-white capitalize rounded-full bg-primary-light"
                   style={{ background: topics[tag]?.hex }}
                 >
-                  {tag.replace(/_/g, " ")}
+                  <Link to={`/topics/${tag}`}>{tag.replace(/_/g, " ")}</Link>
                 </span>
               ))}
           </div>
