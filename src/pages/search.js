@@ -34,11 +34,19 @@ function Search({ quotes }) {
   const pageCount = Math.ceil(quoteResults.length / PER_PAGE);
   return (
     <div className="flex flex-col items-center pt-20">
-      <input
-        className="h-10 text-black w-96"
-        type="text"
-        onKeyDown={handleKeyDown}
-      />
+      <div class="flex rounded-lg bg-primary w-1/5">
+        <button>
+          <span class="w-auto flex justify-end items-center text-grey p-2">
+            <i className="text-lg fas fa-search"></i>
+          </span>
+        </button>
+        <input
+          className="w-full mr-4 text-white rounded bg-primary"
+          type="text"
+          onKeyDown={handleKeyDown}
+        />
+      </div>
+
       {query.length > 0 && (
         <>
           <div className="flex flex-col justify-center">
@@ -56,7 +64,6 @@ function Search({ quotes }) {
                     />
                   ))}
             </Masonry>
-            )
             {pageCount > 1 && (
               <ReactPaginate
                 previousLabel={"«"}

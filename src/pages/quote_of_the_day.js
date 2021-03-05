@@ -1,36 +1,54 @@
 import { useEffect, useState } from "react";
 import { randomChoice } from "../utils/Helper";
-import Swiper from "swiper";
+import Card from "../components/Card";
+
+function getRandomQuotes(quotes) {
+  const dailyQuoteTopics = ["", "motivational"];
+  const newDailyQuotes = {};
+  dailyQuoteTopics.map(
+    (key) =>
+      (newDailyQuotes[key] = randomChoice(
+        key === ""
+          ? quotes
+          : quotes.filter((quote) => quote.topics.includes(key))
+      ))
+  );
+  return newDailyQuotes;
+}
 
 function QuoteOfTheDay({ quotes }) {
   const [date, setDate] = useState(new Date());
-  const [quote, setQuote] = useState(randomChoice(quotes));
-  const [motivationQuote, setMotivationQuote] = useState(
-    randomChoice(
-      quotes.filter((quote) => quote.topics.includes("motivational"))
-    )
-  );
+  const [dailyQuotes, setDailyQuotes] = useState(getRandomQuotes(quotes));
+
   useEffect(() => {
     const interval = setInterval(() => {
+      setDailyQuotes(getRandomQuotes(quotes));
       setDate(new Date());
-      setQuote(randomChoice(quotes));
-      setMotivationQuote(
-        randomChoice(
-          quotes.filter((quote) => quote.topics.includes("motivational"))
-        )
-      );
     }, calculateSecondsUntilEndOfDate(date) * 1000);
-    return () => {
-      //element.classList.remove("hidden");
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, []);
-  console.log(calculateSecondsUntilEndOfDate(date));
+  console.log(calculateSecondsUntilEndOfDate(date), quotes);
 
   return (
-    <>
-    
-    </>
+    <div className="flex flex-row justify-center">
+      <div className="flex flex-col items-center w-full pt-20 lg:w-1/2">
+        {Object.keys(dailyQuotes).map((key) => (
+          <>
+            <h1 className="text-3xl font-semibold text-center text-white capitalize">
+              {key.replace(/_/g, " ")} QOTD
+            </h1>
+            {
+              <Card
+                image={dailyQuotes[key].image}
+                text={dailyQuotes[key].text}
+                author={dailyQuotes[key].author}
+                tags={dailyQuotes[key].topics}
+              />
+            }
+          </>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -59,27 +77,3 @@ function calculateSecondsUntilEndOfDate(date) {
     date.getSeconds()
   );
 }
-
-/*      <div
-        className="swiper-wrapper"
-        //style={{ scrollSnapType: "y mandatory" }}
-      >
-           <div className="absolute w-screen pt-20 ">
-          <h1 className="text-4xl font-bold text-center ">
-            📅 {`${months[date.getMonth()]} ${date.getDate()}`}
-          </h1>
-        </div>
-
-        <div
-          className="flex flex-col items-center justify-center h-screen bg-primary swiper-slide"
-          //style={{ scrollSnapAlign: "start" }}
-        >
-          <p>{quote.text}</p>
-        </div>
-        <div
-          className="flex flex-col items-center justify-center h-screen bg-secondary swiper-slide"
-          //style={{ scrollSnapAlign: "start" }}
-        >
-          <p>{motivationQuote.text}</p>
-        </div>
-      </div> */

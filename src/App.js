@@ -153,7 +153,7 @@ function App() {
       />
       <Route
         path="/authors/:authorId"
-        component={() => <Quotes quotes={quotes} authors={authors} />}
+        component={() => <Quotes quotes={quotes} />}
       />
       <Route
         path="/topics"
@@ -168,10 +168,7 @@ function App() {
         path="/quote_of_the_day"
         component={() => <QuoteOfTheDay quotes={quotes} />}
       />
-      <Route
-        path="/search"
-        component={() => <Search quotes={quotes} />}
-      />
+      <Route path="/search" component={() => <Search quotes={quotes} />} />
       <Footer />
     </HashRouter>
   );
