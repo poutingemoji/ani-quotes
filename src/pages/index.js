@@ -1,10 +1,5 @@
 import Hero from "../components/Hero";
-import Masonry from "../components/Masonry";
-import Loading from "../components/Loading";
 import CountUp from "react-countup";
-import Card from "../components/Card";
-import InfiniteScroll from "react-infinite-scroll-component";
-import { useState, memo } from "react";
 import { groupBy } from "../utils/Helper";
 import ninoConfrontation from "../images/nino-confrontation.jpg";
 import roxyEmbarrassment from "../images/roxy-embarrassment.jpg";
@@ -12,23 +7,6 @@ import sengokuConfession from "../images/sengoku-confession.jpg";
 import ReadMore from "react-read-more-read-less";
 
 function Home({ quotes, authors }) {
-  const quotesCopy = JSON.parse(JSON.stringify(quotes));
-  const [curQuotes, setCurQuotes] = useState(quotes.slice(0, 20));
-  const [hasMore, setHasMore] = useState(true);
-
-  function fetchMoreData() {
-    if (curQuotes.length >= quotes.length) {
-      setHasMore(false);
-      return;
-    }
-    let twentyMoreQuotes = [];
-    for (let i = 0; i < 20; i++) {
-      const idx = Math.floor(Math.random() * quotesCopy.length);
-      twentyMoreQuotes.push(quotesCopy.splice(idx, 1)[0]);
-    }
-    setCurQuotes(curQuotes.concat(twentyMoreQuotes));
-  }
-
   const theNumbersData = {
     "Total Quotes": quotes,
     "Total Authors": authors,

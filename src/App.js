@@ -7,7 +7,6 @@ import Authors from "./pages/authors";
 import QuoteOfTheDay from "./pages/quote_of_the_day";
 import Quotes from "./pages/quotes";
 import Footer from "./components/Footer";
-import Dropdown from "./components/Dropdown";
 import authorQuotes from "./data/authorQuotes";
 import Loading from "./components/Loading";
 import Search from "./pages/search";
@@ -16,110 +15,24 @@ function App() {
   const [quotes, setQuotes] = useState([]);
   const [authors, setAuthors] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(async () => {
-    let newAuthors = [];
-    let media = [];
-    let page = 1;
-    while (true) {
-      const res = await fetch("https://graphql.anilist.co", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          query: `
-            query ($id_in: [Int], $page: Int, $perPage: Int) {
-              Page (page: $page, perPage: $perPage) {
-                pageInfo {
-                  total
-                  currentPage
-                  lastPage
-                  hasNextPage
-                  perPage
-                }
-                characters (id_in: $id_in) {
-                  id
-                  image {
-                    large
-                  }
-                  name {
-                    full
-                  }
-                  media {
-                    nodes {
-                      id
-                    } 
-                  }
-                }
-              }
-            }
-          `,
-          variables: {
-            id_in: Object.keys(authorQuotes),
-            page: page,
-            perPage: 50,
-          },
-        }),
-      });
-      const result = await res.json();
-      page++;
-      newAuthors = newAuthors.concat(result.data.Page.characters);
-      if (!result.data.Page.pageInfo.hasNextPage) break;
-    }
-
-    page = 1;
-    while (true) {
-      const res = await fetch("https://graphql.anilist.co", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          query: `
-            query ($id_in: [Int], $page: Int, $perPage: Int) {
-              Page (page: $page, perPage: $perPage) {
-                pageInfo {
-                  total
-                  currentPage
-                  lastPage
-                  hasNextPage
-                  perPage
-                }
-                media(id_in: $id_in) {
-                  id
-                  title {
-                    english
-                  }
-                  bannerImage
-                }
-              }
-            }
-          `,
-          variables: {
-            id_in: newAuthors.map((author) => author.media.nodes[0].id),
-            page: page,
-            perPage: 50,
-          },
-        }),
-      });
-      const result = await res.json();
-      page++;
-      media = media.concat(result.data.Page.media);
-      if (!result.data.Page.pageInfo.hasNextPage) break;
-    }
-
-    setAuthors(
-      newAuthors
-        .map((author) => ({
-          ...author,
-          media: media.find((media) => media.id === author.media.nodes[0].id),
-        }))
-        .sort((a, b) => a.name.full.localeCompare(b.name.full))
-        .sort((a, b) => authorQuotes[b.id].length - authorQuotes[a.id].length)
+  useEffect(() => {
+    fetchCharacters().then((authors) =>
+      fetchMedia(authors).then((media) =>
+        setAuthors(
+          authors
+            .map((author) => ({
+              ...author,
+              media: media.find(
+                (media) => media.id === author.media.nodes[0].id
+              ),
+            }))
+            .sort((a, b) => a.name.full.localeCompare(b.name.full))
+            .sort(
+              (a, b) => authorQuotes[b.id].length - authorQuotes[a.id].length
+            )
+        )
+      )
     );
   }, []);
 
@@ -127,8 +40,8 @@ function App() {
     let newQuotes = [];
     Object.keys(authorQuotes).map((id) => {
       const character = authors.find((author) => author.id === parseInt(id));
-      if (!character) return;
-      authorQuotes[id].map((newQuote) =>
+      if (!character) return false;
+      return authorQuotes[id].map((newQuote) =>
         newQuotes.push({ ...newQuote, author: character })
       );
     });
@@ -136,7 +49,7 @@ function App() {
     setQuotes(newQuotes);
     setIsLoading(false);
   }, [authors]);
-
+  console.log(isLoading);
   if (isLoading) return <Loading />;
   return (
     <HashRouter basename="/">
@@ -175,3 +88,102 @@ function App() {
 }
 
 export default App;
+
+async function fetchCharacters() {
+  let page = 1;
+  let newAuthors = [];
+  while (true) {
+    const res = await fetch("https://graphql.anilist.co", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        query: `
+                  query ($id_in: [Int], $page: Int, $perPage: Int) {
+                    Page (page: $page, perPage: $perPage) {
+                      pageInfo {
+                        total
+                        currentPage
+                        lastPage
+                        hasNextPage
+                        perPage
+                      }
+                      characters (id_in: $id_in) {
+                        id
+                        image {
+                          large
+                        }
+                        name {
+                          full
+                        }
+                        media {
+                          nodes {
+                            id
+                          } 
+                        }
+                      }
+                    }
+                  }
+                `,
+        variables: {
+          id_in: Object.keys(authorQuotes),
+          page: page,
+          perPage: 50,
+        },
+      }),
+    });
+    const result = await res.json();
+    page++;
+    newAuthors = newAuthors.concat(result.data.Page.characters);
+    if (!result.data.Page.pageInfo.hasNextPage) break;
+  }
+  return newAuthors;
+}
+
+async function fetchMedia(authors) {
+  let page = 1;
+  let media = [];
+  while (true) {
+    const res = await fetch("https://graphql.anilist.co", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        query: `
+            query ($id_in: [Int], $page: Int, $perPage: Int) {
+              Page (page: $page, perPage: $perPage) {
+                pageInfo {
+                  total
+                  currentPage
+                  lastPage
+                  hasNextPage
+                  perPage
+                }
+                media(id_in: $id_in) {
+                  id
+                  title {
+                    english
+                  }
+                  bannerImage
+                }
+              }
+            }
+          `,
+        variables: {
+          id_in: authors.map((author) => author.media.nodes[0].id),
+          page: page,
+          perPage: 50,
+        },
+      }),
+    });
+    const result = await res.json();
+    page++;
+    media = media.concat(result.data.Page.media);
+    if (!result.data.Page.pageInfo.hasNextPage) break;
+  }
+  return media;
+}
