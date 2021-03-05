@@ -170,7 +170,7 @@ function App() {
       />
       <Route
         path="/search"
-        component={() => <Search quotes={quotes} authors={authors} />}
+        component={() => <Search quotes={quotes} />}
       />
       <Footer />
     </HashRouter>

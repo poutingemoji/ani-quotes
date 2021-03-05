@@ -11,9 +11,6 @@ function QuoteOfTheDay({ quotes }) {
     )
   );
   useEffect(() => {
-    /*
-    const element = document.getElementById("footer");
-    element.classList.add("hidden");*/
     const interval = setInterval(() => {
       setDate(new Date());
       setQuote(randomChoice(quotes));
@@ -31,57 +28,13 @@ function QuoteOfTheDay({ quotes }) {
   console.log(calculateSecondsUntilEndOfDate(date));
 
   return (
-    <div className="swiper-container">
-      <div className="swiper-wrapper">
-        <div className="swiper-slide">Slide 1</div>
-        <div className="swiper-slide">Slide 2</div>
-        <div className="swiper-slide">Slide 3</div>
-        ...
-      </div>
-
-      <div className="swiper-pagination"></div>
-
-      <div className="swiper-button-prev"></div>
-      <div className="swiper-button-next"></div>
-
-      <div className="swiper-scrollbar"></div>
-    </div>
+    <>
+    
+    </>
   );
 }
 
 export default QuoteOfTheDay;
-
-const swiper = new Swiper(".swiper-container", {
-  // Optional parameters
-  direction: "vertical",
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
-/*
-const swiper = new Swiper(".swiper-container", {
-  direction: "vertical",
-  mousewheelControl: true,
-  slidesPerView: 1,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});*/
 
 const months = [
   "January",

@@ -150,37 +150,6 @@ function Home({ quotes, authors }) {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center text-center animate-bounce">
-        <div className="text-2xl text-white">
-          <h1 className="font-semibold ">Scroll Down</h1>
-          <i className="fas fa-arrow-down"></i>
-        </div>
-      </div>
-
-      <InfiniteScroll
-        dataLength={curQuotes.length}
-        next={fetchMoreData}
-        hasMore={hasMore}
-        loader={<Loading />}
-        scrollThreshold={"100%"}
-        endMessage={
-          <h1 className="py-1 text-2xl font-semibold text-center text-white">
-            You reached the end! 🥳
-          </h1>
-        }
-      >
-        <Masonry>
-          {curQuotes.map((quote, i) => (
-            <Card
-              key={i}
-              image={quote.image}
-              text={quote.text}
-              author={quote.author}
-              tags={quote.topics}
-            />
-          ))}
-        </Masonry>
-      </InfiniteScroll>
     </>
   );
 }
