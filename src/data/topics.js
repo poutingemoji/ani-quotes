@@ -17,6 +17,7 @@ const topics = {
   alone: { hex: "#434371" },
   believe_in_yourself: { hex: "#FE7F2D" },
   death: { hex: "#000000", icon: "skull-crossbones", image: deathImage },
+
   dreams: { hex: "#D282A6", icon: "cloud" },
   failure: { hex: "#D64045", icon: "times-circle", image: "" },
   faith: { hex: "#EEA243", icon: "cross", image: faithImage },
@@ -28,9 +29,9 @@ const topics = {
   future: { hex: "#5899E2", icon: "clock", image: futureImage },
   happiness: { hex: "#EEA243" },
   imagination: { hex: "#759FBC", icon: "lightbulb", image: imaginationImage },
-  improvement: {},
+
   inspirational: { hex: "#759FBC" },
-  kindness: {  },
+  kindness: {},
   leadership: { hex: "#A755C2", icon: "bullhorn", image: leadershipImage },
   life: { hex: "#04724D", icon: "seedling", image: lifeImage },
   loss: { hex: "#A755C2" },
@@ -43,10 +44,13 @@ const topics = {
   positive: { hex: "#EEA243", icon: "sun" },
 
   regret: { hex: "#D64045" },
+  sacrifice: {},
+  self_improvement: {},
   strength: { hex: "#D64045", icon: "dumbbell", image: strengthImage },
   success: { hex: "#5F4842" },
   trust: { hex: "#4169e1" },
   truth: { hex: "#4169e1", icon: "balance-scale", image: truthImage },
+  uncertainty: {},
   unfair: { hex: "#EEA243" },
   war: { hex: "#606D5D", icon: "chess-knight", image: warImage },
   wisdom: { hex: "#4169e1", icon: "brain", image: "" },

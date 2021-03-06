@@ -13,6 +13,12 @@ const authorQuotes = {
       topics: ["loss"],
     },
   ],
+  5: [
+    {
+      text: "We can’t waste time worrying about the what if’s.",
+      topics: ["uncertainty"],
+    },
+  ],
   11: [
     {
       text:
@@ -86,6 +92,17 @@ const authorQuotes = {
       text:
         "I don't want to conquer anything. I just think that the guy with the most freedom in this ocean is the Pirate King!",
       topics: ["freedom"],
+    },
+    {
+      text:
+        "No matter how hard or impossible it is, never lose sight of your goal.",
+      topics: ["motivational"],
+    },
+  ],
+  61: [
+    {
+      text: "Fools who don’t respect the past are likely to repeat it.",
+      topics: ["past"],
     },
   ],
   62: [
@@ -244,6 +261,12 @@ const authorQuotes = {
       topics: ["regret", "life"],
     },
   ],
+  559: [
+    {
+      text: "The best way to remove your lies is to make them come true.",
+      topics: ["truth", "motivational"],
+    },
+  ],
   601: [
     {
       text:
@@ -271,6 +294,11 @@ const authorQuotes = {
       text:
         "Sake sure is nice. You can forget your troubles if only for a moment. You'll have to remember them tomorrow though, and they'll be even more painful than they were the night before. You can't run away from things like this. Especially from things you really want to forget.",
       topics: [],
+    },
+    {
+      text:
+        "What is right? What is wrong? In this mixed up world, deciding what is right and wrong is not easy. You can’t just go by somebody else’s rules. If you let yourself be controlled like that, you’ll just become a puppet that can’t make decisions on its own. You have to live by your rules.",
+      topics: ["believe_in_yourself"],
     },
   ],
   714: [
@@ -308,6 +336,13 @@ const authorQuotes = {
       topics: ["motivational"],
     },
   ],
+  1184: [
+    {
+      text:
+        "You can’t sit around envying other people’s worlds. You have to go out and change your own.",
+      topics: ["self_improvement"],
+    },
+  ],
   1353: [
     {
       text: "You've got two legs and a heartbeat. What's stopping you?",
@@ -319,6 +354,13 @@ const authorQuotes = {
       text:
         "I want you to be happy. I want you to laugh a lot. I don't know what exactly I'll be able to do for you, but I'll always be by your side.",
       topics: ["happiness", "love"],
+    },
+  ],
+  1611: [
+    {
+      text:
+        "Life is like a tube of toothpaste. When you’ve used all the toothpaste down to the last squeeze, that’s when you’ve really lived. Live with all your might, and struggle as long as you have a life.",
+      topics: ["life"],
     },
   ],
   1795: [
@@ -371,8 +413,14 @@ const authorQuotes = {
   2072: [{ text: "We have to live a life of no regrets.", topics: ["life"] }],
   2087: [
     {
-      text: "It is at the moment of death that humanity has value.",
-      topics: ["death"],
+      text:
+        "Do not think about other things, there is only one thing you can do. So master that one thing. Do not forget. What you must imagine is always that you, yourself, are the strongest. You do not need outside enemies. For you, the one you have to fight is none other than your own image.",
+      topics: ["strength", "self_improvement"],
+    },
+    {
+      text:
+        "I am the bone of my sword. Steel is my body and fire is my blood. I have created over a thousand blades. Unknown to Death, Nor known to Life. Have withstood pain to create many weapons. Yet, those hands will never hold anything. So as I pray, Unlimited Blade Works.",
+      topics: [],
     },
     {
       text:
@@ -525,6 +573,13 @@ const authorQuotes = {
       topics: ["future"],
     },
   ],
+  5113: [
+    {
+      text:
+        "The circumstances of one’s birth are irrelevant, but it is what you do with the gift of life that determines who you are.",
+      topics: ["life", "motivational"],
+    },
+  ],
   5187: [
     {
       text:
@@ -580,6 +635,12 @@ const authorQuotes = {
       text:
         "We each need to find our own inspiration. Sometimes, it is not easy.",
       topics: ["inspirational"],
+    },
+  ],
+  8439: [
+    {
+      text: "I refuse to let my fear control me anymore.",
+      topics: ["fear"],
     },
   ],
   10863: [
@@ -685,11 +746,25 @@ const authorQuotes = {
       topics: ["death"],
     },
   ],
+  19713: [
+    {
+      text:
+        "You should never give up on life, no matter how you feel. No matter how badly you want to give up.",
+      topics: ["life", "failure"],
+    },
+  ],
   20620: [
     {
       text:
         "A teacher doesn't give up on her students just because things get tough.",
       topics: ["motivational"],
+    },
+  ],
+  22037: [
+    {
+      text:
+        "In our society, letting others find out that you’re a nice person is a very risky move. It’s extremely likely that someone would take advantage of that.",
+      topics: ["wisdom"],
     },
   ],
   22253: [
@@ -808,11 +883,18 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  46494: [
+    {
+      text:
+        "People who can’t throw something important away can never hope to change anything.",
+      topics: ["self_improvement", "sacrifice"],
+    },
+  ],
   46496: [
     {
       text:
         "If you begin to regret, you'll dull your future decisions and let others make your choices for you. All that's left for you then is to die. Nobody can foretell the outcome. Each decision you make holds meaning only by affecting your next decision.",
-      topics: [],
+      topics: ["regret", "future"],
     },
   ],
   50163: [
@@ -840,6 +922,20 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  53241: [
+    {
+      text:
+        "I don’t have any goals for the future. So long as I can get out of my home and far away, I don’t care.",
+      topics: ["future"],
+    },
+  ],
+  53923: [
+    {
+      text:
+        "You can’t win a game by doing nothing. And if someone else wins it for you then you haven’t accomplished anything. Life is the same way.",
+      topics: ["believe_in_yourself", "life"],
+    },
+  ],
   54777: [
     {
       text:
@@ -864,6 +960,13 @@ const authorQuotes = {
   ],
   55133: [
     { text: "I find myself hard to understand sometimes.", topics: ["life"] },
+  ],
+  63351: [
+    {
+      text:
+        "If you can’t find a reason to fight, then you shouldn’t be fighting.",
+      topics: ["wisdom"],
+    },
   ],
   63557: [
     {
@@ -1027,7 +1130,7 @@ const authorQuotes = {
     {
       text:
         "You can’t always hold on to the things that are important. By letting them go we gain something else.",
-      topics: ["loss", "improvement"],
+      topics: ["loss", "self_improvement"],
     },
   ],
   77605: [

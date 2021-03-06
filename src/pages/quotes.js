@@ -9,7 +9,7 @@ function Quotes({ quotes, authors }) {
   return (
     <>
       <div
-        className="bg-foreground-lighter h-screen/3"
+        className="bg-foreground-lighter h-screen/2"
         style={{
           background: author
             ? `url(${author.media.bannerImage}) center/cover no-repeat `
