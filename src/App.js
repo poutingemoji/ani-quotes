@@ -92,7 +92,7 @@ function App() {
         component={() => <Topics quotes={quotes} />}
       />
       <Route
-        path="/topics/:topic"
+        path="/topics/:topicId"
         component={() => <Quotes quotes={quotes} authors={authors} />}
       />
       <Route
