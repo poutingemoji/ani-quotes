@@ -8,18 +8,16 @@ import Loading from "../components/Loading";
 
 const PER_FETCH = 36;
 function Authors({ authors }) {
-  const authorsCopy = JSON.parse(JSON.stringify(authors));
   const [curAuthors, setCurAuthors] = useState(authors.slice(0, PER_FETCH));
   const [hasMore, setHasMore] = useState(true);
 
   function fetchMoreData() {
     if (curAuthors.length >= authors.length) return setHasMore(false);
-    let moreAuthors = [];
-    for (let i = 0; i < 20; i++) {
-      const idx = Math.floor(Math.random() * authorsCopy.length);
-      moreAuthors.push(authorsCopy.splice(idx, 1)[0]);
-    }
-    setCurAuthors(curAuthors.concat(moreAuthors));
+    setCurAuthors(
+      curAuthors.concat(
+        authors.slice(curAuthors.length, curAuthors.length + PER_FETCH)
+      )
+    );
   }
 
   return (

@@ -13,7 +13,6 @@ function Topics({ quotes }) {
   const topicKeys = Object.keys(topicQuotes)
     .sort()
     .sort((a, b) => topicQuotes[b].length - topicQuotes[a].length);
-  const topicKeysCopy = JSON.parse(JSON.stringify(topicKeys));
   const [curTopicKeys, setCurTopicKeys] = useState(
     topicKeys.slice(0, PER_FETCH)
   );
@@ -21,12 +20,11 @@ function Topics({ quotes }) {
 
   function fetchMoreData() {
     if (curTopicKeys.length >= topicKeys.length) return setHasMore(false);
-    let moreTopicKeys = [];
-    for (let i = 0; i < 20; i++) {
-      const idx = Math.floor(Math.random() * topicKeysCopy.length);
-      moreTopicKeys.push(topicKeysCopy.splice(idx, 1)[0]);
-    }
-    setCurTopicKeys(curTopicKeys.concat(moreTopicKeys));
+    setCurTopicKeys(
+      curTopicKeys.concat(
+        topicKeys.slice(curTopicKeys.length, curTopicKeys.length + PER_FETCH)
+      )
+    );
   }
 
   return (
