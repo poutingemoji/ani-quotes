@@ -77,6 +77,11 @@ const authorQuotes = {
       text: "Being lonely is more painful then getting hurt.",
       topics: ["alone"],
     },
+    {
+      text:
+        "I don’t want to conquer anything. I just think that the guy with the most freedom in this ocean is the Pirate King!",
+      topics: ["freedom"],
+    },
   ],
   62: [
     {
@@ -128,6 +133,13 @@ const authorQuotes = {
       text:
         "You'll only realize that you truly love someone if they already caused you enormous pain. Your enemies can never hurt you the way your loved ones can. It's the people close to your heart that can give you the most piercing wound. Love is a double-edged sword, it can heal the wound faster or it can sink the blade even deeper.",
       topics: ["love", "pain"],
+    },
+  ],
+  162: [
+    {
+      text:
+        "If you only face forward, there is something you will miss seeing.",
+      topics: [],
     },
   ],
   236: [
@@ -229,6 +241,13 @@ const authorQuotes = {
       topics: ["patience"],
     },
   ],
+  913: [
+    {
+      text:
+        "That's right my friend. Let me ask you: does a machine like yourself ever experience fear?",
+      topics: ["fear", "funny"],
+    },
+  ],
   1169: [
     {
       text:
@@ -270,6 +289,13 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  2034: [
+    {
+      text:
+        "I want... to change things. I want to believe that anything can be changed. The moment I met you, a new world opened up for me. You see, after wandering in the darkness for so long, a light brought me happiness. It’s all thanks to you.”",
+      topics: ["happiness"],
+    },
+  ],
   2072: [{ text: "We have to live a life of no regrets.", topics: ["life"] }],
   2087: [
     {
@@ -305,6 +331,11 @@ const authorQuotes = {
       text:
         "A place where someone still thinks about you is a place you can call home.",
       topics: [],
+    },
+    {
+      text:
+        "The true measure of a shinobi is not how he lives but how he dies. It’s not what they do in life but what they did before dying that proves their worth.",
+      topics: ["life", "death"],
     },
   ],
   2511: [
@@ -420,6 +451,13 @@ const authorQuotes = {
     {
       text: "Hurt me with the truth. But never comfort me with a lie.",
       topics: ["truth"],
+    },
+  ],
+  5333: [
+    {
+      text:
+        "Weaklings will stay weak forever. But weakness is not evil, since human beings are weak creatures to begin with. Alone, you feel nothing but insecurity; that’s why we form guilds, that’s why we have friends. We walk together in order to live a strong life. The clumsy ones will walk into more walls than the others, and it may also take them longer to get there. If you believe in tomorrow and put yourself out there, you can naturally obtain your strength. That’s how you will be able to smile and live strong.",
+      topics: ["alone", "friendship", "strength", "happiness"],
     },
   ],
   5552: [
@@ -652,6 +690,13 @@ const authorQuotes = {
   51595: [
     {
       text: "It doesn't do any good to pretend you can't see what's going on.",
+      topics: [],
+    },
+  ],
+  54777: [
+    {
+      text:
+        "Even if I die, you keep living okay? Live to see the end of this world, and to see why it was born. Live to see why a weak girl like me ended up here... And the reason you and I met.",
       topics: [],
     },
   ],
@@ -950,6 +995,13 @@ const authorQuotes = {
       text:
         "How is it that when we were little, we were able to smile but now neither of us can openly do so anymore?",
       topics: ["past"],
+    },
+  ],
+  120969: [
+    {
+      text:
+        "Knowing you’re different is only the beginning. If you accept these differences you’ll be able to get past them and grow even closer.",
+      topics: ["friendship"],
     },
   ],
   123212: [

@@ -13,7 +13,7 @@ function Quotes({ quotes, authors }) {
         style={{
           background: author
             ? `url(${author.media.bannerImage}) center/cover no-repeat `
-            : topics[topicId].hex,
+            : topics[topicId]?.hex,
         }}
       >
         <div className="flex flex-col justify-center w-full h-full bg-gradient-to-t from-background">
@@ -62,4 +62,3 @@ function Quotes({ quotes, authors }) {
 }
 
 export default Quotes;
-//
