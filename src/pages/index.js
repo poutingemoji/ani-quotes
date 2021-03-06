@@ -21,7 +21,7 @@ function Home({ quotes, authors }) {
             <img
               className="md:rounded-xl"
               src={roxyEmbarrassment}
-              alt="nino-confrontation"
+              alt="roxy-embarrassment"
             />
           </div>
 
@@ -102,7 +102,7 @@ function Home({ quotes, authors }) {
             <img
               className="md:rounded-xl"
               src={ninoConfrontation}
-              alt="roxy-embarrassment"
+              alt="nino-confrontation"
             />
           </div>
         </div>

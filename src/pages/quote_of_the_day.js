@@ -42,7 +42,7 @@ function QuoteOfTheDay({ quotes }) {
 
   return (
     <div className="flex flex-row justify-center">
-      <div className="flex flex-col items-center w-full text-3xl font-semibold text-center text-white lg:pt-20 lg:w-1/2">
+      <div className="flex flex-col items-center w-full mt-3 text-3xl font-semibold text-center text-white lg:pt-20 lg:w-1/2">
         {months[date.getMonth()]} {date.getDate()}, {date.getFullYear()}
         {percentageOfYear < 1 ? (
           Object.keys(dailyQuotes).map((key) => (
