@@ -18,39 +18,47 @@ function App() {
 
   useEffect(() => {
     fetchCharacters().then((authors) =>
-      fetchMedia(authors).then((media) =>
-        setAuthors(
-          authors
-            .map((author) => ({
-              ...author,
-              media: media.find(
-                (media) => media.id === author.media.nodes[0].id
-              ),
-            }))
-            .sort((a, b) => a.name.full.localeCompare(b.name.full))
-            .sort(
-              (a, b) => authorQuotes[b.id].length - authorQuotes[a.id].length
-            )
+      fetchMedia(authors)
+        .then((media) =>
+          setAuthors(
+            authors
+              .map((author) => ({
+                ...author,
+                media: media.find(
+                  (media) => media.id === author.media.nodes[0].id
+                ),
+              }))
+              .sort((a, b) => a.name.full.localeCompare(b.name.full))
+              .sort(
+                (a, b) => authorQuotes[b.id].length - authorQuotes[a.id].length
+              )
+          )
         )
-      )
+        .then(() => {
+          let newQuotes = [];
+          Object.keys(authorQuotes).map((id) => {
+            const character = authors.find(
+              (author) => author.id === parseInt(id)
+            );
+            if (!character) return false;
+            return authorQuotes[id].map((newQuote) =>
+              newQuotes.push({ ...newQuote, author: character })
+            );
+          });
+          console.log(Object.keys(authorQuotes).length, newQuotes, authors);
+          setQuotes(newQuotes);
+        })
+        .finally(() => setIsLoading(false))
     );
   }, []);
 
-  useEffect(() => {
-    let newQuotes = [];
-    Object.keys(authorQuotes).map((id) => {
-      const character = authors.find((author) => author.id === parseInt(id));
-      if (!character) return false;
-      return authorQuotes[id].map((newQuote) =>
-        newQuotes.push({ ...newQuote, author: character })
-      );
-    });
-    console.log(Object.keys(authorQuotes).length, newQuotes, authors);
-    setQuotes(newQuotes);
-    setIsLoading(false);
-  }, [authors]);
-  console.log(isLoading);
-  if (isLoading) return <Loading />;
+  if (isLoading)
+    return (
+      <div className="flex justify-center h-screen">
+        <Loading />
+      </div>
+    );
+    
   return (
     <HashRouter basename="/">
       <Navbar />

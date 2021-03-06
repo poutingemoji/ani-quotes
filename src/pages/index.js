@@ -12,7 +12,6 @@ function Home({ quotes, authors }) {
     "Total Authors": authors,
     Topics: Object.keys(groupBy(quotes, (quote) => quote.topics)),
   };
-
   return (
     <>
       <Hero />
