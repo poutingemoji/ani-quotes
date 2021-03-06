@@ -15,7 +15,7 @@ const authorQuotes = {
   ],
   5: [
     {
-      text: "We can’t waste time worrying about the what if’s.",
+      text: "We can't waste time worrying about the what if's.",
       topics: ["uncertainty"],
     },
   ],
@@ -32,7 +32,7 @@ const authorQuotes = {
     },
     {
       text: "How can you move forward when you keep regretting the past?",
-      topics: ["past", "regret"],
+      topics: ["past", "regret", "life"],
     },
   ],
   14: [
@@ -98,10 +98,15 @@ const authorQuotes = {
         "No matter how hard or impossible it is, never lose sight of your goal.",
       topics: ["motivational"],
     },
+    {
+      text:
+        "Power isn’t determined by your size, but by the size of your heart and dreams!",
+      topics: ["dreams", "life"],
+    },
   ],
   61: [
     {
-      text: "Fools who don’t respect the past are likely to repeat it.",
+      text: "Fools who don't respect the past are likely to repeat it.",
       topics: ["past"],
     },
   ],
@@ -147,11 +152,18 @@ const authorQuotes = {
       topics: ["wisdom"],
     },
   ],
+  139: [
+    {
+      text:
+        "When you lose sight of your path, listen for the destination in your heart.",
+      topics: ["life"],
+    },
+  ],
   147: [
     {
       text:
         "Whatever you lose, you'll find it again. But what you throw away you'll never get back.",
-      topics: ["loss"],
+      topics: ["loss", "life"],
     },
     {
       text: "You can die anytime, but living takes true courage.",
@@ -197,7 +209,7 @@ const authorQuotes = {
     {
       text:
         "Power comes in response to a need, not a desire. You have to create that need.",
-      topics: ["motivational"],
+      topics: ["motivational", "life"],
     },
   ],
   305: [
@@ -257,7 +269,7 @@ const authorQuotes = {
   497: [
     {
       text:
-        "There are no regrets. If one can be proud of one’s life, one should not wish for another chance.",
+        "There are no regrets. If one can be proud of one's life, one should not wish for another chance.",
       topics: ["regret", "life"],
     },
   ],
@@ -297,7 +309,7 @@ const authorQuotes = {
     },
     {
       text:
-        "What is right? What is wrong? In this mixed up world, deciding what is right and wrong is not easy. You can’t just go by somebody else’s rules. If you let yourself be controlled like that, you’ll just become a puppet that can’t make decisions on its own. You have to live by your rules.",
+        "What is right? What is wrong? In this mixed up world, deciding what is right and wrong is not easy. You can't just go by somebody else's rules. If you let yourself be controlled like that, you'll just become a puppet that can't make decisions on its own. You have to live by your rules.",
       topics: ["believe_in_yourself"],
     },
   ],
@@ -306,6 +318,12 @@ const authorQuotes = {
       text:
         "Every journey begins with a single step. We just have to have patience.",
       topics: ["patience"],
+    },
+  ],
+  779: [
+    {
+      text: "The only home that a man should ever need is within his heart.",
+      topics: [],
     },
   ],
   904: [
@@ -339,7 +357,7 @@ const authorQuotes = {
   1184: [
     {
       text:
-        "You can’t sit around envying other people’s worlds. You have to go out and change your own.",
+        "You can't sit around envying other people's worlds. You have to go out and change your own.",
       topics: ["self_improvement"],
     },
   ],
@@ -359,7 +377,7 @@ const authorQuotes = {
   1611: [
     {
       text:
-        "Life is like a tube of toothpaste. When you’ve used all the toothpaste down to the last squeeze, that’s when you’ve really lived. Live with all your might, and struggle as long as you have a life.",
+        "Life is like a tube of toothpaste. When you've used all the toothpaste down to the last squeeze, that's when you've really lived. Live with all your might, and struggle as long as you have a life.",
       topics: ["life"],
     },
   ],
@@ -511,8 +529,19 @@ const authorQuotes = {
     },
     {
       text:
-        "Religion, ideology, resources, land, spite, love or just because… No matter how pathetic the reason, it's enough to start war. War will never cease to exist… reasons can be thought up after the fact… Human nature pursues strife.",
-      topics: ["war", "nature"],
+        "Religion, ideology, resources, land, spite, love or just because… No matter how pathetic the reason, it's enough to start war. War will never cease to exist... reasons can be thought up after the fact... Human nature pursues strife.",
+      topics: ["war", "nature", "life"],
+    },
+    {
+      text:
+        "Love is the reason why there is a pain. When we lose someone precious to us, hate is born. Vengeance is the product of that hate and so death follows. But in death, there is only more death. This will give rise to more pains. In this cursed world we live in, it is a cycle of hatred that will not cease. You and I seek the same thing that Jiraiya–sensei wanted. Let me ask you this: How will you confront this hatred in order to create peace?",
+      topics: ["love", "pain", "death"],
+    },
+  ],
+  3295: [
+    {
+      text: "Sometimes it's necessary to do unnecessary things.",
+      topics: [],
     },
   ],
   3331: [
@@ -538,6 +567,13 @@ const authorQuotes = {
     {
       text: "I must study lots of things or I won't become a great person.",
       topics: [],
+    },
+  ],
+  4624: [
+    {
+      text:
+        "If you turn your eyes away from sad things, they'll happen again one day. If you keep running away, you'll keep repeating the same mistakes. That's why you have to face the truth straight on.",
+      topics: ["fear", "truth"],
     },
   ],
   4631: [
@@ -573,10 +609,17 @@ const authorQuotes = {
       topics: ["future"],
     },
   ],
+  4966: [
+    {
+      text:
+        "Even if you're weak, there are miracles you can seize with your hands if you fight on to the very end.",
+      topics: ["motivational"],
+    },
+  ],
   5113: [
     {
       text:
-        "The circumstances of one’s birth are irrelevant, but it is what you do with the gift of life that determines who you are.",
+        "The circumstances of one's birth are irrelevant, but it is what you do with the gift of life that determines who you are.",
       topics: ["life", "motivational"],
     },
   ],
@@ -763,7 +806,7 @@ const authorQuotes = {
   22037: [
     {
       text:
-        "In our society, letting others find out that you’re a nice person is a very risky move. It’s extremely likely that someone would take advantage of that.",
+        "In our society, letting others find out that you're a nice person is a very risky move. It's extremely likely that someone would take advantage of that.",
       topics: ["wisdom"],
     },
   ],
@@ -779,6 +822,13 @@ const authorQuotes = {
       text:
         "Tears are how our heart speaks when your lips cannot describe how much we've been hurt.",
       topics: ["pain"],
+    },
+  ],
+  24502: [
+    {
+      text:
+        "Even if we forget the faces of our friends, We will never forget the bonds that were carved into our souls.",
+      topics: ["friendship"],
     },
   ],
   24503: [
@@ -799,6 +849,35 @@ const authorQuotes = {
     {
       text: "Simplicity is the easiest path to true beauty.",
       topics: [],
+    },
+  ],
+  35292: [
+    {
+      text:
+        "I do not need a Heaven. However, if I must go to Heaven then please, God, do not divide Heaven in two. Please do not divide the robots from the humans.",
+      topics: [],
+    },
+  ],
+  37681: [
+    {
+      text: "It's impossible to work hard for something you don't enjoy.",
+      topics: ["happiness"],
+    },
+  ],
+  40195: [
+    {
+      text:
+        "What you can't accomplish alone, becomes doable when you're with someone else.",
+      topics: ["life"],
+    },
+    {
+      text: "Everyone has different faces.",
+      topics: [],
+    },
+    {
+      text:
+        "When you're hiding a secret from the whole world, it puts a weight on your shoulders.",
+      topics: ["truth"],
     },
   ],
   40592: [
@@ -836,6 +915,12 @@ const authorQuotes = {
     {
       text:
         "If you lose something, just build it up again and this time with a greater care.",
+      topics: ["loss"],
+    },
+  ],
+  41371: [
+    {
+      text: "Hey, Gin: no matter what, don't ever touch me, okay?",
       topics: ["loss"],
     },
   ],
@@ -883,11 +968,18 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  46163: [
+    {
+      text:
+        "An excellent leader must be passionate because it's their duty to keep everyone moving forward.",
+      topics: ["leadership"],
+    },
+  ],
   46494: [
     {
       text:
-        "People who can’t throw something important away can never hope to change anything.",
-      topics: ["self_improvement", "sacrifice"],
+        "People who can't throw something important away can never hope to change anything.",
+      topics: ["self_improvement", "sacrifice", "life"],
     },
   ],
   46496: [
@@ -925,15 +1017,20 @@ const authorQuotes = {
   53241: [
     {
       text:
-        "I don’t have any goals for the future. So long as I can get out of my home and far away, I don’t care.",
+        "I don't have any goals for the future. So long as I can get out of my home and far away, I don't care.",
       topics: ["future"],
     },
   ],
   53923: [
     {
       text:
-        "You can’t win a game by doing nothing. And if someone else wins it for you then you haven’t accomplished anything. Life is the same way.",
+        "You can't win a game by doing nothing. And if someone else wins it for you then you haven't accomplished anything. Life is the same way.",
       topics: ["believe_in_yourself", "life"],
+    },
+    {
+      text:
+        "Just like games, no matter how well you have things lined up in your life, there's always something to keep you on your toes.",
+      topics: ["life"],
     },
   ],
   54777: [
@@ -958,14 +1055,28 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  53901: [
+    {
+      text:
+        "In this world, wherever there is light – there are also shadows. As long as the concept of winners exists, there must also be losers. The selfish desire of wanting to maintain peace causes wars and hatred is born to protect love.",
+      topics: ["war", "love"],
+    },
+  ],
   55133: [
     { text: "I find myself hard to understand sometimes.", topics: ["life"] },
   ],
   63351: [
     {
       text:
-        "If you can’t find a reason to fight, then you shouldn’t be fighting.",
+        "If you can't find a reason to fight, then you shouldn't be fighting.",
       topics: ["wisdom"],
+    },
+  ],
+  63467: [
+    {
+      text:
+        "A dream is worth less than nothing if you don't have someone else to share it.",
+      topics: ["dreams"],
     },
   ],
   63557: [
@@ -973,6 +1084,12 @@ const authorQuotes = {
       text:
         "Love is a bitter sweet taste of life, which many humans have as weaknesses... and sometimes is their strongest weapon.",
       topics: ["love", "inspirational", "life"],
+    },
+  ],
+  63971: [
+    {
+      text: "I don't just want to die: I want to die happy.",
+      topics: ["death", "happiness"],
     },
   ],
   64173: [
@@ -985,6 +1102,13 @@ const authorQuotes = {
     {
       text: "The best kind of love is the one that helps you grow up.",
       topics: ["love"],
+    },
+  ],
+  64523: [
+    {
+      text:
+        "I always, always wondered: I was born to die, so what was my reason for existing in this world?",
+      topics: ["death"],
     },
   ],
   64769: [
@@ -1005,6 +1129,13 @@ const authorQuotes = {
       text:
         "No matter how many good deeds you perform, your past sins cannot be erased.",
       topics: [],
+    },
+  ],
+  65643: [
+    {
+      text:
+        "I had more than enough time to notice, so why? Why didn't I use my deadly, destructive strength to help someone?",
+      topics: ["strength"],
     },
   ],
   67065: [
@@ -1092,6 +1223,12 @@ const authorQuotes = {
       topics: ["love"],
     },
   ],
+  73059: [
+    {
+      text: "We are neither beasts nor slaves! We are human!",
+      topics: [],
+    },
+  ],
   73067: [
     {
       text:
@@ -1118,6 +1255,10 @@ const authorQuotes = {
       text: "If you have time to breakdown, you've better off moving.",
       topics: ["motivational"],
     },
+    {
+      text: "Human beings are strong because we can change ourselves.",
+      topics: ["strength", "self_improvement"],
+    },
   ],
   74695: [
     {
@@ -1129,7 +1270,7 @@ const authorQuotes = {
   75750: [
     {
       text:
-        "You can’t always hold on to the things that are important. By letting them go we gain something else.",
+        "You can't always hold on to the things that are important. By letting them go we gain something else.",
       topics: ["loss", "self_improvement"],
     },
   ],
@@ -1157,6 +1298,13 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  81853: [
+    {
+      text:
+        "You did the best you could. The both of you did the best you could.",
+      topics: [],
+    },
+  ],
   82523: [
     {
       text: "Life is not a game of luck. If you wanna win, work hard.",
@@ -1171,6 +1319,10 @@ const authorQuotes = {
     },
     {
       text: "A castle that vanishes at the first gust of wind is worthless.",
+      topics: [],
+    },
+    {
+      text: "A skyscraper built within your mind will never fall down.",
       topics: [],
     },
   ],
@@ -1201,10 +1353,31 @@ const authorQuotes = {
       topics: ["dreams"],
     },
   ],
+  88037: [
+    {
+      text:
+        "I don't want to forget today. I want to remember the time I spent with you today - even the little things. But even more than that, I don't want to stop being friends with you! If that day comes then I won't be happy even if I'm able to remember you.",
+      topics: ["friendship"],
+    },
+  ],
   88265: [
     {
       text:
         "In order for a mediocre man to defeat a genius, he has to become a monster.",
+      topics: [],
+    },
+  ],
+  88328: [
+    {
+      text:
+        "That's why I can't make a change. Everything I do is so… Half-assed.",
+      topics: [],
+    },
+  ],
+  88394: [
+    {
+      text:
+        "Protecting someone means giving them a place to belong. Giving them a place where they can be happy.",
       topics: [],
     },
   ],
@@ -1225,6 +1398,13 @@ const authorQuotes = {
       text:
         "Why should I apologize for being a monster? Has anyone ever apologized for turning me into one?",
       topics: [],
+    },
+  ],
+  88753: [
+    {
+      text:
+        "Having happy and beautiful memories won't always bring you salvation. The more beautiful a memory is, the more painful it can become.",
+      topics: ["happiness", "pain", "life"],
     },
   ],
   88942: [
@@ -1274,6 +1454,13 @@ const authorQuotes = {
       text:
         "How is it that when we were little, we were able to smile but now neither of us can openly do so anymore?",
       topics: ["past"],
+    },
+  ],
+  120536: [
+    {
+      text:
+        "Through action, a man becomes a Hero. Through death, the Hero becomes a Legend. And, through time, the Legend becomes a Myth. And by learning from the myth, a man takes action.",
+      topics: ["life"],
     },
   ],
   120969: [
