@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route, useHistory } from "react-router-dom";
 import Home from "./pages";
 import Topics from "./pages/topics";
 import Authors from "./pages/authors";
@@ -10,11 +10,20 @@ import Footer from "./components/Footer";
 import authorQuotes from "./data/authorQuotes";
 import Loading from "./components/Loading";
 import Search from "./pages/search";
+import Hamburger from "./components/Hamburger";
 
 function App() {
   const [quotes, setQuotes] = useState([]);
   const [authors, setAuthors] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const history = useHistory();
+  useEffect(() => {
+    const unlisten = history.listen(() => {
+      window.scrollTo(0, 0);
+    });
+    return unlisten;
+  }, [history]);
 
   useEffect(() => {
     fetchCharacters().then((authors) =>
@@ -58,10 +67,11 @@ function App() {
         <Loading />
       </div>
     );
-    
+
   return (
     <HashRouter basename="/">
       <Navbar />
+      <Hamburger />
       <Route
         path="/"
         exact
@@ -112,11 +122,7 @@ async function fetchCharacters() {
                   query ($id_in: [Int], $page: Int, $perPage: Int) {
                     Page (page: $page, perPage: $perPage) {
                       pageInfo {
-                        total
-                        currentPage
-                        lastPage
                         hasNextPage
-                        perPage
                       }
                       characters (id_in: $id_in) {
                         id
@@ -165,11 +171,7 @@ async function fetchMedia(authors) {
             query ($id_in: [Int], $page: Int, $perPage: Int) {
               Page (page: $page, perPage: $perPage) {
                 pageInfo {
-                  total
-                  currentPage
-                  lastPage
                   hasNextPage
-                  perPage
                 }
                 media(id_in: $id_in) {
                   id

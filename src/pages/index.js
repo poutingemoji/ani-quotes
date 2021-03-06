@@ -16,7 +16,7 @@ function Home({ quotes, authors }) {
     <>
       <Hero />
       <div className="mt-24 mb-0 md:mt-40 md:mb-14 md:mx-10">
-        <div className="flex flex-col items-center justify-center h-screen lg:flex-row lg:h-screen/2">
+        <div className="flex flex-col items-center justify-center lg:flex-row ">
           <div className="lg:mr-10 lg:w-1/2 xl:w-2/5">
             <img
               className="md:rounded-xl"
@@ -42,7 +42,7 @@ function Home({ quotes, authors }) {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center h-screen lg:flex-row lg:h-screen/2">
+        <div className="flex flex-col items-start justify-center lg:flex-row">
           <div className="p-5 md:p-0 lg:w-1/2 xl:w-2/5">
             <h1 className="py-4 text-4xl font-semibold text-white ">
               Who is poutingemoji?
@@ -106,7 +106,7 @@ function Home({ quotes, authors }) {
             />
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center h-screen lg:flex-row lg:h-screen/2">
+        <div className="flex flex-col items-center justify-center lg:flex-row ">
           <div className="lg:w-1/3 lg:m-10">
             <img
               className="md:rounded-xl"

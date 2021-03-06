@@ -21,7 +21,7 @@ function Authors({ authors }) {
   }
 
   return (
-    <div className="pt-20">
+    <div>
       <InfiniteScroll
         dataLength={curAuthors.length}
         next={fetchMoreData}

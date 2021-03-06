@@ -2,7 +2,7 @@ import Card from "../components/Card";
 import { useState } from "react";
 import Masonry from "../components/Masonry";
 import ReactPaginate from "react-paginate";
-
+import SearchBar from "../components/SearchBar"
 const PER_PAGE = 18;
 
 function Search({ quotes }) {
@@ -20,12 +20,11 @@ function Search({ quotes }) {
   }
   console.log(quotes);
   const quoteResults = quotes.filter((quote) => {
-    console.log(quote.author.media.title.english);
     return (
       quote.text.toLowerCase().includes(query.toLowerCase()) ||
       quote.topics.includes(query.replace(/ /g, "_")) ||
       quote.author.name.full.toLowerCase().includes(query.toLowerCase()) ||
-      quote.author.media.title.english
+      quote.author.media.title?.english
         ?.toLowerCase()
         .includes(query.toLowerCase())
     );
@@ -34,20 +33,8 @@ function Search({ quotes }) {
   const pageCount = Math.ceil(quoteResults.length / PER_PAGE);
   return (
     <div className="flex flex-col items-center pt-20">
-      <div class="flex rounded-lg bg-foreground w-1/5">
-        <button>
-          <span class="w-auto flex justify-end items-center text-grey p-2">
-            <i className="text-lg fas fa-search"></i>
-          </span>
-        </button>
-        <input
-          className="w-full mr-4 text-white rounded bg-foreground"
-          type="text"
-          onKeyDown={handleKeyDown}
-        />
-      </div>
-
-      {query.length > 0 && (
+      <SearchBar handleKeyDown={handleKeyDown} />
+      {query.replace(/\s/g, "").length > 0 && (
         <>
           <div className="flex flex-col justify-center">
             <Masonry>

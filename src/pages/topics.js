@@ -28,7 +28,7 @@ function Topics({ quotes }) {
   }
 
   return (
-    <div className="pt-20">
+    <div>
       <InfiniteScroll
         dataLength={curTopicKeys.length}
         next={fetchMoreData}
