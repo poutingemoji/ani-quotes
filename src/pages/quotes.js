@@ -19,12 +19,12 @@ function Quotes({ quotes, authors }) {
         <div className="flex flex-col justify-center w-full h-full bg-gradient-to-t from-background">
           <div className="flex flex-col text-white pl-7 ">
             {author && (
-              <span className="pl-2 uppercase letters">
+              <span className="pl-2 uppercase">
                 {author.media.title.english}
               </span>
             )}
-            <span className="text-4xl font-bold capitalize letters sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl">
-              {author ? author.name.full : topicId.replace(/_/g, " ")}
+            <span className="text-4xl font-bold capitalize sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl">
+              {author?.name.full || topicId.replace(/_/g, " ")}
             </span>
             {author && (
               <a
