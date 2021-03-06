@@ -11,22 +11,20 @@ function Hero() {
       );
     }
 
-    anime
-      .timeline({ loop: false })
-      .add({
-        targets: ".letter",
-        scale: [0.3, 1],
-        opacity: [0, 1],
-        translateZ: 0,
-        easing: "easeOutExpo",
-        duration: 600,
-        delay: (el, i) => 70 * (i + 1),
-      });
+    anime.timeline({ loop: false }).add({
+      targets: ".letter",
+      scale: [0.3, 1],
+      opacity: [0, 1],
+      translateZ: 0,
+      easing: "easeOutExpo",
+      duration: 600,
+      delay: (el, i) => 70 * (i + 1),
+    });
   }, []);
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full h-screen overflow-x-hidden bg-secondary">
+      <div className="flex flex-col items-center justify-center w-full h-screen overflow-x-hidden bg-background">
         <iframe
           title="youtube-bg"
           style={{
@@ -37,15 +35,13 @@ function Hero() {
           modestbranding="true"
           allowFullScreen
         />
-        <div className="absolute z-30 flex flex-col items-center justify-center w-full h-full bg-gradient-to-t from-secondary">
+        <div className="absolute z-30 flex flex-col items-center justify-center w-full h-full bg-gradient-to-t from-background">
           <div className="text-5xl text-left md:text-6xl lg:text-7xl xl:text-8xl">
             <span className="font-light text-white letters">
               poutingemoji's
             </span>
             <div>
-              <span className="font-semibold text-white letters">
-                Ani
-              </span>
+              <span className="font-semibold text-white letters">Ani</span>
               <span className="font-bold text-blue letters">Quotes</span>
             </div>
           </div>

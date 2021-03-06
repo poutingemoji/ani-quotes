@@ -6,7 +6,7 @@ function Quotes({ quotes }) {
   const { topic, authorId } = useParams();
   return (
     <>
-      <div className="bg-primary h-screen/3"></div>
+      <div className="bg-foreground h-screen/3"></div>
       <Masonry>
         {quotes
           .filter(

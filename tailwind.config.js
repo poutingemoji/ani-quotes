@@ -8,17 +8,22 @@ module.exports = {
         "screen/3": "33vh",
       },
       colors: {
-        primary: {
+        foreground: {
+          transparent: "rgba(21,31,46, 0.75)",
           light: "#152232",
           DEFAULT: "#151f2e",
-          transparent: "rgba(21,31,46, 0.75)",
         },
-        secondary: {
+        text: {
+          lighter: "rgb(133,150,165)",
+          light: "rgb(114,138,161)",
+          DEFAULT: "rgb(159,173,189)",
+        },
+        background: {
           DEFAULT: "rgb(11,22,34)",
           transparent: "rgba(11,22,34, 0.75)",
         },
         gray: {
-          DEFAULT: "#e0e0e0",
+          DEFAULT: "rgb(159,173,189)",
         },
         green: {
           DEFAULT: "rgb(74,189,78)",

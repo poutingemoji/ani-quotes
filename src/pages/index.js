@@ -32,7 +32,7 @@ function Home({ quotes, authors }) {
             </h1>
             <p className="text-lg">
               AniQuotes is a collection of quotes by anime characters. The
-              primary focus of AniQuotes is to allow anime quotes to be more
+              foreground focus of AniQuotes is to allow anime quotes to be more
               accessible and to bring attention to all the beautiful quotes that
               can be found in anime and manga. The idea for AniQuotes came about
               from my friend introducing me to AniList, a website that tracks
@@ -122,7 +122,7 @@ function Home({ quotes, authors }) {
             {Object.keys(theNumbersData).map((key, i) => (
               <div key={i} className="my-2">
                 <CountUp end={theNumbersData[key].length} duration={5} />
-                <p className="text-lg font-normal text-gray">{key}</p>
+                <p className="text-lg font-normal text-text">{key}</p>
               </div>
             ))}
           </div>

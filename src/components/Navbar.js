@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="fixed z-50 flex items-center justify-between w-full h-16 shadow-sm text-gray md:justify-evenly bg-primary-light"
+        className="fixed z-50 flex items-center justify-between w-full h-16 shadow-sm text-text md:justify-evenly bg-foreground-light"
         role="navigation"
       >
         <Link to="/" className="pl-8">

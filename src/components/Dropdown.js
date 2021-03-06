@@ -5,7 +5,7 @@ const Dropdown = ({ isOpen, toggle }) => {
     <div
       className={`z-40 fixed w-full ${
         isOpen
-          ? "font-semibold grid grid-rows-4 text-center items-center bg-primary"
+          ? "font-semibold grid grid-rows-4 text-center items-center bg-foreground-light"
           : "hidden"
       }
        

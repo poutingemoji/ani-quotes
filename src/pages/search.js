@@ -34,14 +34,14 @@ function Search({ quotes }) {
   const pageCount = Math.ceil(quoteResults.length / PER_PAGE);
   return (
     <div className="flex flex-col items-center pt-20">
-      <div class="flex rounded-lg bg-primary w-1/5">
+      <div class="flex rounded-lg bg-foreground w-1/5">
         <button>
           <span class="w-auto flex justify-end items-center text-grey p-2">
             <i className="text-lg fas fa-search"></i>
           </span>
         </button>
         <input
-          className="w-full mr-4 text-white rounded bg-primary"
+          className="w-full mr-4 text-white rounded bg-foreground"
           type="text"
           onKeyDown={handleKeyDown}
         />

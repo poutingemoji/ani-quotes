@@ -1,6 +1,6 @@
 function ImageButton({ className, icon, title, numOfQuotes, image }) {
   return (
-    <button className="w-full h-full overflow-hidden text-white rounded-lg parent bg-primary-light">
+    <button className="w-full h-full overflow-hidden text-white rounded-lg parent bg-foreground-light">
       <div
         className="flex flex-col items-center justify-center w-full h-full transform parent-hover:scale-105"
         style={{
@@ -12,7 +12,7 @@ function ImageButton({ className, icon, title, numOfQuotes, image }) {
         }}
       >
         <span
-          className={`${className} flex flex-col items-center justify-center w-full bg-opacity-50 bg-secondary`}
+          className={`${className} flex flex-col items-center justify-center w-full bg-opacity-50 bg-background`}
         >
           {icon && <i className={`fas fa-${icon} fa-5x`}></i>}
           <span className="text-3xl font-semibold capitalize">
@@ -28,4 +28,4 @@ function ImageButton({ className, icon, title, numOfQuotes, image }) {
 }
 
 export default ImageButton;
-//py-24 py-40 v 
+//py-24 py-40 v
