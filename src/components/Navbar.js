@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="fixed z-50 items-center justify-between hidden w-full h-16 shadow-sm lg:flex text-text lg:justify-evenly bg-foreground-light"
+        className="fixed z-50 items-center justify-between hidden w-full h-16 shadow-sm lg:flex text-text lg:justify-evenly bg-foreground-transparent"
         role="navigation"
       >
         <Link to="/" className="pl-8">

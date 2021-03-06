@@ -2,27 +2,38 @@ import { useEffect, useState } from "react";
 import { randomChoice } from "../utils/Helper";
 import Card from "../components/Card";
 
-function getRandomQuotes(quotes) {
+function getDailyQuotes(quotes, percentageOfYear) {
   const dailyQuoteTopics = ["", "motivational"];
   const newDailyQuotes = {};
-  dailyQuoteTopics.map(
-    (key) =>
-      (newDailyQuotes[key] = randomChoice(
-        key === ""
-          ? quotes
-          : quotes.filter((quote) => quote.topics.includes(key))
-      ))
-  );
+
+  dailyQuoteTopics.map((key) => {
+    const array =
+      key === ""
+        ? quotes
+        : quotes.filter((quote) => quote.topics.includes(key));
+    newDailyQuotes[key] = array[Math.floor(percentageOfYear * array.length)];
+  });
   return newDailyQuotes;
 }
 
 function QuoteOfTheDay({ quotes }) {
   const [date, setDate] = useState(new Date());
-  const [dailyQuotes, setDailyQuotes] = useState(getRandomQuotes(quotes));
+  const now = date;
+  const start = new Date(now.getFullYear(), 0, 0);
+  const diff =
+    now -
+    start +
+    (start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000;
+  const oneDay = 1000 * 60 * 60 * 24;
+  const day = Math.floor(diff / oneDay);
+  const percentageOfYear = day / 365;
+  const [dailyQuotes, setDailyQuotes] = useState(
+    getDailyQuotes(quotes, percentageOfYear)
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDailyQuotes(getRandomQuotes(quotes));
+      setDailyQuotes(getDailyQuotes(quotes, percentageOfYear));
       setDate(new Date());
     }, calculateSecondsUntilEndOfDate(date) * 1000);
     return () => clearInterval(interval);
@@ -31,22 +42,27 @@ function QuoteOfTheDay({ quotes }) {
 
   return (
     <div className="flex flex-row justify-center">
-      <div className="flex flex-col items-center w-full pt-20 lg:w-1/2">
-        {Object.keys(dailyQuotes).map((key) => (
-          <>
-            <h1 className="text-3xl font-semibold text-center text-white capitalize">
-              {key.replace(/_/g, " ")} QOTD
-            </h1>
-            {
-              <Card
-                image={dailyQuotes[key].image}
-                text={dailyQuotes[key].text}
-                author={dailyQuotes[key].author}
-                tags={dailyQuotes[key].topics}
-              />
-            }
-          </>
-        ))}
+      <div className="flex flex-col items-center w-full text-3xl font-semibold text-center text-white lg:pt-20 lg:w-1/2">
+        {months[date.getMonth()]} {date.getDate()}, {date.getFullYear()}
+        {percentageOfYear < 1 ? (
+          Object.keys(dailyQuotes).map((key) => (
+            <>
+              <h1 className="capitalize">{key.replace(/_/g, " ")}</h1>
+              {
+                <Card
+                  image={dailyQuotes[key].image}
+                  text={dailyQuotes[key].text}
+                  author={dailyQuotes[key].author}
+                  tags={dailyQuotes[key].topics}
+                />
+              }
+            </>
+          ))
+        ) : (
+          <span className="text-lg font-normal text-text">
+            🧨 Finish the year with a bang!
+          </span>
+        )}
       </div>
     </div>
   );

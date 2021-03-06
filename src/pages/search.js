@@ -56,7 +56,7 @@ function Search({ quotes }) {
                 previousLabel={"«"}
                 nextLabel={"»"}
                 pageCount={pageCount}
-                pageRangeDisplayed={10}
+                pageRangeDisplayed={9}
                 onPageChange={handlePageChange}
                 containerClassName={"pagination"}
                 activeClassName={"active"}

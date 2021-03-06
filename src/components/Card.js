@@ -15,8 +15,8 @@ function Card({ author, text, image, tags }) {
           ></div>
         )}
         <div className="flex flex-col flex-1 p-4">
-          <div className="flex-1 mb-2 text-xl text-text">
-            <p className="text-lg lg:text-lg">"{text}"</p>
+          <div className="flex-1 mb-2">
+            <p className="text-lg font-normal text-left lg:text-lg text-text">"{text}"</p>
           </div>
           <Link to={`/authors/${author.id}`}>
             <div className="flex text-white hover:underline">
@@ -35,7 +35,7 @@ function Card({ author, text, image, tags }) {
               tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="px-2 mr-2 text-white capitalize rounded-full hover:text-text bg-foreground-light"
+                  className="px-2 mr-2 text-base font-normal text-white capitalize rounded-full hover:text-text bg-foreground-light"
                   style={{ background: topics[tag]?.hex }}
                 >
                   <Link to={`/topics/${tag}`}>{tag.replace(/_/g, " ")}</Link>

@@ -84,7 +84,7 @@ function App() {
       />
       <Route
         path="/authors/:authorId"
-        component={() => <Quotes quotes={quotes} />}
+        component={() => <Quotes quotes={quotes} authors={authors} />}
       />
       <Route
         path="/topics"
@@ -93,7 +93,7 @@ function App() {
       />
       <Route
         path="/topics/:topic"
-        component={() => <Quotes quotes={quotes} />}
+        component={() => <Quotes quotes={quotes} authors={authors} />}
       />
       <Route
         path="/quote_of_the_day"
