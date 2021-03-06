@@ -117,7 +117,7 @@ function Home({ quotes, authors }) {
 
           <div className="flex flex-col my-10 text-4xl font-semibold text-center text-white md:text-5xl">
             <h1 className="text-4xl">The Numbers</h1>
-            <hr className="mt-2 border-gray"></hr>
+            <hr className="mt-2 border-text"></hr>
             {Object.keys(theNumbersData).map((key, i) => (
               <div key={i} className="my-2">
                 <CountUp end={theNumbersData[key].length} duration={5} />

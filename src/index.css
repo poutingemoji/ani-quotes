@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  color: theme("colors.gray.DEFAULT");
+  color: theme("colors.text.DEFAULT");
   background-color: theme("colors.background.DEFAULT");
 }
 
