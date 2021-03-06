@@ -24,6 +24,10 @@ const authorQuotes = {
         "There's no such thing as a painless lesson, they just don't exist. Sacrifices are necessary; you can't gain anything without losing something first. Although, if you can endure that pain, and walk away from it you'll find that you now have a heart strong enough to overcome any obstacle. Yea, a heart made fullmetal.",
       topics: ["pain"],
     },
+    {
+      text: "How can you move forward when you keep regretting the past?",
+      topics: ["past", "regret"],
+    },
   ],
   14: [
     {
@@ -44,7 +48,8 @@ const authorQuotes = {
   ],
   17: [
     {
-      text: "If you don't like your destiny, don't accept it.",
+      text:
+        "If you don't like your destiny, don't accept it. Instead, have the courage to change it the way you want it to be!",
       topics: ["future"],
     },
     {
@@ -79,7 +84,7 @@ const authorQuotes = {
     },
     {
       text:
-        "I don’t want to conquer anything. I just think that the guy with the most freedom in this ocean is the Pirate King!",
+        "I don't want to conquer anything. I just think that the guy with the most freedom in this ocean is the Pirate King!",
       topics: ["freedom"],
     },
   ],
@@ -104,6 +109,12 @@ const authorQuotes = {
       text:
         "The world's not perfect, but it's there for us trying the best it can. That's what makes it so damn beautiful.",
       topics: ["positive"],
+    },
+  ],
+  71: [
+    {
+      text: "Being alone is better than being with the wrong person.",
+      topics: ["alone"],
     },
   ],
   80: [
@@ -141,6 +152,10 @@ const authorQuotes = {
         "If you only face forward, there is something you will miss seeing.",
       topics: [],
     },
+    {
+      text: "The ticket to the future is always open.",
+      topics: ["future"],
+    },
   ],
   236: [
     {
@@ -160,7 +175,12 @@ const authorQuotes = {
     {
       text:
         "I am the hope of the universe. I am the answer to all living things that cry out for peace. I am protector of the innocent. I am the light in the darkness. I am truth. Ally to good! Nightmare to you!",
-      topics: [],
+      topics: ["inspirational", "strength"],
+    },
+    {
+      text:
+        "Power comes in response to a need, not a desire. You have to create that need.",
+      topics: ["motivational"],
     },
   ],
   305: [
@@ -175,6 +195,11 @@ const authorQuotes = {
       text: "A dropout will beat a genius through hard work.",
       topics: ["motivational"],
     },
+    {
+      text:
+        "If you believe in your dreams, I will prove to you, that you can achieve your dreams just by working hard.",
+      topics: ["motivational", "dreams"],
+    },
   ],
   307: [
     {
@@ -188,6 +213,13 @@ const authorQuotes = {
       text:
         "As time passes, the day will come when everything will fade to memories. But those miraculous days, when you and I, along with everyone else, searched together for just that one thing, will continue revolving forever somewhere deep in my heart, as my bittersweet memory.",
       topics: [],
+    },
+  ],
+  390: [
+    {
+      text:
+        "Don't live your life making up excuses. The one making your choices is yourself!",
+      topics: ["life", "regret"],
     },
   ],
   434: [
@@ -205,10 +237,17 @@ const authorQuotes = {
     },
   ],
   496: [{ text: "People die if they are killed...", topics: ["death"] }],
+  497: [
+    {
+      text:
+        "There are no regrets. If one can be proud of one’s life, one should not wish for another chance.",
+      topics: ["regret", "life"],
+    },
+  ],
   601: [
     {
       text:
-        "Giving up kills people. When people reject giving up… they finally win the right to transcend humanity.",
+        "Giving up kills people. When people reject giving up... they finally win the right to transcend humanity.",
       topics: ["failure"],
     },
   ],
@@ -241,6 +280,13 @@ const authorQuotes = {
       topics: ["patience"],
     },
   ],
+  904: [
+    {
+      text:
+        "To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have.",
+      topics: ["happiness"],
+    },
+  ],
   913: [
     {
       text:
@@ -248,11 +294,24 @@ const authorQuotes = {
       topics: ["fear", "funny"],
     },
   ],
+  1168: [
+    {
+      text:
+        "I hate perfection. To be perfect is to be unable to improve any further.",
+      topics: ["wisdom"],
+    },
+  ],
   1169: [
     {
       text:
         "Even if you've only got a 1% chance of winning, but you convince yourself you're gonna lose, that 1% becomes 0%.",
-      topics: [],
+      topics: ["motivational"],
+    },
+  ],
+  1353: [
+    {
+      text: "You've got two legs and a heartbeat. What's stopping you?",
+      topics: ["motivational"],
     },
   ],
   1354: [
@@ -266,6 +325,19 @@ const authorQuotes = {
     {
       text: `We weep for the blood of a bird, but not for the blood of a fish. Blessed are those with a voice. If the dolls could speak, no doubt they'd scream, "I didn't want to become human."`,
       topics: [],
+    },
+  ],
+  1851: [
+    {
+      text: "If you just submit yourself to fate, then that's the end of it.",
+      topics: ["failure"],
+    },
+  ],
+  1969: [
+    {
+      text:
+        "The past is the past. We cannot indulge ourselves in memories and destroy the present.",
+      topics: ["past"],
     },
   ],
   1997: [
@@ -292,7 +364,7 @@ const authorQuotes = {
   2034: [
     {
       text:
-        "I want... to change things. I want to believe that anything can be changed. The moment I met you, a new world opened up for me. You see, after wandering in the darkness for so long, a light brought me happiness. It’s all thanks to you.”",
+        "I want... to change things. I want to believe that anything can be changed. The moment I met you, a new world opened up for me. You see, after wandering in the darkness for so long, a light brought me happiness. It's all thanks to you.”",
       topics: ["happiness"],
     },
   ],
@@ -334,8 +406,13 @@ const authorQuotes = {
     },
     {
       text:
-        "The true measure of a shinobi is not how he lives but how he dies. It’s not what they do in life but what they did before dying that proves their worth.",
+        "The true measure of a shinobi is not how he lives but how he dies. It's not what they do in life but what they did before dying that proves their worth.",
       topics: ["life", "death"],
+    },
+    {
+      text:
+        "Knowing what it feels to be in pain, is exactly why we try to be kind to others.",
+      topics: ["pain", "kindness"],
     },
   ],
   2511: [
@@ -402,6 +479,19 @@ const authorQuotes = {
       topics: ["wisdom"],
     },
   ],
+  4303: [
+    {
+      text:
+        "Thinking you're no–good and worthless is the worst thing you can do",
+      topics: [],
+    },
+  ],
+  4602: [
+    {
+      text: "I must study lots of things or I won't become a great person.",
+      topics: [],
+    },
+  ],
   4631: [
     {
       text:
@@ -456,7 +546,7 @@ const authorQuotes = {
   5333: [
     {
       text:
-        "Weaklings will stay weak forever. But weakness is not evil, since human beings are weak creatures to begin with. Alone, you feel nothing but insecurity; that’s why we form guilds, that’s why we have friends. We walk together in order to live a strong life. The clumsy ones will walk into more walls than the others, and it may also take them longer to get there. If you believe in tomorrow and put yourself out there, you can naturally obtain your strength. That’s how you will be able to smile and live strong.",
+        "Weaklings will stay weak forever. But weakness is not evil, since human beings are weak creatures to begin with. Alone, you feel nothing but insecurity; that's why we form guilds, that's why we have friends. We walk together in order to live a strong life. The clumsy ones will walk into more walls than the others, and it may also take them longer to get there. If you believe in tomorrow and put yourself out there, you can naturally obtain your strength. That's how you will be able to smile and live strong.",
       topics: ["alone", "friendship", "strength", "happiness"],
     },
   ],
@@ -467,10 +557,29 @@ const authorQuotes = {
       topics: [],
     },
   ],
+  5627: [
+    {
+      text: "No matter how deep the night, it always turns to day, eventually.",
+      topics: [],
+    },
+  ],
   6752: [
     {
       text: "May all your bacon burn",
       topics: ["funny"],
+    },
+  ],
+  6831: [
+    {
+      text: "If your life can change once, your life can change again.",
+      topics: ["life", "motivational"],
+    },
+  ],
+  6866: [
+    {
+      text:
+        "We each need to find our own inspiration. Sometimes, it is not easy.",
+      topics: ["inspirational"],
     },
   ],
   10863: [
@@ -562,6 +671,13 @@ const authorQuotes = {
       topics: ["happiness", "life"],
     },
   ],
+  18938: [
+    {
+      text:
+        "It may be hard right now but you must silent those thoughts. Stop counting those things you have lost, what is gone is gone. So ask yourself, what is there that still remains to you.",
+      topics: ["loss"],
+    },
+  ],
   19271: [
     {
       text:
@@ -569,11 +685,25 @@ const authorQuotes = {
       topics: ["death"],
     },
   ],
+  20620: [
+    {
+      text:
+        "A teacher doesn't give up on her students just because things get tough.",
+      topics: ["motivational"],
+    },
+  ],
   22253: [
     {
       text:
-        "There's no shame in falling down! True shame is to not stand up again!",
+        "Don't give up, there's no shame in falling down! The true shame is to not stand up again!",
       topics: ["failure"],
+    },
+  ],
+  22751: [
+    {
+      text:
+        "Tears are how our heart speaks when your lips cannot describe how much we've been hurt.",
+      topics: ["pain"],
     },
   ],
   24503: [
@@ -620,6 +750,11 @@ const authorQuotes = {
       text:
         "Secrets have a cost. It's not free now, not ever. That is why I never lie to someone I care about. There is no such thing as truth in this world. That is our reality. Anyone can become a God or a Devil. All it takes is for someone to claim that to be the truth.",
       topics: ["truth"],
+    },
+    {
+      text:
+        "If you win, you live. If you lose, you die. If you don't fight, you can't win.",
+      topics: ["life", "death", "motivational"],
     },
   ],
   41025: [
@@ -687,6 +822,18 @@ const authorQuotes = {
       topics: ["mistakes"],
     },
   ],
+  51593: [
+    {
+      text:
+        "It's just pathetic to give up on something before you even give it a shot.",
+      topics: ["failure"],
+    },
+    {
+      text:
+        "Not giving up on yourself is what's truly important. That way you don't end up pathetic.",
+      topics: ["failure"],
+    },
+  ],
   51595: [
     {
       text: "It doesn't do any good to pretend you can't see what's going on.",
@@ -708,6 +855,10 @@ const authorQuotes = {
     {
       text:
         "I don't care if no one likes me. I wasn't created to this world to entertain everyone.",
+      topics: [],
+    },
+    {
+      text: "I'm not stupid. I'm just too lazy to show how smart I am.",
       topics: [],
     },
   ],
@@ -872,6 +1023,13 @@ const authorQuotes = {
       topics: ["future", "life", "unfair"],
     },
   ],
+  75750: [
+    {
+      text:
+        "You can’t always hold on to the things that are important. By letting them go we gain something else.",
+      topics: ["loss", "improvement"],
+    },
+  ],
   77605: [
     {
       text: "A real sin is something you can never atone for.",
@@ -898,7 +1056,7 @@ const authorQuotes = {
   ],
   82523: [
     {
-      text: "Life is not a game of luck if you wanna win work hard.",
+      text: "Life is not a game of luck. If you wanna win, work hard.",
       topics: ["life"],
     },
   ],
@@ -906,6 +1064,10 @@ const authorQuotes = {
     {
       text:
         "Fear is freedom! Subjugation is liberation! Contradiction is truth! Those are the facts of this world! And you will all surrender to them, you pigs in human clothing!",
+      topics: [],
+    },
+    {
+      text: "A castle that vanishes at the first gust of wind is worthless.",
       topics: [],
     },
   ],
@@ -920,6 +1082,13 @@ const authorQuotes = {
       text:
         "Life and death are like light and shadow. They're both always there. But people don't like thinking about death, so subconsciously, they always look away from it.",
       topics: ["life", "death"],
+    },
+  ],
+  85151: [
+    {
+      text:
+        "I too will obtain everything that I desire. Not because someone asked me to do it, but because I know in my heart that I have something worth fighting for.",
+      topics: ["motivational"],
     },
   ],
   87971: [
@@ -962,6 +1131,13 @@ const authorQuotes = {
       topics: ["regret"],
     },
   ],
+  89028: [
+    {
+      text:
+        "Sometimes I do feel like I'm a failure. Like there's no hope for me. But even so, I'm not gonna give up. Ever!",
+      topics: ["motivational", "failure"],
+    },
+  ],
   89224: [
     {
       text:
@@ -1000,7 +1176,7 @@ const authorQuotes = {
   120969: [
     {
       text:
-        "Knowing you’re different is only the beginning. If you accept these differences you’ll be able to get past them and grow even closer.",
+        "Knowing you're different is only the beginning. If you accept these differences you'll be able to get past them and grow even closer.",
       topics: ["friendship"],
     },
   ],
@@ -1082,6 +1258,13 @@ const authorQuotes = {
   134750: [
     {
       text: `In this world, there are various forms of good and bad luck. But there's no better luck than meeting someone who makes you think, "I'm glad we met."`,
+      topics: [],
+    },
+  ],
+  168734: [
+    {
+      text:
+        "If you're gonna insist on gambling and then complain when you lose, you had better work on your game.",
       topics: [],
     },
   ],

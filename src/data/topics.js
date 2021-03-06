@@ -28,8 +28,9 @@ const topics = {
   future: { hex: "#5899E2", icon: "clock", image: futureImage },
   happiness: { hex: "#EEA243" },
   imagination: { hex: "#759FBC", icon: "lightbulb", image: imaginationImage },
+  improvement: {},
   inspirational: { hex: "#759FBC" },
-
+  kindness: {  },
   leadership: { hex: "#A755C2", icon: "bullhorn", image: leadershipImage },
   life: { hex: "#04724D", icon: "seedling", image: lifeImage },
   loss: { hex: "#A755C2" },
