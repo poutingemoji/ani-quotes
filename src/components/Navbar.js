@@ -16,7 +16,7 @@ const Navbar = () => {
             to="/"
             exact
             activeClassName="active"
-            className="p-4 hover:text-white"
+            className="p-4 hover:text-text-light"
           >
             Home
           </NavLink>
@@ -24,7 +24,7 @@ const Navbar = () => {
             to="/authors"
             exact
             activeClassName="active"
-            className="p-4 hover:text-white"
+            className="p-4 hover:text-text-light"
           >
             Authors
           </NavLink>
@@ -32,7 +32,7 @@ const Navbar = () => {
             to="/topics"
             exact
             activeClassName="active"
-            className="p-4 hover:text-white"
+            className="p-4 hover:text-text-light"
           >
             Topics
           </NavLink>
@@ -40,12 +40,12 @@ const Navbar = () => {
             to="/quote_of_the_day"
             exact
             activeClassName="active"
-            className="p-4 hover:text-white"
+            className="p-4 hover:text-text-light"
           >
             Quote Of The Day
           </NavLink>
         </div>
-        <Link to="/search" className="p-4 hover:text-white">
+        <Link to="/search" className="p-4 hover:text-text-light">
           <i className="fas fa-search fa-lg"></i>
         </Link>
       </nav>

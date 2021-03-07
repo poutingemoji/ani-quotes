@@ -19,8 +19,8 @@ module.exports = {
           transparent: "rgba(11,22,34, 0.75)",
         },
         text: {
-          lighter: "rgb(133,150,165)",
-          light: "rgb(114,138,161)",
+          lighter: "#c5cdd7",
+          light: "#b6c1cd",
           DEFAULT: "rgb(159,173,189)",
         },
         green: {

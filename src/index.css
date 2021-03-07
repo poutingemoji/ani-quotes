@@ -148,5 +148,5 @@ body {
 }
 
 .active {
-  @apply text-white;
+  @apply text-white !important;
 }
